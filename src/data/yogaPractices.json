@@ -1,0 +1,211 @@
+{
+    "vata": {
+        "name": "Vata Balancing Yoga",
+        "focus": "Grounding, calming, warming practices",
+        "poses": [
+            {
+                "name": "Mountain Pose (Tadasana)",
+                "benefit": "Grounding and stabilizing"
+            },
+            {
+                "name": "Warrior I (Virabhadrasana I)",
+                "benefit": "Builds stability and strength"
+            },
+            {
+                "name": "Forward Fold (Uttanasana)",
+                "benefit": "Calms the nervous system"
+            },
+            {
+                "name": "Child's Pose (Balasana)",
+                "benefit": "Deeply grounding and restful"
+            },
+            {
+                "name": "Seated Forward Bend (Paschimottanasana)",
+                "benefit": "Calms Vata in the lower body"
+            },
+            {
+                "name": "Corpse Pose (Savasana)",
+                "benefit": "Deep relaxation and integration"
+            }
+        ],
+        "pranayama": [
+            {
+                "name": "Alternate Nostril Breathing (Nadi Shodhana)",
+                "benefit": "Balances nervous system, calms mind"
+            },
+            {
+                "name": "Bee Breath (Bhramari)",
+                "benefit": "Soothes anxiety and promotes sleep"
+            }
+        ],
+        "guidelines": [
+            "Practice in a warm, quiet environment",
+            "Move slowly and smoothly",
+            "Hold poses for shorter durations",
+            "Focus on hip and lower back opening",
+            "End with extended Savasana (15+ minutes)"
+        ]
+    },
+    "pitta": {
+        "name": "Pitta Balancing Yoga",
+        "focus": "Cooling, releasing, non-competitive practices",
+        "poses": [
+            {
+                "name": "Moon Salutation (Chandra Namaskar)",
+                "benefit": "Cooling alternative to Sun Salutation"
+            },
+            {
+                "name": "Wide-Legged Forward Fold",
+                "benefit": "Releases heat from the head"
+            },
+            {
+                "name": "Supported Bridge (Setu Bandhasana)",
+                "benefit": "Opens heart, releases tension"
+            },
+            {
+                "name": "Reclined Twist (Supta Matsyendrasana)",
+                "benefit": "Releases heat from core"
+            },
+            {
+                "name": "Legs Up the Wall (Viparita Karani)",
+                "benefit": "Cooling and restorative"
+            },
+            {
+                "name": "Fish Pose (Matsyasana)",
+                "benefit": "Opens throat and chest"
+            }
+        ],
+        "pranayama": [
+            {
+                "name": "Cooling Breath (Sheetali)",
+                "benefit": "Directly cools the body and mind"
+            },
+            {
+                "name": "Left Nostril Breathing (Chandra Bhedana)",
+                "benefit": "Activates cooling lunar energy"
+            }
+        ],
+        "guidelines": [
+            "Practice in a cool, well-ventilated space",
+            "Avoid hot yoga and intense competition",
+            "Include plenty of forward folds and twists",
+            "Practice with 60-70% effort, not 100%",
+            "Include cooling pranayama before and after"
+        ]
+    },
+    "kapha": {
+        "name": "Kapha Balancing Yoga",
+        "focus": "Energizing, stimulating, heart-opening practices",
+        "poses": [
+            {
+                "name": "Sun Salutation (Surya Namaskar)",
+                "benefit": "Energizing and warming"
+            },
+            {
+                "name": "Warrior III (Virabhadrasana III)",
+                "benefit": "Builds heat and focus"
+            },
+            {
+                "name": "Camel Pose (Ustrasana)",
+                "benefit": "Opens chest, stimulates circulation"
+            },
+            {
+                "name": "Bow Pose (Dhanurasana)",
+                "benefit": "Stimulates digestive organs"
+            },
+            {
+                "name": "Headstand (Sirsasana)",
+                "benefit": "Invigorating, increases circulation"
+            },
+            {
+                "name": "Lion's Breath (Simhasana)",
+                "benefit": "Releases stagnation, energizes"
+            }
+        ],
+        "pranayama": [
+            {
+                "name": "Skull Shining Breath (Kapalabhati)",
+                "benefit": "Clears stagnation, energizes"
+            },
+            {
+                "name": "Bellows Breath (Bhastrika)",
+                "benefit": "Increases internal heat and energy"
+            },
+            {
+                "name": "Right Nostril Breathing (Surya Bhedana)",
+                "benefit": "Stimulates solar, warming energy"
+            }
+        ],
+        "guidelines": [
+            "Practice in the early morning (6-10 AM)",
+            "Move quickly with fewer breaks",
+            "Include inversions and backbends",
+            "Challenge yourself with longer holds",
+            "Keep Savasana short (5-7 minutes)"
+        ]
+    },
+    "stressManagement": {
+        "techniques": [
+            {
+                "name": "Meditation (Dhyana)",
+                "description": "Daily practice of 15-20 minutes to calm the mind",
+                "forDoshas": [
+                    "Vata",
+                    "Pitta",
+                    "Kapha"
+                ]
+            },
+            {
+                "name": "Progressive Muscle Relaxation",
+                "description": "Systematically tense and release muscle groups",
+                "forDoshas": [
+                    "Vata",
+                    "Pitta"
+                ]
+            },
+            {
+                "name": "Journaling",
+                "description": "Express thoughts and emotions on paper",
+                "forDoshas": [
+                    "Pitta",
+                    "Vata"
+                ]
+            },
+            {
+                "name": "Nature Walks",
+                "description": "Mindful walking in natural surroundings",
+                "forDoshas": [
+                    "Vata",
+                    "Pitta",
+                    "Kapha"
+                ]
+            },
+            {
+                "name": "Oil Massage (Abhyanga)",
+                "description": "Self-massage with warm oil before bathing",
+                "forDoshas": [
+                    "Vata",
+                    "Pitta"
+                ]
+            },
+            {
+                "name": "Aromatherapy",
+                "description": "Use of essential oils for mood balance",
+                "forDoshas": [
+                    "Vata",
+                    "Pitta",
+                    "Kapha"
+                ]
+            }
+        ],
+        "mentalHygiene": [
+            "Maintain regular daily routines",
+            "Limit screen time, especially before bed",
+            "Practice gratitude daily",
+            "Connect with supportive relationships",
+            "Engage in creative expression",
+            "Set healthy boundaries",
+            "Take regular breaks from work"
+        ]
+    }
+}

@@ -1,0 +1,95 @@
+{
+    "vata": {
+        "name": "Vata Balancing Routine",
+        "morning": {
+            "wakeUp": "Wake up between 6-7 AM",
+            "practices": [
+                "Start with warm water with lemon",
+                "Self-massage with warm sesame oil (Abhyanga)",
+                "Gentle yoga stretches focusing on grounding",
+                "10-15 minutes of meditation or pranayama",
+                "Warm, nourishing breakfast with healthy fats"
+            ]
+        },
+        "afternoon": {
+            "practices": [
+                "Eat your largest meal at lunch (12-1 PM)",
+                "Take a short walk after eating",
+                "Avoid working through lunch",
+                "Stay warm and avoid drafts",
+                "Take short breaks every hour"
+            ]
+        },
+        "evening": {
+            "practices": [
+                "Light, warm dinner by 7 PM",
+                "Gentle evening walk",
+                "Abhyanga or foot massage before bed",
+                "Drink warm milk with nutmeg",
+                "Be in bed by 10 PM for deep rest"
+            ]
+        }
+    },
+    "pitta": {
+        "name": "Pitta Balancing Routine",
+        "morning": {
+            "wakeUp": "Wake up by 6 AM before heat builds",
+            "practices": [
+                "Drink cooling water or coconut water",
+                "Self-massage with coconut or sunflower oil",
+                "Moderate yoga avoiding overexertion",
+                "Cooling pranayama (Sheetali, left nostril breathing)",
+                "Light, cooling breakfast"
+            ]
+        },
+        "afternoon": {
+            "practices": [
+                "Avoid intense activity during peak heat (10 AM - 2 PM)",
+                "Eat lunch in a calm environment",
+                "Take breaks to prevent burnout",
+                "Stay hydrated with cooling drinks",
+                "Practice patience and self-compassion"
+            ]
+        },
+        "evening": {
+            "practices": [
+                "Dinner by 6-7 PM, avoid spicy foods",
+                "Moonlight walk in nature",
+                "Cooling activities (reading, gentle music)",
+                "Avoid screens 1 hour before bed",
+                "Sleep by 10-10:30 PM in a cool room"
+            ]
+        }
+    },
+    "kapha": {
+        "name": "Kapha Balancing Routine",
+        "morning": {
+            "wakeUp": "Wake up by 6 AM (before Kapha time)",
+            "practices": [
+                "No breakfast or very light meal only",
+                "Dry brushing before shower",
+                "Vigorous exercise (brisk walk, sun salutations)",
+                "Invigorating pranayama (Kapalabhati, Bhastrika)",
+                "Warm ginger tea to stimulate digestion"
+            ]
+        },
+        "afternoon": {
+            "practices": [
+                "Main meal at lunch with stimulating spices",
+                "Stay active, avoid napping",
+                "Engage in stimulating mental activities",
+                "Take a walk after meals",
+                "Avoid heavy, sweet foods"
+            ]
+        },
+        "evening": {
+            "practices": [
+                "Light dinner by 6 PM (soup or steamed veggies)",
+                "Evening exercise or walk",
+                "Social activities to avoid isolation",
+                "Avoid heavy reading or TV",
+                "Sleep by 10 PM, wake with first light"
+            ]
+        }
+    }
+}

@@ -1,0 +1,362 @@
+[
+    {
+        "id": 1,
+        "question": "How would you describe your body frame?",
+        "options": [
+            {
+                "text": "Thin, light, with prominent joints",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Medium build, muscular, athletic",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Larger, solid, tendency to gain weight",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "question": "What is your skin type?",
+        "options": [
+            {
+                "text": "Dry, rough, thin, cool to touch",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Warm, oily, prone to rashes or redness",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Thick, moist, smooth, cool",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "question": "How is your hair?",
+        "options": [
+            {
+                "text": "Dry, thin, frizzy, prone to split ends",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Fine, oily, early graying or thinning",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Thick, lush, wavy, oily",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "question": "How would you describe your appetite?",
+        "options": [
+            {
+                "text": "Variable, sometimes I forget to eat",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Strong, I get irritable if I miss a meal",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Steady but moderate, can skip meals easily",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "question": "How is your digestion?",
+        "options": [
+            {
+                "text": "Irregular, prone to gas and bloating",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Strong, sometimes too fast, prone to acidity",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Slow and steady, feel heavy after eating",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "question": "What is your sleep pattern?",
+        "options": [
+            {
+                "text": "Light, interrupted, difficulty falling asleep",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Moderate, I wake up feeling hot sometimes",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Deep and long, hard to wake up",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "question": "How do you handle temperature?",
+        "options": [
+            {
+                "text": "Dislike cold, always feel cold",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Dislike heat, feel hot easily",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Tolerate most temperatures, dislike damp cold",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 8,
+        "question": "How would you describe your energy levels?",
+        "options": [
+            {
+                "text": "Quick bursts of energy, tire easily",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Good stamina when motivated",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Steady, lasting endurance, slow to start",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 9,
+        "question": "How do you typically walk?",
+        "options": [
+            {
+                "text": "Quick, light steps, fast pace",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Determined, purposeful stride",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Slow, steady, graceful",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 10,
+        "question": "How is your memory?",
+        "options": [
+            {
+                "text": "Quick to learn but quick to forget",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Sharp, clear, focused",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Slow to learn but never forget",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 11,
+        "question": "Under stress, how do you react?",
+        "options": [
+            {
+                "text": "Anxious, worried, fearful",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Irritable, angry, critical",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Withdrawn, avoidant, unmotivated",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 12,
+        "question": "How do you make decisions?",
+        "options": [
+            {
+                "text": "Quickly but often change my mind",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Decisively and stand by my choice",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Slowly, carefully, after much thought",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 13,
+        "question": "What is your speaking style?",
+        "options": [
+            {
+                "text": "Fast, talkative, jump between topics",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Clear, precise, persuasive",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Slow, deliberate, melodious",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 14,
+        "question": "How do you handle finances?",
+        "options": [
+            {
+                "text": "Spend impulsively, hard to save",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Spend on quality and experiences",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Save carefully, good with money",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    },
+    {
+        "id": 15,
+        "question": "What best describes your emotional nature?",
+        "options": [
+            {
+                "text": "Enthusiastic, creative, changeable",
+                "vata": 2,
+                "pitta": 0,
+                "kapha": 0
+            },
+            {
+                "text": "Passionate, ambitious, intense",
+                "vata": 0,
+                "pitta": 2,
+                "kapha": 0
+            },
+            {
+                "text": "Calm, loving, stable, supportive",
+                "vata": 0,
+                "pitta": 0,
+                "kapha": 2
+            }
+        ]
+    }
+]

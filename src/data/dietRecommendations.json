@@ -1,0 +1,89 @@
+{
+    "vata": {
+        "name": "Vata Balancing Diet",
+        "qualities": "Warm, moist, grounding, sweet, sour, salty",
+        "favor": [
+            "Warm, cooked foods",
+            "Healthy fats (ghee, olive oil, sesame oil)",
+            "Root vegetables (sweet potato, carrots, beets)",
+            "Warming spices (ginger, cinnamon, cumin)",
+            "Cooked grains (rice, oats, quinoa)",
+            "Sweet fruits (bananas, mangoes, dates)",
+            "Warm milk and herbal teas",
+            "Soups and stews"
+        ],
+        "avoid": [
+            "Cold, raw foods and salads",
+            "Dry, crunchy snacks",
+            "Cold drinks and ice cream",
+            "Caffeine in excess",
+            "Bitter and astringent tastes",
+            "Dried fruits (unless soaked)",
+            "Raw vegetables"
+        ],
+        "mealTiming": {
+            "breakfast": "Warm, nourishing breakfast by 8 AM",
+            "lunch": "Largest meal between 12-1 PM",
+            "dinner": "Light, warm dinner by 6-7 PM",
+            "snacks": "Soaked nuts, warm milk, fruit"
+        }
+    },
+    "pitta": {
+        "name": "Pitta Balancing Diet",
+        "qualities": "Cool, heavy, dry, sweet, bitter, astringent",
+        "favor": [
+            "Cooling foods (cucumber, coconut, melon)",
+            "Sweet fruits (grapes, pears, pomegranate)",
+            "Bitter greens (kale, arugula, dandelion)",
+            "Cooling spices (fennel, coriander, mint)",
+            "Coconut oil and ghee",
+            "Basmati rice, oats, wheat",
+            "Milk and sweet dairy",
+            "Cooling herbs (aloe vera, neem)"
+        ],
+        "avoid": [
+            "Spicy, hot foods",
+            "Sour and fermented foods",
+            "Excessive salt",
+            "Red meat and fried foods",
+            "Alcohol and caffeine",
+            "Tomatoes, garlic, onions",
+            "Hot beverages"
+        ],
+        "mealTiming": {
+            "breakfast": "Cool, light breakfast by 7-8 AM",
+            "lunch": "Main meal at noon, avoid rush",
+            "dinner": "Moderate dinner by 6-7 PM",
+            "snacks": "Sweet fruits, coconut water"
+        }
+    },
+    "kapha": {
+        "name": "Kapha Balancing Diet",
+        "qualities": "Light, dry, warm, pungent, bitter, astringent",
+        "favor": [
+            "Light, dry foods",
+            "Pungent spices (ginger, black pepper, turmeric)",
+            "Bitter vegetables (leafy greens, Brussels sprouts)",
+            "Light grains (millet, barley, buckwheat)",
+            "Legumes (lentils, beans)",
+            "Honey (uncooked)",
+            "Warm, spiced teas",
+            "Astringent fruits (apples, pears, berries)"
+        ],
+        "avoid": [
+            "Heavy, oily foods",
+            "Sweet, cold foods",
+            "Dairy (especially cold milk, ice cream)",
+            "Wheat and rice in excess",
+            "Sweet fruits (bananas, dates)",
+            "Nuts in excess",
+            "Cold drinks"
+        ],
+        "mealTiming": {
+            "breakfast": "Skip or very light (fruit, tea) by 8 AM",
+            "lunch": "Main meal between 12-1 PM",
+            "dinner": "Light dinner by 6 PM",
+            "snacks": "Avoid snacking, herbal tea if needed"
+        }
+    }
+}

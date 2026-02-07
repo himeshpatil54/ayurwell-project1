@@ -1,0 +1,232 @@
+[
+    {
+        "id": 1,
+        "name": "Ashwagandha",
+        "sanskritName": "Ashwagandha (Withania somnifera)",
+        "description": "Known as 'Indian Ginseng', this adaptogenic herb helps the body manage stress and promotes overall vitality.",
+        "benefits": [
+            "Reduces stress and anxiety",
+            "Supports energy and vitality",
+            "Promotes restful sleep",
+            "Strengthens the immune system",
+            "Supports muscle strength"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces (calming, grounding)",
+            "pitta": "Neutral (use in moderation)",
+            "kapha": "Reduces (energizing)"
+        },
+        "contraindications": [
+            "Pregnancy",
+            "Hyperthyroidism",
+            "Autoimmune conditions without guidance"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Triphala",
+        "sanskritName": "Triphala (Three Fruits)",
+        "description": "A traditional Ayurvedic formula combining Amalaki, Bibhitaki, and Haritaki for digestive health.",
+        "benefits": [
+            "Supports healthy digestion",
+            "Gentle detoxification",
+            "Promotes regular elimination",
+            "Rich in antioxidants",
+            "Balances all three doshas"
+        ],
+        "doshaEffect": {
+            "vata": "Balances",
+            "pitta": "Balances",
+            "kapha": "Balances"
+        },
+        "contraindications": [
+            "Pregnancy",
+            "Diarrhea",
+            "Severe dehydration"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Brahmi",
+        "sanskritName": "Brahmi (Bacopa monnieri)",
+        "description": "A renowned brain tonic that enhances cognitive function and calms the nervous system.",
+        "benefits": [
+            "Enhances memory and concentration",
+            "Reduces mental fatigue",
+            "Calms anxiety",
+            "Supports healthy sleep",
+            "Nourishes the nervous system"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces (calming)",
+            "pitta": "Reduces (cooling)",
+            "kapha": "May slightly increase"
+        },
+        "contraindications": [
+            "Low thyroid function",
+            "Use with caution in Kapha types"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Turmeric",
+        "sanskritName": "Haridra (Curcuma longa)",
+        "description": "The golden spice with powerful anti-inflammatory and antioxidant properties.",
+        "benefits": [
+            "Reduces inflammation",
+            "Supports joint health",
+            "Aids digestion",
+            "Purifies the blood",
+            "Supports liver function"
+        ],
+        "doshaEffect": {
+            "vata": "Balances (with oil/ghee)",
+            "pitta": "Use in moderation (warming)",
+            "kapha": "Reduces (drying, warming)"
+        },
+        "contraindications": [
+            "Gallstones",
+            "Blood-thinning medications",
+            "Pregnancy in high doses"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Shatavari",
+        "sanskritName": "Shatavari (Asparagus racemosus)",
+        "description": "Known as the 'Queen of Herbs', particularly supportive for women's health.",
+        "benefits": [
+            "Supports female reproductive health",
+            "Nourishes and rejuvenates",
+            "Promotes lactation",
+            "Soothes the digestive tract",
+            "Calms Pitta imbalances"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces (nourishing)",
+            "pitta": "Reduces (cooling)",
+            "kapha": "May increase (use with ginger)"
+        },
+        "contraindications": [
+            "Congestion",
+            "Excess mucus",
+            "Certain hormonal conditions"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Tulsi",
+        "sanskritName": "Tulsi (Ocimum sanctum)",
+        "description": "Holy Basil, a sacred adaptogenic herb that supports respiratory and stress management.",
+        "benefits": [
+            "Supports respiratory health",
+            "Reduces stress",
+            "Boosts immunity",
+            "Balances metabolism",
+            "Promotes mental clarity"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces",
+            "pitta": "Use in moderation (heating)",
+            "kapha": "Reduces"
+        },
+        "contraindications": [
+            "Blood-thinning medications",
+            "Pregnancy",
+            "Pre-surgery"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Ginger",
+        "sanskritName": "Shunti/Ardraka (Zingiber officinale)",
+        "description": "The universal medicine in Ayurveda, excellent for digestion and circulation.",
+        "benefits": [
+            "Kindles digestive fire (Agni)",
+            "Relieves nausea",
+            "Reduces inflammation",
+            "Warms the body",
+            "Clears congestion"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces (warming, aids digestion)",
+            "pitta": "Use fresh in moderation",
+            "kapha": "Reduces (stimulating, drying)"
+        },
+        "contraindications": [
+            "Gastritis",
+            "Ulcers",
+            "Excessive heat conditions"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Amla",
+        "sanskritName": "Amalaki (Emblica officinalis)",
+        "description": "Indian Gooseberry, one of the richest sources of Vitamin C and a powerful rejuvenative.",
+        "benefits": [
+            "Highest natural Vitamin C source",
+            "Powerful antioxidant",
+            "Supports healthy hair and skin",
+            "Balances all doshas",
+            "Rejuvenates tissues"
+        ],
+        "doshaEffect": {
+            "vata": "Balances",
+            "pitta": "Reduces (cooling)",
+            "kapha": "Balances"
+        },
+        "contraindications": [
+            "Diarrhea",
+            "Acute cold or congestion"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Licorice",
+        "sanskritName": "Yashtimadhu (Glycyrrhiza glabra)",
+        "description": "A sweet, soothing herb that supports respiratory and digestive health.",
+        "benefits": [
+            "Soothes the throat",
+            "Supports adrenal function",
+            "Calms digestive irritation",
+            "Nourishes the body",
+            "Balances hormones"
+        ],
+        "doshaEffect": {
+            "vata": "Reduces (moistening)",
+            "pitta": "Reduces (cooling, sweet)",
+            "kapha": "May increase (use in moderation)"
+        },
+        "contraindications": [
+            "High blood pressure",
+            "Kidney disease",
+            "Pregnancy",
+            "Long-term use without guidance"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Neem",
+        "sanskritName": "Nimba (Azadirachta indica)",
+        "description": "A powerful purifying and detoxifying herb with bitter properties.",
+        "benefits": [
+            "Purifies the blood",
+            "Supports skin health",
+            "Natural detoxifier",
+            "Reduces Pitta and Kapha",
+            "Supports healthy blood sugar"
+        ],
+        "doshaEffect": {
+            "vata": "May increase (very bitter, drying)",
+            "pitta": "Reduces (cooling, cleansing)",
+            "kapha": "Reduces (drying, bitter)"
+        },
+        "contraindications": [
+            "Vata imbalances",
+            "Pregnancy",
+            "Fatigue",
+            "Underweight conditions"
+        ]
+    }
+]

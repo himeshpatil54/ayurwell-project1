@@ -1,0 +1,272 @@
+[
+  {
+    "id": 1,
+    "name": "Constipation",
+    "category": "Digestive",
+    "description": "Difficulty or infrequent bowel movements",
+    "vata": 0.9,
+    "pitta": 0.05,
+    "kapha": 0.05
+  },
+  {
+    "id": 2,
+    "name": "Bloating",
+    "category": "Digestive",
+    "description": "Feeling of fullness and gas in the stomach",
+    "vata": 0.7,
+    "pitta": 0.15,
+    "kapha": 0.15
+  },
+  {
+    "id": 3,
+    "name": "Acidity",
+    "category": "Digestive",
+    "description": "Heartburn and acid reflux",
+    "vata": 0.1,
+    "pitta": 0.85,
+    "kapha": 0.05
+  },
+  {
+    "id": 4,
+    "name": "Slow digestion",
+    "category": "Digestive",
+    "description": "Food takes long to digest, feeling heavy after meals",
+    "vata": 0.1,
+    "pitta": 0.05,
+    "kapha": 0.85
+  },
+  {
+    "id": 5,
+    "name": "Diarrhea",
+    "category": "Digestive",
+    "description": "Loose or watery stools",
+    "vata": 0.3,
+    "pitta": 0.6,
+    "kapha": 0.1
+  },
+  {
+    "id": 6,
+    "name": "Anxiety",
+    "category": "Mental",
+    "description": "Excessive worry and restlessness",
+    "vata": 0.9,
+    "pitta": 0.05,
+    "kapha": 0.05
+  },
+  {
+    "id": 7,
+    "name": "Irritability",
+    "category": "Mental",
+    "description": "Easily frustrated or angered",
+    "vata": 0.1,
+    "pitta": 0.85,
+    "kapha": 0.05
+  },
+  {
+    "id": 8,
+    "name": "Lethargy",
+    "category": "Mental",
+    "description": "Lack of motivation and mental sluggishness",
+    "vata": 0.05,
+    "pitta": 0.05,
+    "kapha": 0.9
+  },
+  {
+    "id": 9,
+    "name": "Insomnia",
+    "category": "Sleep",
+    "description": "Difficulty falling or staying asleep",
+    "vata": 0.85,
+    "pitta": 0.1,
+    "kapha": 0.05
+  },
+  {
+    "id": 10,
+    "name": "Excessive sleep",
+    "category": "Sleep",
+    "description": "Sleeping more than 9 hours, difficulty waking",
+    "vata": 0.05,
+    "pitta": 0.05,
+    "kapha": 0.9
+  },
+  {
+    "id": 11,
+    "name": "Dry skin",
+    "category": "Skin",
+    "description": "Rough, cracked, or flaky skin",
+    "vata": 0.9,
+    "pitta": 0.05,
+    "kapha": 0.05
+  },
+  {
+    "id": 12,
+    "name": "Skin rashes",
+    "category": "Skin",
+    "description": "Red, inflamed patches or hives",
+    "vata": 0.1,
+    "pitta": 0.85,
+    "kapha": 0.05
+  },
+  {
+    "id": 13,
+    "name": "Oily skin",
+    "category": "Skin",
+    "description": "Excessive oil production, prone to acne",
+    "vata": 0.05,
+    "pitta": 0.25,
+    "kapha": 0.7
+  },
+  {
+    "id": 14,
+    "name": "Joint pain",
+    "category": "Musculoskeletal",
+    "description": "Stiffness and pain in joints",
+    "vata": 0.8,
+    "pitta": 0.1,
+    "kapha": 0.1
+  },
+  {
+    "id": 15,
+    "name": "Inflammation",
+    "category": "Musculoskeletal",
+    "description": "Swelling and heat in body parts",
+    "vata": 0.1,
+    "pitta": 0.8,
+    "kapha": 0.1
+  },
+  {
+    "id": 16,
+    "name": "Weight gain",
+    "category": "Metabolic",
+    "description": "Unexplained increase in body weight",
+    "vata": 0.05,
+    "pitta": 0.1,
+    "kapha": 0.85
+  },
+  {
+    "id": 17,
+    "name": "Weight loss",
+    "category": "Metabolic",
+    "description": "Unexplained decrease in body weight",
+    "vata": 0.85,
+    "pitta": 0.1,
+    "kapha": 0.05
+  },
+  {
+    "id": 18,
+    "name": "Cold hands and feet",
+    "category": "Circulation",
+    "description": "Poor circulation to extremities",
+    "vata": 0.85,
+    "pitta": 0.05,
+    "kapha": 0.1
+  },
+  {
+    "id": 19,
+    "name": "Excessive sweating",
+    "category": "Circulation",
+    "description": "Sweating more than normal",
+    "vata": 0.1,
+    "pitta": 0.85,
+    "kapha": 0.05
+  },
+  {
+    "id": 20,
+    "name": "Water retention",
+    "category": "Circulation",
+    "description": "Swelling due to fluid buildup",
+    "vata": 0.05,
+    "pitta": 0.1,
+    "kapha": 0.85
+  },
+  {
+    "id": 21,
+    "name": "Headaches",
+    "category": "Pain",
+    "description": "Recurring head pain",
+    "vata": 0.4,
+    "pitta": 0.5,
+    "kapha": 0.1
+  },
+  {
+    "id": 22,
+    "name": "Fatigue",
+    "category": "Energy",
+    "description": "Constant tiredness and low energy",
+    "vata": 0.3,
+    "pitta": 0.2,
+    "kapha": 0.5
+  },
+  {
+    "id": 23,
+    "name": "Restlessness",
+    "category": "Energy",
+    "description": "Inability to sit still or relax",
+    "vata": 0.85,
+    "pitta": 0.1,
+    "kapha": 0.05
+  },
+  {
+    "id": 24,
+    "name": "Hoarse voice",
+    "category": "Respiratory",
+    "description": "Dry, scratchy throat and voice",
+    "vata": 0.85,
+    "pitta": 0.1,
+    "kapha": 0.05
+  },
+  {
+    "id": 25,
+    "name": "Congestion",
+    "category": "Respiratory",
+    "description": "Blocked nose and sinuses",
+    "vata": 0.05,
+    "pitta": 0.1,
+    "kapha": 0.85
+  },
+  {
+    "id": 26,
+    "name": "Brittle nails",
+    "category": "Appearance",
+    "description": "Weak, breaking nails",
+    "vata": 0.85,
+    "pitta": 0.1,
+    "kapha": 0.05
+  },
+  {
+    "id": 27,
+    "name": "Hair loss",
+    "category": "Appearance",
+    "description": "Excessive hair fall",
+    "vata": 0.5,
+    "pitta": 0.4,
+    "kapha": 0.1
+  },
+  {
+    "id": 28,
+    "name": "Stress",
+    "category": "Mental",
+    "description": "Feeling overwhelmed and pressured",
+    "vata": 0.5,
+    "pitta": 0.4,
+    "kapha": 0.1
+  },
+  {
+    "id": 29,
+    "name": "Depression",
+    "category": "Mental",
+    "description": "Persistent sadness and low mood",
+    "vata": 0.3,
+    "pitta": 0.1,
+    "kapha": 0.6
+  },
+  {
+    "id": 30,
+    "name": "Irregular appetite",
+    "category": "Digestive",
+    "description": "Variable hunger patterns",
+    "vata": 0.8,
+    "pitta": 0.1,
+    "kapha": 0.1
+  }
+]

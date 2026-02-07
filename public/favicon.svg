@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <linearGradient id="leafGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#5D6E4E"/>
+      <stop offset="100%" style="stop-color:#82B582"/>
+    </linearGradient>
+  </defs>
+  <!-- Lotus flower representing Ayurveda -->
+  <circle cx="50" cy="50" r="45" fill="#FAF7F2" stroke="#5D6E4E" stroke-width="2"/>
+  <!-- Center -->
+  <circle cx="50" cy="50" r="8" fill="#D4A574"/>
+  <!-- Petals -->
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(0 50 50)"/>
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(60 50 50)"/>
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(120 50 50)"/>
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(180 50 50)"/>
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(240 50 50)"/>
+  <ellipse cx="50" cy="30" rx="8" ry="15" fill="url(#leafGradient)" transform="rotate(300 50 50)"/>
+</svg>
