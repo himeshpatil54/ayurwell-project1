@@ -6,7 +6,7 @@ import ChatInput from '../components/ChatInput';
 import { useChat } from '../context/ChatContext';
 
 function DashboardPage() {
-    const { messages, isTyping, sendMessage, clearChat } = useChat();
+    const { messages, isTyping, sendMessage, clearChat, feedbackState, submitFeedback } = useChat();
     const messagesEndRef = useRef(null);
 
     // Auto-scroll to bottom when new messages arrive
@@ -24,7 +24,13 @@ function DashboardPage() {
                 {/* Chat Messages */}
                 <div className="chat-messages">
                     {messages.map((message) => (
-                        <ChatMessage key={message.id} message={message} />
+                        <ChatMessage
+                            key={message.id}
+                            message={message}
+                            feedbackState={feedbackState}
+                            onFeedback={submitFeedback}
+                        />
+
                     ))}
 
                     {/* Typing Indicator */}

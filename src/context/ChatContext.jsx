@@ -1,172 +1,250 @@
 // Chat Context - Manages conversation state and Ayurvedic chatbot logic
-import { createContext, useContext, useState, useCallback, useEffect } from 'react';
+// ALL symptom/health queries go to Supabase KB first
+import { createContext, useContext, useState, useCallback, useEffect, useRef } from 'react';
 import { useAuth } from './AuthContext';
 import { demoStorage } from '../lib/supabase';
-import { detectIntent, extractSymptoms } from '../lib/symptomMapper';
-import { calculateDoshaFromSymptoms, calculateDoshaFromQuestionnaire, getDominantDosha } from '../lib/doshaCalculator';
+import { searchKnowledgeBase, formatKBResponse, logChatMessage } from '../lib/knowledgeBase';
+import { calculateDoshaFromQuestionnaire } from '../lib/doshaCalculator';
 import { generateReport, formatReportForChat } from '../lib/reportGenerator';
 import routinesData from '../data/routines.json';
 import dietData from '../data/dietRecommendations.json';
 import yogaData from '../data/yogaPractices.json';
 import prakritiQuestions from '../data/prakritiQuestions.json';
+import herbsData from '../data/herbs.json';
 
 const ChatContext = createContext(null);
+const SESSION_ID = `session_${Date.now()}`;
 
-// Greeting responses
-const GREETING_RESPONSES = [
-    "Hi 😊 How can I help you today?",
-    "Hello! Welcome to your Ayurvedic wellness journey. How are you feeling today?",
-    "Namaste 🙏 I'm here to support your wellness. What brings you here?",
-    "Hi there! How can I support your wellness today?",
-    "Hello! I'm your AYURWELL wellness guide. Feel free to share how you're feeling, or ask me anything about Ayurveda."
-];
+// ========== SIMPLE INTENT DETECTION (no symptomMapper dependency) ==========
 
-// Empathetic lead-ins
-const EMPATHY_RESPONSES = [
-    "Thank you for sharing that with me. I understand how challenging that can be. ",
-    "I appreciate you opening up about this. Let's explore what might help. ",
-    "I hear you, and I want to help. ",
-    "That sounds difficult. Let's see how Ayurveda can support you. "
-];
+function detectSimpleIntent(text) {
+    const t = text.toLowerCase().trim();
+
+    // Greetings
+    const greetings = ['hi', 'hello', 'hey', 'namaste', 'good morning', 'good afternoon', 'good evening', 'howdy', 'hola', 'yo'];
+    if (greetings.some(g => t === g || t.startsWith(g + ' ') || t.startsWith(g + '!') || t.startsWith(g + ','))) {
+        return 'greeting';
+    }
+
+    // Identity
+    const identity = ['who are you', 'what are you', 'your name', 'what is ayurwell', 'about ayurwell', 'what can you do', 'introduce yourself', 'are you a bot', 'are you ai'];
+    if (identity.some(k => t.includes(k))) return 'identity';
+
+    // Emergency
+    const emergency = ['suicide', 'suicidal', 'kill myself', 'want to die', 'heart attack', 'call 911', 'emergency', 'seizure', 'stroke', 'cant breathe', 'severe bleeding'];
+    if (emergency.some(k => t.includes(k))) return 'emergency';
+
+    // Thanks (short messages only)
+    const thanks = ['thank you', 'thanks', 'thank', 'appreciate', 'that helps', 'helpful', 'great advice'];
+    if (t.length < 50 && thanks.some(k => t.includes(k))) return 'thanks';
+
+    // Goodbye
+    const bye = ['bye', 'goodbye', 'see you', 'take care', 'good night', 'gotta go', 'quit', 'exit'];
+    if (bye.some(k => t === k || t.startsWith(k + ' '))) return 'goodbye';
+
+    // Prakriti
+    const prakriti = ['prakriti', 'prakruti', 'constitution', 'body type', 'my dosha', 'what dosha', 'assessment', 'questionnaire'];
+    if (prakriti.some(k => t.includes(k))) return 'prakriti';
+
+    // Routine
+    const routine = ['routine', 'daily routine', 'dinacharya', 'daily schedule'];
+    if (routine.some(k => t.includes(k))) return 'routine';
+
+    // Diet
+    const diet = ['diet', 'food', 'what to eat', 'nutrition', 'meal plan', 'ahara'];
+    if (diet.some(k => t.includes(k))) return 'diet';
+
+    // Yoga
+    const yoga = ['yoga', 'pranayama', 'breathing exercise', 'meditation', 'asana'];
+    if (yoga.some(k => t.includes(k))) return 'yoga';
+
+    // Everything else → search KB
+    return 'search_kb';
+}
+
+function extractDosha(text) {
+    const t = text.toLowerCase();
+    if (t.includes('vata')) return 'vata';
+    if (t.includes('pitta')) return 'pitta';
+    if (t.includes('kapha')) return 'kapha';
+    return null;
+}
+
+// ========== PROVIDER ==========
 
 export function ChatProvider({ children }) {
     const { user } = useAuth();
     const [messages, setMessages] = useState([]);
     const [isTyping, setIsTyping] = useState(false);
-    const [collectedSymptoms, setCollectedSymptoms] = useState([]);
     const [questionnaire, setQuestionnaire] = useState({
         active: false,
         currentQuestion: 0,
         answers: []
     });
     const [lastAnalysis, setLastAnalysis] = useState(null);
+    const [feedbackState, setFeedbackState] = useState({});
 
-    // Load chat history on mount
+    // Load chat history (with version check to clear stale cached responses)
     useEffect(() => {
-        const savedMessages = demoStorage.getChatHistory();
-        if (savedMessages.length > 0) {
-            setMessages(savedMessages);
+        const CHAT_VERSION = 'v2_supabase_kb'; // Bump this to invalidate old cache
+        const savedVersion = localStorage.getItem('ayurveda_chat_version');
+
+        if (savedVersion !== CHAT_VERSION) {
+            // Old cache from before the fix — clear it
+            console.log('[Chat] Clearing old cached chat history (version mismatch)');
+            demoStorage.clearChatHistory();
+            localStorage.setItem('ayurveda_chat_version', CHAT_VERSION);
+        }
+
+        const saved = demoStorage.getChatHistory();
+        if (saved.length > 0) {
+            setMessages(saved);
         } else {
-            // Add welcome message
             setMessages([{
                 id: Date.now(),
                 role: 'assistant',
-                content: "Namaste 🙏 Welcome to AYURWELL!\n\nI'm here to help you understand your unique constitution (Prakriti), explore any imbalances, and provide personalized wellness guidance based on classical Ayurveda principles.\n\nYou can:\n- Share how you're feeling or any symptoms\n- Ask for a Prakriti (constitution) analysis\n- Get diet, routine, or yoga recommendations\n\nHow may I support your wellness journey today?",
+                content: "Namaste 🙏 Welcome to AYURWELL!\n\nI'm your Ayurvedic wellness companion. Tell me any symptom or health concern and I'll look up guidance from our knowledge base.\n\nYou can also:\n- 📋 Say \"Prakriti\" for a constitution assessment\n- 🍽️ Ask about diet for any dosha\n- 🧘 Ask about yoga and pranayama\n- 🌿 Ask about Ayurvedic herbs\n\nHow are you feeling today? 😊",
                 timestamp: new Date().toISOString()
             }]);
         }
     }, []);
 
-    // Save messages when they change
     useEffect(() => {
-        if (messages.length > 0) {
-            demoStorage.saveChatHistory(messages);
-        }
+        if (messages.length > 0) demoStorage.saveChatHistory(messages);
     }, [messages]);
 
-    // Add a message to the chat
     const addMessage = useCallback((role, content) => {
-        const message = {
-            id: Date.now(),
+        const msg = {
+            id: Date.now() + Math.random(),
             role,
             content,
             timestamp: new Date().toISOString()
         };
-        setMessages(prev => [...prev, message]);
-        return message;
+        setMessages(prev => [...prev, msg]);
+        logChatMessage(SESSION_ID, role, content);
+        return msg;
     }, []);
 
-    // Simulate typing delay for natural feel
-    const simulateTyping = (minMs = 800, maxMs = 1500) => {
-        return new Promise(resolve => {
-            const delay = Math.random() * (maxMs - minMs) + minMs;
-            setTimeout(resolve, delay);
-        });
-    };
+    const simulateTyping = (min = 400, max = 800) =>
+        new Promise(r => setTimeout(r, Math.random() * (max - min) + min));
 
-    // Get random response from array
-    const getRandomResponse = (responses) => {
-        return responses[Math.floor(Math.random() * responses.length)];
-    };
+    const pick = (arr) => arr[Math.floor(Math.random() * arr.length)];
 
-    // Handle greeting
+    // ========== HANDLERS ==========
+
     const handleGreeting = async () => {
         setIsTyping(true);
-        await simulateTyping(500, 1000);
-        addMessage('assistant', getRandomResponse(GREETING_RESPONSES));
+        await simulateTyping(300, 600);
+        addMessage('assistant', pick([
+            "Hello! 😊 I'm AyurWell, your Ayurvedic wellness guide. How can I help you with your health today?",
+            "Hi there! 🙏 Welcome to AyurWell. Tell me what's bothering you — or ask me about any health topic!",
+            "Hey! 🌿 I'm AyurWell. Feel free to share any symptoms or ask about Ayurvedic remedies. I'm here to help!",
+            "Namaste! 😊 I'm AyurWell. You can tell me any symptom like headache, stress, or fatigue — and I'll find Ayurvedic guidance for you!",
+            "Hello! Welcome to AyurWell 🌿 Just type any symptom or health concern and I'll look it up for you!"
+        ]));
         setIsTyping(false);
     };
 
-    // Handle symptom collection
-    const handleSymptoms = async (symptoms, hasDistress) => {
+    const handleIdentity = async () => {
         setIsTyping(true);
-        await simulateTyping();
+        await simulateTyping(300, 600);
+        addMessage('assistant',
+            "I'm **AyurWell** 🌿 — your friendly Ayurvedic wellness assistant!\n\n" +
+            "I look up Ayurvedic guidance from our knowledge base. Just tell me any symptom (like *headache*, *stress*, *fatigue*) and I'll show you:\n" +
+            "- Which dosha is involved\n- Herbal remedies\n- Diet recommendations\n- Yoga practices\n- Lifestyle tips\n\n" +
+            "Everything I share comes from our verified Ayurvedic database. How can I help? 😊"
+        );
+        setIsTyping(false);
+    };
 
-        // Add new symptoms to collection
-        const newSymptoms = [...collectedSymptoms];
-        symptoms.forEach(s => {
-            if (!newSymptoms.find(cs => cs.id === s.id)) {
-                newSymptoms.push(s);
-            }
-        });
-        setCollectedSymptoms(newSymptoms);
+    const handleEmergency = async () => {
+        setIsTyping(true);
+        await simulateTyping(200, 400);
+        addMessage('assistant',
+            "🚨 **This sounds like a medical emergency.**\n\n" +
+            "Please **call your local emergency number immediately** (112 / 911 / 108).\n\n" +
+            "I'm an Ayurvedic wellness guide and cannot provide emergency medical help.\n\n" +
+            "**Helplines:**\n- **iCall:** 9152987821\n- **Vandrevala Foundation:** 1860-2662-345"
+        );
+        setIsTyping(false);
+    };
 
-        let response = '';
-        if (hasDistress) {
-            response = getRandomResponse(EMPATHY_RESPONSES);
-        }
+    const handleThanks = async () => {
+        setIsTyping(true);
+        await simulateTyping(200, 500);
+        addMessage('assistant', pick([
+            "You're welcome! 😊 Feel free to ask me anything else about your wellness!",
+            "Happy to help! 🙏 I'm here whenever you need guidance.",
+            "Glad I could help! 🌿 Take care of yourself!",
+            "You're welcome! 😊 Stay healthy and don't hesitate to come back anytime!"
+        ]));
+        setIsTyping(false);
+    };
 
-        // Acknowledge the symptoms and ask follow-up
-        const symptomNames = symptoms.map(s => s.name.toLowerCase()).join(', ');
-        response += `I notice you mentioned ${symptomNames}. `;
+    const handleGoodbye = async () => {
+        setIsTyping(true);
+        await simulateTyping(200, 500);
+        addMessage('assistant', pick([
+            "Goodbye! 🙏 Take care and stay well. Come back anytime!",
+            "Bye! 🌿 Wishing you health and balance. See you next time! 😊",
+            "Take care! 🙏 Remember, small daily habits make a big difference. Namaste!"
+        ]));
+        setIsTyping(false);
+    };
 
-        if (newSymptoms.length < 3) {
-            response += `To give you a more complete picture, could you share if you're experiencing any other symptoms? For example:\n\n`;
-            response += `- Sleep quality (difficulty sleeping, oversleeping)\n`;
-            response += `- Digestion (bloating, acidity, irregular appetite)\n`;
-            response += `- Energy levels (fatigue, restlessness)\n`;
-            response += `- Skin or hair concerns\n\n`;
-            response += `Or if you'd like, I can analyze what we have so far and suggest a Prakriti questionnaire for a more comprehensive assessment.`;
+    // ========== KB SEARCH — THE MAIN HANDLER ==========
+    // This handles ALL symptom/health queries by searching Supabase directly
+    const handleKBSearch = async (message) => {
+        setIsTyping(true);
+        await simulateTyping(500, 900);
+
+        console.log('[Chat] handleKBSearch called — querying Supabase for:', message);
+        const kbResult = await searchKnowledgeBase(message);
+        console.log('[Chat] Supabase KB returned:', kbResult.results.length, 'results, confidence:', kbResult.confidence, 'source:', kbResult.source);
+
+        if (kbResult.results.length > 0 && kbResult.confidence >= 0.3) {
+            // Found data from Supabase!
+            console.log('[Chat] Showing Supabase results for:', message);
+            const formatted = formatKBResponse(kbResult.results, message);
+            const intros = [
+                "Great question! Here's what our Ayurvedic knowledge base says:\n\n",
+                "I looked that up for you! Here's what I found:\n\n",
+                "Here's some Ayurvedic guidance from our knowledge base:\n\n",
+                "I found some helpful information for you! 😊\n\n"
+            ];
+            const intro = intros[Math.floor(Math.random() * intros.length)];
+            addMessage('assistant', `${intro}${formatted}`);
         } else {
-            // We have enough symptoms, offer analysis
-            const scores = calculateDoshaFromSymptoms(newSymptoms);
-            const dominant = getDominantDosha(scores);
-
-            response += `Based on the symptoms you've shared, there seems to be a ${dominant.primary || dominant.type} tendency.\n\n`;
-            response += `Would you like me to:\n`;
-            response += `1. **Provide immediate recommendations** based on these symptoms\n`;
-            response += `2. **Take the Prakriti questionnaire** for a comprehensive constitution analysis\n\n`;
-            response += `Just let me know, or type "analyze" for immediate guidance.`;
+            // No match in KB — friendly fallback
+            console.log('[Chat] No Supabase results for:', message);
+            addMessage('assistant',
+                "I could not find verified information for that symptom in the AyurWell knowledge base. 😊\n\n" +
+                "Try describing your concern with common symptom names like:\n" +
+                "- **headache**, **anxiety**, **stress**, **fatigue**\n" +
+                "- **insomnia**, **acidity**, **bloating**, **constipation**\n" +
+                "- **skin problems**, **hair loss**, **joint pain**, **back pain**\n" +
+                "- **depression**, **weight gain**, **congestion**, **nausea**\n\n" +
+                "Or ask about **diet**, **yoga**, **daily routine**, or **Prakriti assessment**!"
+            );
         }
 
-        addMessage('assistant', response);
         setIsTyping(false);
     };
 
-    // Handle Prakriti questionnaire request
+    // ========== PRAKRITI QUESTIONNAIRE ==========
     const startQuestionnaire = async () => {
-        setQuestionnaire({
-            active: true,
-            currentQuestion: 0,
-            answers: []
-        });
-
+        setQuestionnaire({ active: true, currentQuestion: 0, answers: [] });
         setIsTyping(true);
-        await simulateTyping(500, 800);
+        await simulateTyping(300, 600);
 
-        const question = prakritiQuestions[0];
-        let response = `Great! Let's discover your Prakriti (constitution). I'll ask you 15 questions about your natural tendencies.\n\n`;
-        response += `**Question 1 of 15:**\n${question.question}\n\n`;
-        question.options.forEach((opt, idx) => {
-            response += `${idx + 1}. ${opt.text}\n`;
-        });
-        response += `\nReply with the number of your choice (1, 2, or 3).`;
-
+        const q = prakritiQuestions[0];
+        let response = `Great! Let's discover your Prakriti 🌿\n\n**Question 1 of 15:**\n${q.question}\n\n`;
+        q.options.forEach((opt, i) => { response += `${i + 1}. ${opt.text}\n`; });
+        response += `\nReply with **1**, **2**, or **3**.`;
         addMessage('assistant', response);
         setIsTyping(false);
     };
 
-    // Handle questionnaire answer
     const handleQuestionnaireAnswer = async (answerIndex) => {
         const { currentQuestion, answers } = questionnaire;
         const newAnswers = [...answers, {
@@ -175,257 +253,156 @@ export function ChatProvider({ children }) {
         }];
 
         if (currentQuestion + 1 >= prakritiQuestions.length) {
-            // Questionnaire complete
             setQuestionnaire({ active: false, currentQuestion: 0, answers: [] });
-
             setIsTyping(true);
-            await simulateTyping(1000, 1500);
+            await simulateTyping(700, 1100);
 
-            const questionnaireScores = calculateDoshaFromQuestionnaire(newAnswers, prakritiQuestions);
-            let finalScores = questionnaireScores;
-
-            // Combine with symptom scores if available
-            if (collectedSymptoms.length > 0) {
-                const symptomScores = calculateDoshaFromSymptoms(collectedSymptoms);
-                finalScores = {
-                    vata: Math.round((symptomScores.vata * 0.4 + questionnaireScores.vata * 0.6) * 10) / 10,
-                    pitta: Math.round((symptomScores.pitta * 0.4 + questionnaireScores.pitta * 0.6) * 10) / 10,
-                    kapha: Math.round((symptomScores.kapha * 0.4 + questionnaireScores.kapha * 0.6) * 10) / 10
-                };
-            }
-
-            const report = generateReport(finalScores, collectedSymptoms.map(s => s.name));
+            const scores = calculateDoshaFromQuestionnaire(newAnswers, prakritiQuestions);
+            const report = generateReport(scores, []);
             setLastAnalysis(report);
-
-            // Save report
-            demoStorage.saveReport({
-                type: 'prakriti',
-                scores: finalScores,
-                symptoms: collectedSymptoms.map(s => s.name),
-                report
-            });
-            demoStorage.savePrakriti(finalScores);
-
-            const formattedReport = formatReportForChat(report);
-            addMessage('assistant', formattedReport);
+            demoStorage.saveReport({ type: 'prakriti', scores, report });
+            demoStorage.savePrakriti(scores);
+            addMessage('assistant', formatReportForChat(report));
             setIsTyping(false);
         } else {
-            // Next question
             const nextQ = currentQuestion + 1;
-            setQuestionnaire({
-                active: true,
-                currentQuestion: nextQ,
-                answers: newAnswers
-            });
-
+            setQuestionnaire({ active: true, currentQuestion: nextQ, answers: newAnswers });
             setIsTyping(true);
-            await simulateTyping(300, 600);
+            await simulateTyping(200, 400);
 
-            const question = prakritiQuestions[nextQ];
-            let response = `**Question ${nextQ + 1} of 15:**\n${question.question}\n\n`;
-            question.options.forEach((opt, idx) => {
-                response += `${idx + 1}. ${opt.text}\n`;
-            });
-
+            const q = prakritiQuestions[nextQ];
+            let response = `**Question ${nextQ + 1} of 15:**\n${q.question}\n\n`;
+            q.options.forEach((opt, i) => { response += `${i + 1}. ${opt.text}\n`; });
             addMessage('assistant', response);
             setIsTyping(false);
         }
     };
 
-    // Handle routine request
-    const handleRoutineRequest = async (dosha) => {
+    // ========== ROUTINE / DIET / YOGA ==========
+    const handleRoutine = async (text) => {
         setIsTyping(true);
         await simulateTyping();
+        const dosha = extractDosha(text) || 'vata';
+        const routine = routinesData[dosha];
+        const label = dosha.charAt(0).toUpperCase() + dosha.slice(1);
 
-        const targetDosha = dosha || lastAnalysis?.prakriti?.type?.toLowerCase().split('-')[0] || 'vata';
-        const routine = routinesData[targetDosha];
-
-        let response = `## 🌅 ${routine.name}\n\n`;
-        response += `**Morning Routine:**\n`;
-        response += `*Wake up: ${routine.morning.wakeUp}*\n\n`;
-        routine.morning.practices.forEach(p => {
-            response += `- ${p}\n`;
-        });
-        response += `\n**Afternoon:**\n`;
-        routine.afternoon.practices.forEach(p => {
-            response += `- ${p}\n`;
-        });
-        response += `\n**Evening:**\n`;
-        routine.evening.practices.forEach(p => {
-            response += `- ${p}\n`;
-        });
-        response += `\n---\n*Would you like diet recommendations or yoga practices for ${targetDosha.charAt(0).toUpperCase() + targetDosha.slice(1)} balance?*`;
-
-        addMessage('assistant', response);
+        let r = `Here's a daily routine for **${label}** balance 🌅\n\n`;
+        r += `**Morning** *(${routine.morning.wakeUp})*\n`;
+        routine.morning.practices.slice(0, 4).forEach(p => { r += `- ${p}\n`; });
+        r += `\n**Afternoon**\n`;
+        routine.afternoon.practices.slice(0, 3).forEach(p => { r += `- ${p}\n`; });
+        r += `\n**Evening**\n`;
+        routine.evening.practices.slice(0, 3).forEach(p => { r += `- ${p}\n`; });
+        r += `\nWant **diet** or **yoga** recommendations too? 😊`;
+        addMessage('assistant', r);
         setIsTyping(false);
     };
 
-    // Handle diet request
-    const handleDietRequest = async (dosha) => {
+    const handleDiet = async (text) => {
         setIsTyping(true);
         await simulateTyping();
+        const dosha = extractDosha(text) || 'vata';
+        const diet = dietData[dosha];
+        const label = dosha.charAt(0).toUpperCase() + dosha.slice(1);
 
-        const targetDosha = dosha || lastAnalysis?.prakriti?.type?.toLowerCase().split('-')[0] || 'vata';
-        const diet = dietData[targetDosha];
-
-        let response = `## 🍽️ ${diet.name}\n\n`;
-        response += `**Qualities to favor:** ${diet.qualities}\n\n`;
-        response += `**Foods to Include:**\n`;
-        diet.favor.slice(0, 6).forEach(f => {
-            response += `- ${f}\n`;
-        });
-        response += `\n**Foods to Limit:**\n`;
-        diet.avoid.slice(0, 5).forEach(f => {
-            response += `- ${f}\n`;
-        });
-        response += `\n**Meal Timing:**\n`;
-        response += `- Breakfast: ${diet.mealTiming.breakfast}\n`;
-        response += `- Lunch: ${diet.mealTiming.lunch}\n`;
-        response += `- Dinner: ${diet.mealTiming.dinner}\n`;
-        response += `\n---\n*Would you like routine or yoga recommendations for ${targetDosha.charAt(0).toUpperCase() + targetDosha.slice(1)} balance?*`;
-
-        addMessage('assistant', response);
+        let r = `Here's the **${label}** diet guide 🍽️\n\n`;
+        r += `**Qualities to favor:** ${diet.qualities}\n\n`;
+        r += `**Eat more:**\n`;
+        diet.favor.slice(0, 5).forEach(f => { r += `- ${f}\n`; });
+        r += `\n**Eat less:**\n`;
+        diet.avoid.slice(0, 4).forEach(f => { r += `- ${f}\n`; });
+        r += `\n**Meal timing:**\n- 🌅 ${diet.mealTiming.breakfast}\n- ☀️ ${diet.mealTiming.lunch}\n- 🌙 ${diet.mealTiming.dinner}\n`;
+        r += `\nNeed **yoga** or **routine** tips too? 😊`;
+        addMessage('assistant', r);
         setIsTyping(false);
     };
 
-    // Handle yoga request
-    const handleYogaRequest = async (dosha) => {
+    const handleYoga = async (text) => {
         setIsTyping(true);
         await simulateTyping();
+        const dosha = extractDosha(text) || 'vata';
+        const yoga = yogaData[dosha];
+        const label = dosha.charAt(0).toUpperCase() + dosha.slice(1);
 
-        const targetDosha = dosha || lastAnalysis?.prakriti?.type?.toLowerCase().split('-')[0] || 'vata';
-        const yoga = yogaData[targetDosha];
-
-        let response = `## 🧘 ${yoga.name}\n\n`;
-        response += `**Focus:** ${yoga.focus}\n\n`;
-        response += `**Recommended Poses:**\n`;
-        yoga.poses.slice(0, 5).forEach(pose => {
-            response += `- **${pose.name}**: ${pose.benefit}\n`;
-        });
-        response += `\n**Pranayama (Breathing):**\n`;
-        yoga.pranayama.forEach(p => {
-            response += `- **${p.name}**: ${p.benefit}\n`;
-        });
-        response += `\n**Practice Guidelines:**\n`;
-        yoga.guidelines.slice(0, 3).forEach(g => {
-            response += `- ${g}\n`;
-        });
-        response += `\n---\n*Remember to practice mindfully and listen to your body.*`;
-
-        addMessage('assistant', response);
+        let r = `Here's yoga for **${label}** balance 🧘\n\n`;
+        r += `**Focus:** ${yoga.focus}\n\n**Poses:**\n`;
+        yoga.poses.slice(0, 4).forEach(p => { r += `- **${p.name}** — ${p.benefit}\n`; });
+        r += `\n**Pranayama:**\n`;
+        yoga.pranayama.forEach(p => { r += `- **${p.name}** — ${p.benefit}\n`; });
+        r += `\n*Listen to your body and practice mindfully* 🙏`;
+        addMessage('assistant', r);
         setIsTyping(false);
     };
 
-    // Handle general/unknown input
-    const handleGeneral = async (message) => {
-        setIsTyping(true);
-        await simulateTyping();
+    // ========== FEEDBACK ==========
+    const submitFeedback = useCallback((messageId, rating) => {
+        setFeedbackState(prev => ({ ...prev, [messageId]: rating }));
+        try {
+            const existing = JSON.parse(localStorage.getItem('ayurveda_feedback') || '[]');
+            existing.push({ messageId, rating, timestamp: new Date().toISOString() });
+            localStorage.setItem('ayurveda_feedback', JSON.stringify(existing));
+        } catch (e) { /* ignore */ }
+    }, []);
 
-        // Check for "analyze" keyword
-        if (message.toLowerCase().includes('analyze') && collectedSymptoms.length > 0) {
-            const scores = calculateDoshaFromSymptoms(collectedSymptoms);
-            const report = generateReport(scores, collectedSymptoms.map(s => s.name));
-            setLastAnalysis(report);
-
-            demoStorage.saveReport({
-                type: 'symptom-analysis',
-                scores,
-                symptoms: collectedSymptoms.map(s => s.name),
-                report
-            });
-
-            addMessage('assistant', formatReportForChat(report));
-            setIsTyping(false);
-            return;
-        }
-
-        // Generic helpful response
-        let response = "I'd love to help you with your Ayurvedic wellness journey! Here are some ways I can assist:\n\n";
-        response += "🔍 **Prakriti Analysis** - Say \"Analyze my Prakriti\" to discover your constitution\n\n";
-        response += "💭 **Share Symptoms** - Tell me how you're feeling (e.g., \"I feel tired and anxious\")\n\n";
-        response += "🌅 **Daily Routine** - Ask for a routine for any dosha (e.g., \"Vata daily routine\")\n\n";
-        response += "🍽️ **Diet Guidance** - Ask about diet (e.g., \"Diet for Pitta balance\")\n\n";
-        response += "🧘 **Yoga & Pranayama** - Get yoga recommendations (e.g., \"Yoga for Kapha\")\n\n";
-        response += "What would you like to explore?";
-
-        addMessage('assistant', response);
-        setIsTyping(false);
-    };
-
-    // Main message handler
+    // ========== MAIN MESSAGE HANDLER ==========
     const sendMessage = useCallback(async (text) => {
         if (!text.trim()) return;
-
-        // Add user message
         addMessage('user', text);
 
-        // Check if in questionnaire mode
+        // Questionnaire mode
         if (questionnaire.active) {
             const num = parseInt(text.trim());
             if (num >= 1 && num <= 3) {
                 await handleQuestionnaireAnswer(num - 1);
-                return;
             } else {
                 setIsTyping(true);
-                await simulateTyping(300, 500);
-                addMessage('assistant', "Please reply with 1, 2, or 3 to choose your answer.");
+                await simulateTyping(200, 400);
+                addMessage('assistant', "Please reply with **1**, **2**, or **3**. 😊");
                 setIsTyping(false);
-                return;
             }
+            return;
         }
 
-        // Detect intent
-        const { intent, data } = detectIntent(text);
+        // Simple intent detection
+        const intent = detectSimpleIntent(text);
+        console.log('[Chat] Intent:', intent, 'for:', text);
 
         switch (intent) {
-            case 'greeting':
-                await handleGreeting();
-                break;
-            case 'prakriti':
-                await startQuestionnaire();
-                break;
-            case 'symptoms':
-                await handleSymptoms(data.symptoms, data.hasDistress);
-                break;
-            case 'routine':
-                await handleRoutineRequest(data?.dosha);
-                break;
-            case 'diet':
-                await handleDietRequest(data?.dosha);
-                break;
-            case 'yoga':
-                await handleYogaRequest(data?.dosha);
-                break;
+            case 'greeting': await handleGreeting(); break;
+            case 'identity': await handleIdentity(); break;
+            case 'emergency': await handleEmergency(); break;
+            case 'thanks': await handleThanks(); break;
+            case 'goodbye': await handleGoodbye(); break;
+            case 'prakriti': await startQuestionnaire(); break;
+            case 'routine': await handleRoutine(text); break;
+            case 'diet': await handleDiet(text); break;
+            case 'yoga': await handleYoga(text); break;
+            case 'search_kb':
             default:
-                await handleGeneral(text);
+                // THIS IS THE KEY: all symptom/health/general queries go to KB
+                await handleKBSearch(text);
+                break;
         }
-    }, [questionnaire, collectedSymptoms, lastAnalysis]);
+    }, [questionnaire]);
 
-    // Clear chat history
+    // Clear chat
     const clearChat = useCallback(() => {
         setMessages([{
             id: Date.now(),
             role: 'assistant',
-            content: "Chat cleared. How can I help you with your Ayurvedic wellness today?",
+            content: "Chat cleared! 🌿 How can I help you today?",
             timestamp: new Date().toISOString()
         }]);
-        setCollectedSymptoms([]);
         setQuestionnaire({ active: false, currentQuestion: 0, answers: [] });
         demoStorage.clearChatHistory();
     }, []);
 
-    const value = {
-        messages,
-        isTyping,
-        sendMessage,
-        clearChat,
-        questionnaire,
-        startQuestionnaire,
-        lastAnalysis
-    };
-
     return (
-        <ChatContext.Provider value={value}>
+        <ChatContext.Provider value={{
+            messages, isTyping, sendMessage, clearChat,
+            questionnaire, startQuestionnaire, lastAnalysis,
+            feedbackState, submitFeedback
+        }}>
             {children}
         </ChatContext.Provider>
     );
@@ -433,9 +410,7 @@ export function ChatProvider({ children }) {
 
 export function useChat() {
     const context = useContext(ChatContext);
-    if (!context) {
-        throw new Error('useChat must be used within a ChatProvider');
-    }
+    if (!context) throw new Error('useChat must be used within a ChatProvider');
     return context;
 }
 

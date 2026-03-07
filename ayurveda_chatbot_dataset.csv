@@ -1,0 +1,207 @@
+symptom,dosha,description,herbal_remedy,diet_recommendation,yoga_recommendation,lifestyle_advice
+anxiety,vata,Excessive worry and nervousness due to vata imbalance,ashwagandha,warm cooked foods with ghee and sesame oil,nadi shodhana pranayama,maintain a consistent daily routine
+anxiety,vata,Restless mind and inability to relax,brahmi,warm milk with nutmeg before bed,child pose (balasana),practice oil massage (abhyanga) with sesame oil
+anxiety,vata,Fear and panic attacks from aggravated vata,jatamansi,avoid cold raw foods and caffeine,yoga nidra,go to bed by 10 PM every night
+anxiety,pitta,Anxiety driven by perfectionism and anger,brahmi,cooling foods like cucumber and coconut water,sheetali pranayama,avoid overworking and competitive environments
+anxiety,pitta,Intense worry with irritability and frustration,shatavari,sweet juicy fruits and leafy greens,moon salutation (chandra namaskar),spend time near water or in moonlight
+anxiety,kapha,Anxiety with emotional heaviness and attachment,tulsi,light warm spiced foods,kapalabhati pranayama,engage in vigorous morning exercise
+anxiety,kapha,Worry accompanied by lethargy and withdrawal,guggulu,reduce dairy and heavy sweets,sun salutation (surya namaskar),wake before sunrise and stay active
+insomnia,vata,Difficulty falling asleep due to racing thoughts,ashwagandha,warm milk with cardamom and nutmeg,legs up the wall pose (viparita karani),oil massage on feet before bed with sesame oil
+insomnia,vata,Light interrupted sleep with vivid dreams,tagara,avoid stimulants after 2 PM,yoga nidra,establish a calming bedtime ritual
+insomnia,vata,Waking up frequently during the night,jatamansi,warm soupy dinner before 7 PM,savasana with guided relaxation,keep bedroom warm and avoid screens before bed
+insomnia,pitta,Inability to sleep due to mental overactivity,brahmi,cooling herbal tea with chamomile,sheetali pranayama before bed,sleep in a cool dark room
+insomnia,pitta,Waking up between 2-4 AM with heat,shatavari,avoid spicy and fermented foods at dinner,forward fold (uttanasana),apply coconut oil to the scalp before bed
+insomnia,kapha,Excessive sleep but still feeling unrested,tulsi,light dinner with ginger tea,bhastrika pranayama,exercise in the evening to improve sleep quality
+insomnia,kapha,Difficulty waking up and heavy morning feeling,trikatu,avoid heavy meals after sunset,standing forward bend,set a consistent wake time before 6 AM
+acidity,pitta,Burning sensation in stomach and chest,shatavari,cooling foods like coconut and coriander,sheetali pranayama,avoid eating when angry or stressed
+acidity,pitta,Acid reflux with sour taste in mouth,amla,drink aloe vera juice on empty stomach,seated forward bend (paschimottanasana),eat meals at regular times
+acidity,pitta,Heartburn after meals with nausea,licorice,avoid citrus tomatoes and vinegar,restorative fish pose,chew fennel seeds after meals
+acidity,pitta,Gastritis with sharp abdominal pain,avipattikar churna,bland cooling diet with rice and moong dal,supine twist (supta matsyendrasana),never skip meals or overeat
+acidity,vata,Irregular acidity with bloating and gas,hingvastak churna,warm easily digestible foods with cumin,wind relieving pose (pawanmuktasana),eat in a calm relaxed environment
+acidity,kapha,Slow digestion with mild acid and mucus,trikatu,avoid heavy oily foods and dairy,bow pose (dhanurasana),walk for 15 minutes after meals
+digestive_problems,vata,Irregular appetite and variable digestion,hingvastak churna,warm cooked foods with digestive spices,wind relieving pose (pawanmuktasana),eat at regular times in a calm setting
+digestive_problems,vata,Bloating gas and abdominal distension,ajwain,avoid raw salads and cold beverages,seated spinal twist (ardha matsyendrasana),sip warm water throughout the day
+digestive_problems,vata,Constipation with hard dry stools,triphala,include ghee and warm fluids in diet,malasana (garland pose),drink warm water with lemon on waking
+digestive_problems,vata,Gurgling stomach with erratic bowel movements,ginger,small frequent warm meals with cumin and fennel,cat-cow pose (marjaryasana),establish consistent meal times
+digestive_problems,pitta,Hyperacidity and loose burning stools,kutki,cooling bland diet with coriander and fennel,cooling pranayama (sheetali),avoid spicy fried and fermented foods
+digestive_problems,pitta,Excessive hunger with quick digestion,amalaki,sweet bitter and astringent tastes,half spinal twist,eat at moderate pace without rushing
+digestive_problems,pitta,Diarrhea with burning sensation,bilva,pomegranate juice and rice water,supine butterfly pose,avoid alcohol and coffee
+digestive_problems,kapha,Sluggish digestion with heaviness after meals,trikatu,light warm meals with black pepper and ginger,boat pose (navasana),avoid snacking between meals
+digestive_problems,kapha,Loss of appetite with nausea,chitrak,fasting or light khichdi diet,agni sara kriya,eat largest meal at noon
+digestive_problems,kapha,Mucus in stool with slow metabolism,punarnava,reduce wheat dairy and sugar,twisted chair pose,drink warm ginger water before meals
+fatigue,vata,Chronic tiredness with restlessness,ashwagandha,warm nourishing foods with ghee and nuts,yoga nidra,get 7-8 hours of sleep every night
+fatigue,vata,Low energy with inability to concentrate,brahmi,dates almonds and warm milk,gentle sun salutation,practice daily oil massage with sesame oil
+fatigue,vata,Nervous exhaustion from overactivity,shatavari,sweet grounding foods like sweet potato,legs up the wall pose (viparita karani),take short rest breaks during the day
+fatigue,pitta,Burnout from overwork and intensity,shatavari,cooling sweet foods like coconut and melon,restorative bridge pose,take breaks from work and avoid midday sun
+fatigue,pitta,Mental exhaustion with irritability,brahmi,fresh fruit juices and herbal teas,supported child pose,reduce screen time and competitive activities
+fatigue,pitta,Depleted energy from excessive heat,guduchi,bitter greens and cooling spices like fennel,savasana with cooling eye pillow,spend time in nature near water
+fatigue,kapha,Heavy fatigue with oversleeping,guggulu,light warm spiced foods with honey,kapalabhati pranayama,exercise vigorously every morning
+fatigue,kapha,Daytime drowsiness and lack of motivation,punarnava,avoid heavy meals especially breakfast,sun salutation at pace,wake before 6 AM and avoid daytime naps
+fatigue,kapha,Sluggish energy with weight gain,shilajit,reduce carbs and increase bitter vegetables,warrior pose sequence,take cold showers in the morning
+headache,vata,Throbbing headache at back of head,ashwagandha,warm soups and cooked vegetables,nadi shodhana pranayama,apply sesame oil to temples and scalp
+headache,vata,Tension headache from stress and dryness,brahmi,ghee-based foods and warm fluids,neck rolls and shoulder stretches,stay hydrated with warm water
+headache,vata,Migraine with sensitivity to light and sound,jatamansi,avoid fasting and cold foods,yoga nidra in dark room,maintain regular sleep schedule
+headache,pitta,Sharp burning headache above eyes,shatavari,cooling foods like cucumber melon and mint,sheetali pranayama,avoid direct sun exposure and overheating
+headache,pitta,Headache with visual disturbances,amla,drink coconut water and coriander tea,forward fold with cooling breath,apply sandalwood paste to forehead
+headache,pitta,Headache triggered by anger or spicy food,guduchi,bland cooling diet avoiding fermented foods,supported headstand alternative,practice patience and anger management
+headache,kapha,Dull heavy headache with sinus pressure,trikatu,light warm food with black pepper and ginger,kapalabhati pranayama,use steam inhalation with eucalyptus
+headache,kapha,Morning headache with congestion,tulsi,avoid dairy and heavy breakfast,bhastrika pranayama,use neti pot for nasal cleansing
+skin_problems,vata,Dry rough cracked skin,shatavari,ghee sesame oil and moisturizing foods,gentle forward bends,apply sesame oil to body daily
+skin_problems,vata,Premature wrinkles and skin flaking,ashwagandha,warm milk with turmeric and ghee,child pose with deep breathing,stay hydrated and avoid cold dry wind
+skin_problems,vata,Discoloration and uneven skin tone,kumkumadi tailam,carrots sweet potatoes and beets,sun salutation at slow pace,moisturize immediately after bathing
+skin_problems,pitta,Rashes redness and inflammatory acne,neem,cooling foods like cucumber aloe and coconut,moon salutation (chandra namaskar),avoid midday sun and use natural sunscreen
+skin_problems,pitta,Burning itchy skin with hives,manjistha,bitter greens and turmeric milk,sheetali pranayama,wear loose cotton clothing
+skin_problems,pitta,Eczema and psoriasis flare-ups,khadira,avoid spicy sour and fermented foods,supported fish pose,apply coconut oil or aloe vera gel to skin
+skin_problems,kapha,Oily clogged skin with cystic acne,neem,light dry foods with turmeric and bitter melon,kapalabhati pranayama,exfoliate with gram flour (besan) paste
+skin_problems,kapha,Fungal infections and excess moisture,turmeric,avoid dairy sugar and fried foods,sun salutation vigorous pace,keep skin dry and clean
+skin_problems,kapha,Dull lifeless complexion,triphala,increase leafy greens and citrus fruits,vigorous backbends,dry brush skin before bathing
+stress,vata,Overwhelm and inability to cope,ashwagandha,warm comforting foods with ghee,nadi shodhana pranayama,follow a strict daily routine
+stress,vata,Racing thoughts and difficulty grounding,brahmi,root vegetables and warm grains,tree pose (vrksasana),practice grounding meditation daily
+stress,vata,Nervous tension in shoulders and jaw,jatamansi,warm herbal teas with chamomile,neck and shoulder stretches,get regular oil massage (abhyanga)
+stress,pitta,Intense pressure with anger outbursts,shatavari,cooling foods and sweet fruits,sheetali pranayama,spend time in nature away from work
+stress,pitta,Workaholic tendency with burnout risk,brahmi,reduce coffee and switch to herbal tea,restorative yoga sequence,set firm work boundaries
+stress,pitta,Competitive stress with perfectionism,guduchi,coconut water and cooling herb infusions,moon salutation,practice gratitude and self-compassion
+stress,kapha,Emotional stress with comfort eating,tulsi,light warm meals avoid emotional eating,vigorous sun salutation,exercise daily and socialize
+stress,kapha,Apathetic response to stress with withdrawal,guggulu,stimulating spices like ginger and cinnamon,kapalabhati pranayama,create a structured activity schedule
+joint_pain,vata,Crackling stiff joints especially in cold weather,ashwagandha,warm soups with turmeric and ginger,gentle joint rotations,apply warm sesame oil to joints daily
+joint_pain,vata,Wandering joint pain that changes location,guggulu,ghee and omega-3 rich foods like walnuts,gentle warrior pose,avoid cold damp environments
+joint_pain,vata,Osteoarthritis with dryness and degeneration,bala,milk decoctions with shatavari and ashwagandha,supported tree pose,take warm baths with epsom salt
+joint_pain,pitta,Hot inflamed swollen joints,guduchi,cooling anti-inflammatory foods with turmeric,gentle forward folds,apply cooling castor oil paste to joints
+joint_pain,pitta,Rheumatoid arthritis with burning,manjistha,bitter gourd and neem leaves,seated gentle twists,avoid overexertion and heat exposure
+joint_pain,kapha,Heavy swollen joints with stiffness,guggulu,light dry food with fenugreek and turmeric,sun salutation modified,exercise daily to maintain joint mobility
+joint_pain,kapha,Joint pain with water retention,punarnava,reduce salt dairy and heavy foods,warrior sequence,use dry heat therapy on joints
+weight_gain,kapha,Unexplained weight gain with slow metabolism,guggulu,light warm food with bitter and pungent tastes,vigorous sun salutation,exercise for 45 minutes every morning
+weight_gain,kapha,Emotional eating and sugar cravings,triphala,replace sweets with honey and fruit,kapalabhati pranayama,find non-food emotional outlets
+weight_gain,kapha,Water retention and puffiness,punarnava,reduce salt and increase barley and millet,boat pose (navasana),avoid daytime sleeping
+weight_gain,kapha,Stubborn belly fat with lethargy,trikatu,eat largest meal at noon with digestive spices,twisted chair pose,walk briskly for 30 minutes after dinner
+weight_gain,pitta,Stress-related weight gain around midsection,shatavari,moderate portions of balanced meals,cooling yoga flow,manage stress and avoid late-night eating
+weight_loss,vata,Unexplained weight loss with anxiety,ashwagandha,calorie-dense nourishing foods with ghee,restorative yoga,rest adequately and reduce excessive activity
+weight_loss,vata,Inability to gain weight despite eating,shatavari,warm milk with dates and almonds,yoga nidra,eat in calm pleasant environment
+weight_loss,pitta,Rapid weight loss with high metabolism,shatavari,sweet nourishing foods like rice and ghee,gentle seated poses,avoid intense exercise and fasting
+hair_loss,vata,Dry brittle hair with split ends,bhringaraj,sesame oil and iron-rich foods like spinach,headstand preparation (downward dog),apply bhringaraj oil to scalp weekly
+hair_loss,vata,Hair thinning from stress and poor nutrition,ashwagandha,protein-rich foods and warm milk with turmeric,inversions for scalp circulation,reduce stress and maintain sleep schedule
+hair_loss,pitta,Premature graying and hair fall from heat,amla,cooling foods and amla juice daily,sheetali pranayama,avoid chemical hair products and excessive heat
+hair_loss,pitta,Receding hairline with oily scalp,bhringaraj,bitter greens and coconut water,forward fold (uttanasana),apply coconut oil infused with brahmi to scalp
+hair_loss,kapha,Oily heavy hair with dandruff,neem,light diet with bitter and astringent foods,kapalabhati pranayama,wash hair regularly with shikakai
+congestion,kapha,Chronic nasal congestion and sinusitis,tulsi,warm light foods with black pepper and ginger,kapalabhati pranayama,use neti pot with warm saline water daily
+congestion,kapha,Excess mucus production and post-nasal drip,trikatu,avoid dairy cold food and sweets,bhastrika pranayama,inhale steam with turmeric and eucalyptus
+congestion,kapha,Sinus headache with facial pressure,vasambu,honey with ginger juice on empty stomach,lion pose (simhasana),sleep with head elevated
+congestion,vata,Dry nasal passages with occasional blockage,sesame oil nasya,warm fluids and ghee in diet,nadi shodhana pranayama,apply nasya oil (sesame) to nostrils daily
+congestion,pitta,Sinus inflammation with yellow discharge,turmeric,cooling anti-inflammatory foods,sheetali pranayama followed by gentle bhramari,avoid dust smoke and pollutants
+cold_sensitivity,vata,Always feeling cold especially extremities,ginger,warm cooked food with cinnamon and cardamom,sun salutation at moderate pace,wear warm clothing and avoid cold wind
+cold_sensitivity,vata,Poor circulation to hands and feet,pippali,warm spiced milk and ghee,warrior poses for circulation,take warm baths and use heating pad
+cold_sensitivity,kapha,Cold and clammy skin with sluggishness,trikatu,hot ginger tea and pungent spices,vigorous vinyasa flow,exercise to generate internal heat
+excessive_sweating,pitta,Profuse sweating especially in heat,shatavari,cooling foods like coconut water and mint,sheetali pranayama,wear light cotton clothing
+excessive_sweating,pitta,Night sweats with body heat,chandanasadi,sandalwood paste water and cooling herbs,restorative supine poses,sleep in a well-ventilated cool room
+excessive_sweating,pitta,Strong body odor from excessive heat,neem,chlorophyll-rich foods and coriander water,moon salutation,bathe twice daily with neem water
+irritability,pitta,Short temper and anger outbursts,brahmi,sweet cooling foods and rose petal jam,sheetali pranayama,practice patience through meditation
+irritability,pitta,Frustration with critical judgmental attitude,shatavari,reduce caffeine and spicy food,moon salutation,spend time in cooling nature
+irritability,pitta,Impatience and aggressive communication,guduchi,cool herbal tea with rose and fennel,bhramari pranayama (humming bee),practice compassion meditation
+irritability,vata,Mood swings with nervous irritability,ashwagandha,warm grounding foods,alternate nostril breathing,establish calming evening routine
+depression,kapha,Persistent sadness and emotional heaviness,brahmi,light warm spiced foods,vigorous sun salutation,exercise every morning and socialize
+depression,kapha,Loss of interest and motivation,tulsi,avoid heavy comfort foods,kapalabhati pranayama,create daily goals and maintain structure
+depression,kapha,Social withdrawal and excessive sleeping,guggulu,stimulating foods with ginger and black pepper,backbends like cobra pose,seek sunlight exposure daily
+depression,vata,Hopelessness with anxiety and restlessness,ashwagandha,nourishing warm meals with ghee,yoga nidra,follow a stabilizing daily routine
+depression,pitta,Depression with self-criticism and anger,shatavari,sweet cooling foods and herbal teas,restorative yoga,practice self-compassion and journaling
+memory_problems,vata,Forgetfulness and scattered thinking,brahmi,ghee and brain-nourishing foods like almonds,nadi shodhana pranayama,practice meditation for 15 minutes daily
+memory_problems,vata,Poor concentration and mental fog,shankhpushpi,warm milk with brahmi powder,trataka (candle gazing),get adequate sleep and reduce multitasking
+memory_problems,kapha,Slow learning and mental dullness,bacopa,light stimulating diet with spices,kapalabhati pranayama,engage in mentally stimulating activities
+memory_problems,pitta,Mental burnout affecting recall,gotu kola,cooling brain foods like coconut and walnuts,sheetali pranayama,take regular work breaks
+low_immunity,vata,Frequent colds and infections,ashwagandha,warm nourishing soups and kitchari,gentle pranayama,get consistent rest and avoid overexertion
+low_immunity,pitta,Autoimmune tendency with inflammation,guduchi,cooling immune foods like amla and turmeric,restorative poses,reduce stress and avoid overheating
+low_immunity,kapha,Recurring respiratory infections,tulsi,honey with ginger and black pepper,kapalabhati pranayama,exercise daily and avoid cold dampness
+low_immunity,vata,Weak resistance to seasonal changes,chyawanprash,warm milk with turmeric and honey,sun salutation gentle pace,dress warmly and follow seasonal routines
+menstrual_problems,vata,Irregular periods with cramping pain,ashoka,warm sesame-rich foods and ghee,gentle hip openers,apply warm castor oil pack on abdomen
+menstrual_problems,vata,Scanty painful periods with anxiety,shatavari,warm spiced milk and nourishing grains,supported reclined butterfly,rest during menstruation
+menstrual_problems,pitta,Heavy periods with clots and irritability,shatavari,cooling foods avoiding spice and fermented items,sheetali pranayama,avoid intense exercise during periods
+menstrual_problems,pitta,PMS with acne and bloating,manjistha,aloe vera juice and cooling herbs,moon salutation gentle,keep emotional environment calm
+menstrual_problems,kapha,Heavy prolonged periods with lethargy,ashoka,light warm diet with ginger and cinnamon,gentle flow yoga,exercise regularly between periods
+eye_problems,pitta,Eye strain with burning and redness,triphala,cooling foods and carrot juice,palming exercise and trataka,wash eyes with rose water daily
+eye_problems,pitta,Sensitivity to light and dry eyes,amla,green leafy vegetables and ghee,eye rotation exercises,reduce screen time take 20-20-20 breaks
+eye_problems,vata,Dry itchy eyes with twitching,triphala ghrit,ghee in diet and warm compresses,gentle eye exercises,apply ghee to eyelids before sleep
+bloating,vata,Abdominal distension with gas and discomfort,hingvastak churna,warm soups with cumin and coriander,wind relieving pose,chew food thoroughly and eat slowly
+bloating,vata,Post-meal bloating with burping,ajwain,avoid beans and raw cruciferous vegetables,seated spinal twist,sip warm cumin water after meals
+bloating,pitta,Bloating with acid and burning,avipattikar churna,cooling digestive foods with fennel,seated forward bend,avoid eating when stressed
+bloating,kapha,Heavy bloating with water retention,trikatu,light dry foods with digestive spices,boat pose,reduce salt and carbohydrate intake
+constipation,vata,Hard dry stool with straining,triphala,warm fluids ghee and fiber-rich foods,wind relieving pose,drink warm water on waking
+constipation,vata,Irregular bowel movements,isabgol with warm water,stewed fruits and cooked vegetables,malasana (garland pose),establish regular bathroom routine
+constipation,pitta,Burning sensation with dry hard stool,amla,cooling laxative foods like prunes and figs,seated forward fold,drink aloe vera juice daily
+constipation,kapha,Sluggish bowels with mucus,triphala with honey,light diet with lots of vegetables,nauli kriya,exercise vigorously every morning
+muscle_cramps,vata,Painful muscle spasms especially at night,ashwagandha,magnesium-rich foods and warm milk,gentle stretching routine,warm oil massage on affected area
+muscle_cramps,pitta,Muscle cramps with inflammation,shatavari,cooling mineral-rich foods,gentle yoga stretches,avoid over-exercising in heat
+muscle_cramps,vata,Restless legs and body twitching,bala,warm nourishing diet with ghee,legs up the wall pose,apply warm sesame oil before bed
+water_retention,kapha,Swelling in feet and ankles,punarnava,reduce salt and drink barley water,inversions and leg raises,elevate legs for 15 minutes daily
+water_retention,kapha,Puffiness in face and hands,gokshura,light diuretic foods like asparagus,sun salutation brisk pace,avoid sitting for long periods
+water_retention,pitta,Inflammatory swelling with heat,guduchi,cooling anti-inflammatory diet,gentle supported inversions,apply cooling compress to swollen areas
+bad_breath,pitta,Chronic halitosis from excess heat,triphala,cooling foods and coriander tea,sheetali pranayama,scrape tongue every morning with copper scraper
+bad_breath,kapha,Bad breath from sluggish digestion,trikatu,light meals with digestive spices,kapalabhati pranayama,oil pulling with sesame oil daily
+bad_breath,vata,Dry mouth causing odor,cardamom,hydrating foods and warm herbal teas,ujjayi pranayama,stay hydrated and chew fennel seeds
+throat_problems,vata,Dry scratchy throat with hoarseness,licorice,warm honey-ginger water,ujjayi pranayama,gargle with warm salt water daily
+throat_problems,pitta,Sore throat with burning,yashtimadhu,cold milk with turmeric,sheetali pranayama,avoid shouting and spicy food
+throat_problems,kapha,Throat congestion with mucus,tulsi,honey with ginger juice,lion pose (simhasana),gargle with turmeric water
+back_pain,vata,Lower back pain with stiffness,ashwagandha,warm anti-inflammatory foods with turmeric,cat-cow pose (marjaryasana),apply warm sesame oil to lower back
+back_pain,vata,Sciatica with radiating nerve pain,guggulu,warm nourishing diet with ghee,gentle supine twist,avoid sitting for long periods
+back_pain,pitta,Inflammatory back pain with swelling,guduchi,cooling anti-inflammatory foods,supported bridge pose,apply cooling castor oil to affected area
+back_pain,kapha,Heavy dull aching back pain,trikatu,light warm food reducing heaviness,cobra pose (bhujangasana),exercise daily and maintain healthy weight
+high_blood_pressure,pitta,Hypertension from stress and anger,arjuna,low-sodium cooling foods with garlic,sheetali pranayama,practice meditation and anger management
+high_blood_pressure,pitta,Elevated BP with headache and flushing,sarpagandha,reduce caffeine alcohol and salt,savasana with breath awareness,follow a calm stress-free lifestyle
+high_blood_pressure,kapha,BP elevated from weight and inactivity,arjuna,light low-salt diet with plenty of vegetables,brisk sun salutation,exercise 30 minutes daily
+diabetes_support,kapha,Elevated blood sugar with sluggish metabolism,gudmar,bitter gourd fenugreek and barley,sun salutation daily,maintain healthy weight through exercise
+diabetes_support,kapha,Sugar cravings with weight gain,turmeric,reduce refined carbs increase fiber,kapalabhati pranayama,walk for 30 minutes after every meal
+diabetes_support,pitta,Blood sugar fluctuations with irritability,amla,balanced meals with bitter and astringent tastes,gentle yoga flow,eat meals at consistent times daily
+respiratory_problems,kapha,Asthma with wheezing and mucus,vasaka,light warm diet avoiding dairy and cold foods,bhastrika pranayama,use steam inhalation with eucalyptus
+respiratory_problems,kapha,Chronic bronchitis with cough,tulsi,honey ginger tea and warm spiced food,kapalabhati pranayama,avoid cold damp environments
+respiratory_problems,vata,Dry cough with breathlessness,licorice,warm fluids and ghee-based foods,nadi shodhana pranayama,keep chest warm and hydrated
+respiratory_problems,pitta,Allergic respiratory issues with inflammation,turmeric,cooling anti-allergenic foods,sheetali pranayama,avoid allergens and air pollution
+urinary_problems,pitta,Burning painful urination,gokshura,cooling drinks like coconut water and coriander,seated forward bend,drink plenty of water throughout the day
+urinary_problems,kapha,Frequent cloudy urination,punarnava,light dry diet with cranberry,vigorous flow yoga,avoid excessive fluid intake at night
+urinary_problems,vata,Scanty or difficult urination,gokshura,warm fluids and soothing herbal teas,hip opening poses,stay hydrated with warm water
+liver_problems,pitta,Liver congestion with skin issues,kutki,bitter greens and turmeric water,seated twist (ardha matsyendrasana),avoid alcohol and processed food
+liver_problems,pitta,Fatty liver with sluggish bile flow,bhumyamalaki,light diet with bitter gourd and dandelion,gentle twisting poses,eat dinner before 7 PM
+liver_problems,kapha,Sluggish liver with weight gain,punarnava,reduce fatty foods increase bitter vegetables,twisted chair pose,fast once a week with herbal teas
+anger,pitta,Explosive anger with aggressive behavior,brahmi,cooling sweet foods and rose water,sheetali pranayama,count to 10 before reacting
+anger,pitta,Simmering resentment and criticism,shatavari,fresh coconut water and cooling herbs,bhramari pranayama,practice forgiveness meditation daily
+anger,pitta,Frustration with impatience,guduchi,avoid caffeine and switch to cooling teas,moon salutation gentle pace,walk in nature when feeling angry
+dental_problems,vata,Receding gums with sensitivity,triphala,calcium-rich warm foods,ujjayi pranayama,oil pull with sesame oil daily
+dental_problems,pitta,Bleeding gums with inflammation,neem,cooling vitamin C rich foods,sheetali pranayama,rinse mouth with neem water
+dental_problems,kapha,Excess saliva with gum swelling,clove,reduce sugar and sticky foods,kapalabhati pranayama,use neem twig for brushing
+fever,pitta,High fever with burning sensation,guduchi,light cooling liquids like rice water,complete rest with gentle breathing,sponge with cool water on forehead
+fever,vata,Low grade fever with chills and body ache,tulsi,warm ginger-tulsi tea with honey,complete rest,stay warm and get plenty of sleep
+fever,kapha,Fever with congestion and heaviness,tulsi with pippali,warm light soup with ginger and pepper,rest with gentle neck rotation,steam inhalation and light fasting
+nausea,pitta,Nausea from excess heat and acidity,shatavari,small sips of coconut water with mint,gentle seated breathing,rest in cool environment
+nausea,vata,Nausea from anxiety and air travel,ginger,small frequent warm meals with ginger,deep belly breathing,apply ginger essential oil to wrists
+nausea,kapha,Nausea from overeating and heaviness,trikatu,fast until hunger returns then eat light,gentle walking,avoid lying down immediately after eating
+dry_mouth,vata,Chronic dry mouth with thirst,shatavari,hydrating soupy foods with ghee,ujjayi pranayama,sip warm water frequently throughout day
+dry_mouth,pitta,Dry mouth with burning tongue,amla,cooling juicy fruits and aloe vera,sheetali pranayama,chew fennel or cardamom seeds
+body_odor,pitta,Strong body odor from excess heat,neem,chlorophyll-rich greens and coriander,sheetali pranayama,bathe with neem water twice daily
+body_odor,kapha,Musty body odor from toxin buildup,triphala,light detoxifying diet with turmeric,kapalabhati pranayama,dry brush skin and bathe with gram flour
+leg_cramps,vata,Night cramps in calves and feet,ashwagandha,magnesium-rich foods and warm milk,legs up wall pose,warm oil massage on legs before bed
+leg_cramps,pitta,Cramps with inflammation in muscles,shatavari,cooling mineral-rich bone broth,gentle calf stretches,apply cooling oil to legs
+dizziness,vata,Lightheadedness and vertigo,ashwagandha,grounding warm foods with iron,tree pose with support,move slowly and avoid sudden position changes
+dizziness,pitta,Dizziness with nausea and heat,shatavari,cooling hydrating foods,seated meditation,sit or lie down immediately when dizzy
+dizziness,kapha,Dizziness with heaviness and fog,vacha,light stimulating diet,gentle neck rotations,avoid sudden movements and stay active
+poor_appetite,vata,Variable appetite with no hunger signal,ginger,small warm appetizing meals with spices,gentle twists before meals,eat at consistent times daily
+poor_appetite,kapha,Complete loss of appetite with heaviness,trikatu,skip breakfast and eat light lunch,agni sara kriya,drink ginger tea 30 minutes before meals
+poor_appetite,pitta,Suppressed appetite from stress,amla,small portions of appealing foods,gentle walking before meals,eat in pleasant relaxed environment
+swelling,kapha,Generalized edema and puffiness,punarnava,low-salt diet with barley water,inversions and leg raises,elevate swollen areas and exercise
+swelling,pitta,Inflammatory swelling with redness,guduchi,cooling anti-inflammatory diet,supported bridge pose,apply cool compress to affected area
+swelling,vata,Swelling with pain in specific joints,guggulu,warm anti-inflammatory foods,gentle joint movement,warm compress and gentle massage
+teeth_grinding,vata,Bruxism from anxiety and stress,ashwagandha,calming warm foods before bed,yoga nidra before sleep,warm oil massage on jaw and temples
+teeth_grinding,pitta,Grinding from suppressed anger,brahmi,cooling dinner avoiding stimulants,bhramari pranayama,practice expressing emotions constructively
+hiccups,vata,Frequent hiccups from dry cold,ginger,warm honey water with cardamom,deep diaphragmatic breathing,sip warm water slowly
+hiccups,pitta,Hiccups from overeating spicy food,mint,cool water with sugar,gentle belly breathing,eat slowly and avoid very spicy foods
+tinnitus,vata,Ringing in ears from vata aggravation,ashwagandha,warm nourishing foods with ghee,nadi shodhana pranayama,apply warm sesame oil in ears at bedtime
+tinnitus,pitta,Buzzing with ear inflammation,shatavari,cooling foods and avoid loud noise,bhramari pranayama,reduce exposure to loud environments
+dark_circles,vata,Under-eye circles from poor sleep,ashwagandha,iron-rich foods and warm milk,legs up the wall pose,sleep 7-8 hours and apply almond oil
+dark_circles,pitta,Dark circles from liver heat,amla,cooling liver-supportive foods,gentle eye exercises,apply rose water soaked cotton pads
+dark_circles,kapha,Puffy dark circles from congestion,triphala,light diet reducing dairy and salt,kapalabhati pranayama,sleep with head slightly elevated
+earache,vata,Ear pain from cold wind and dryness,sesame oil drops,warm nourishing foods with ghee,nadi shodhana pranayama,apply warm sesame oil drops in ears
+earache,pitta,Ear infection with inflammation,neem oil,cooling anti-inflammatory foods,sheetali pranayama,avoid swimming and keep ears dry
+earache,kapha,Ear congestion with fluid buildup,tulsi,avoid dairy and cold foods,kapalabhati pranayama,use warm garlic oil drops in ears
+irregular_heartbeat,vata,Palpitations from anxiety and stress,arjuna,warm calming foods with ghee,nadi shodhana pranayama,practice deep breathing when palpitations occur
+irregular_heartbeat,pitta,Rapid heartbeat from anger,arjuna,cooling foods and pomegranate juice,sheetali pranayama,practice meditation and avoid stimulants
+numbness,vata,Tingling and numbness in extremities,ashwagandha,warm circulation-boosting foods with ginger,gentle hand and foot exercises,warm oil massage on affected limbs daily
+numbness,kapha,Numbness from poor circulation and heaviness,guggulu,light warming foods with black pepper,vigorous sun salutation,exercise daily to improve blood flow
+chest_tightness,vata,Chest constriction from anxiety,ashwagandha,warm soothing foods with ghee,gentle chest-opening poses,practice deep diaphragmatic breathing
+chest_tightness,kapha,Chest heaviness from congestion,tulsi,light warm diet with ginger and honey,bhastrika pranayama,do steam inhalation before bed
+night_sweats,pitta,Sweating during sleep from excess heat,shatavari,cooling foods and sandalwood water,sheetali pranayama before bed,sleep in cool well-ventilated room with cotton sheets

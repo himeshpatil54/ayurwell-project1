@@ -1,0 +1,1856 @@
+[
+  {
+    "symptom": "anxiety",
+    "dosha": "vata",
+    "description": "Excessive worry and nervousness due to vata imbalance",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm cooked foods with ghee and sesame oil",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "maintain a consistent daily routine"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "vata",
+    "description": "Restless mind and inability to relax",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "warm milk with nutmeg before bed",
+    "yoga_recommendation": "child pose (balasana)",
+    "lifestyle_advice": "practice oil massage (abhyanga) with sesame oil"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "vata",
+    "description": "Fear and panic attacks from aggravated vata",
+    "herbal_remedy": "jatamansi",
+    "diet_recommendation": "avoid cold raw foods and caffeine",
+    "yoga_recommendation": "yoga nidra",
+    "lifestyle_advice": "go to bed by 10 PM every night"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "pitta",
+    "description": "Anxiety driven by perfectionism and anger",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "cooling foods like cucumber and coconut water",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid overworking and competitive environments"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "pitta",
+    "description": "Intense worry with irritability and frustration",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "sweet juicy fruits and leafy greens",
+    "yoga_recommendation": "moon salutation (chandra namaskar)",
+    "lifestyle_advice": "spend time near water or in moonlight"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "kapha",
+    "description": "Anxiety with emotional heaviness and attachment",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "light warm spiced foods",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "engage in vigorous morning exercise"
+  },
+  {
+    "symptom": "anxiety",
+    "dosha": "kapha",
+    "description": "Worry accompanied by lethargy and withdrawal",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "reduce dairy and heavy sweets",
+    "yoga_recommendation": "sun salutation (surya namaskar)",
+    "lifestyle_advice": "wake before sunrise and stay active"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "vata",
+    "description": "Difficulty falling asleep due to racing thoughts",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm milk with cardamom and nutmeg",
+    "yoga_recommendation": "legs up the wall pose (viparita karani)",
+    "lifestyle_advice": "oil massage on feet before bed with sesame oil"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "vata",
+    "description": "Light interrupted sleep with vivid dreams",
+    "herbal_remedy": "tagara",
+    "diet_recommendation": "avoid stimulants after 2 PM",
+    "yoga_recommendation": "yoga nidra",
+    "lifestyle_advice": "establish a calming bedtime ritual"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "vata",
+    "description": "Waking up frequently during the night",
+    "herbal_remedy": "jatamansi",
+    "diet_recommendation": "warm soupy dinner before 7 PM",
+    "yoga_recommendation": "savasana with guided relaxation",
+    "lifestyle_advice": "keep bedroom warm and avoid screens before bed"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "pitta",
+    "description": "Inability to sleep due to mental overactivity",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "cooling herbal tea with chamomile",
+    "yoga_recommendation": "sheetali pranayama before bed",
+    "lifestyle_advice": "sleep in a cool dark room"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "pitta",
+    "description": "Waking up between 2-4 AM with heat",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "avoid spicy and fermented foods at dinner",
+    "yoga_recommendation": "forward fold (uttanasana)",
+    "lifestyle_advice": "apply coconut oil to the scalp before bed"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "kapha",
+    "description": "Excessive sleep but still feeling unrested",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "light dinner with ginger tea",
+    "yoga_recommendation": "bhastrika pranayama",
+    "lifestyle_advice": "exercise in the evening to improve sleep quality"
+  },
+  {
+    "symptom": "insomnia",
+    "dosha": "kapha",
+    "description": "Difficulty waking up and heavy morning feeling",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "avoid heavy meals after sunset",
+    "yoga_recommendation": "standing forward bend",
+    "lifestyle_advice": "set a consistent wake time before 6 AM"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "pitta",
+    "description": "Burning sensation in stomach and chest",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods like coconut and coriander",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid eating when angry or stressed"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "pitta",
+    "description": "Acid reflux with sour taste in mouth",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "drink aloe vera juice on empty stomach",
+    "yoga_recommendation": "seated forward bend (paschimottanasana)",
+    "lifestyle_advice": "eat meals at regular times"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "pitta",
+    "description": "Heartburn after meals with nausea",
+    "herbal_remedy": "licorice",
+    "diet_recommendation": "avoid citrus tomatoes and vinegar",
+    "yoga_recommendation": "restorative fish pose",
+    "lifestyle_advice": "chew fennel seeds after meals"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "pitta",
+    "description": "Gastritis with sharp abdominal pain",
+    "herbal_remedy": "avipattikar churna",
+    "diet_recommendation": "bland cooling diet with rice and moong dal",
+    "yoga_recommendation": "supine twist (supta matsyendrasana)",
+    "lifestyle_advice": "never skip meals or overeat"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "vata",
+    "description": "Irregular acidity with bloating and gas",
+    "herbal_remedy": "hingvastak churna",
+    "diet_recommendation": "warm easily digestible foods with cumin",
+    "yoga_recommendation": "wind relieving pose (pawanmuktasana)",
+    "lifestyle_advice": "eat in a calm relaxed environment"
+  },
+  {
+    "symptom": "acidity",
+    "dosha": "kapha",
+    "description": "Slow digestion with mild acid and mucus",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "avoid heavy oily foods and dairy",
+    "yoga_recommendation": "bow pose (dhanurasana)",
+    "lifestyle_advice": "walk for 15 minutes after meals"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "vata",
+    "description": "Irregular appetite and variable digestion",
+    "herbal_remedy": "hingvastak churna",
+    "diet_recommendation": "warm cooked foods with digestive spices",
+    "yoga_recommendation": "wind relieving pose (pawanmuktasana)",
+    "lifestyle_advice": "eat at regular times in a calm setting"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "vata",
+    "description": "Bloating gas and abdominal distension",
+    "herbal_remedy": "ajwain",
+    "diet_recommendation": "avoid raw salads and cold beverages",
+    "yoga_recommendation": "seated spinal twist (ardha matsyendrasana)",
+    "lifestyle_advice": "sip warm water throughout the day"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "vata",
+    "description": "Constipation with hard dry stools",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "include ghee and warm fluids in diet",
+    "yoga_recommendation": "malasana (garland pose)",
+    "lifestyle_advice": "drink warm water with lemon on waking"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "vata",
+    "description": "Gurgling stomach with erratic bowel movements",
+    "herbal_remedy": "ginger",
+    "diet_recommendation": "small frequent warm meals with cumin and fennel",
+    "yoga_recommendation": "cat-cow pose (marjaryasana)",
+    "lifestyle_advice": "establish consistent meal times"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "pitta",
+    "description": "Hyperacidity and loose burning stools",
+    "herbal_remedy": "kutki",
+    "diet_recommendation": "cooling bland diet with coriander and fennel",
+    "yoga_recommendation": "cooling pranayama (sheetali)",
+    "lifestyle_advice": "avoid spicy fried and fermented foods"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "pitta",
+    "description": "Excessive hunger with quick digestion",
+    "herbal_remedy": "amalaki",
+    "diet_recommendation": "sweet bitter and astringent tastes",
+    "yoga_recommendation": "half spinal twist",
+    "lifestyle_advice": "eat at moderate pace without rushing"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "pitta",
+    "description": "Diarrhea with burning sensation",
+    "herbal_remedy": "bilva",
+    "diet_recommendation": "pomegranate juice and rice water",
+    "yoga_recommendation": "supine butterfly pose",
+    "lifestyle_advice": "avoid alcohol and coffee"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "kapha",
+    "description": "Sluggish digestion with heaviness after meals",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "light warm meals with black pepper and ginger",
+    "yoga_recommendation": "boat pose (navasana)",
+    "lifestyle_advice": "avoid snacking between meals"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "kapha",
+    "description": "Loss of appetite with nausea",
+    "herbal_remedy": "chitrak",
+    "diet_recommendation": "fasting or light khichdi diet",
+    "yoga_recommendation": "agni sara kriya",
+    "lifestyle_advice": "eat largest meal at noon"
+  },
+  {
+    "symptom": "digestive_problems",
+    "dosha": "kapha",
+    "description": "Mucus in stool with slow metabolism",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "reduce wheat dairy and sugar",
+    "yoga_recommendation": "twisted chair pose",
+    "lifestyle_advice": "drink warm ginger water before meals"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "vata",
+    "description": "Chronic tiredness with restlessness",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm nourishing foods with ghee and nuts",
+    "yoga_recommendation": "yoga nidra",
+    "lifestyle_advice": "get 7-8 hours of sleep every night"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "vata",
+    "description": "Low energy with inability to concentrate",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "dates almonds and warm milk",
+    "yoga_recommendation": "gentle sun salutation",
+    "lifestyle_advice": "practice daily oil massage with sesame oil"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "vata",
+    "description": "Nervous exhaustion from overactivity",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "sweet grounding foods like sweet potato",
+    "yoga_recommendation": "legs up the wall pose (viparita karani)",
+    "lifestyle_advice": "take short rest breaks during the day"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "pitta",
+    "description": "Burnout from overwork and intensity",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling sweet foods like coconut and melon",
+    "yoga_recommendation": "restorative bridge pose",
+    "lifestyle_advice": "take breaks from work and avoid midday sun"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "pitta",
+    "description": "Mental exhaustion with irritability",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "fresh fruit juices and herbal teas",
+    "yoga_recommendation": "supported child pose",
+    "lifestyle_advice": "reduce screen time and competitive activities"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "pitta",
+    "description": "Depleted energy from excessive heat",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "bitter greens and cooling spices like fennel",
+    "yoga_recommendation": "savasana with cooling eye pillow",
+    "lifestyle_advice": "spend time in nature near water"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "kapha",
+    "description": "Heavy fatigue with oversleeping",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "light warm spiced foods with honey",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "exercise vigorously every morning"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "kapha",
+    "description": "Daytime drowsiness and lack of motivation",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "avoid heavy meals especially breakfast",
+    "yoga_recommendation": "sun salutation at pace",
+    "lifestyle_advice": "wake before 6 AM and avoid daytime naps"
+  },
+  {
+    "symptom": "fatigue",
+    "dosha": "kapha",
+    "description": "Sluggish energy with weight gain",
+    "herbal_remedy": "shilajit",
+    "diet_recommendation": "reduce carbs and increase bitter vegetables",
+    "yoga_recommendation": "warrior pose sequence",
+    "lifestyle_advice": "take cold showers in the morning"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "vata",
+    "description": "Throbbing headache at back of head",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm soups and cooked vegetables",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "apply sesame oil to temples and scalp"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "vata",
+    "description": "Tension headache from stress and dryness",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "ghee-based foods and warm fluids",
+    "yoga_recommendation": "neck rolls and shoulder stretches",
+    "lifestyle_advice": "stay hydrated with warm water"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "vata",
+    "description": "Migraine with sensitivity to light and sound",
+    "herbal_remedy": "jatamansi",
+    "diet_recommendation": "avoid fasting and cold foods",
+    "yoga_recommendation": "yoga nidra in dark room",
+    "lifestyle_advice": "maintain regular sleep schedule"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "pitta",
+    "description": "Sharp burning headache above eyes",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods like cucumber melon and mint",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid direct sun exposure and overheating"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "pitta",
+    "description": "Headache with visual disturbances",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "drink coconut water and coriander tea",
+    "yoga_recommendation": "forward fold with cooling breath",
+    "lifestyle_advice": "apply sandalwood paste to forehead"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "pitta",
+    "description": "Headache triggered by anger or spicy food",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "bland cooling diet avoiding fermented foods",
+    "yoga_recommendation": "supported headstand alternative",
+    "lifestyle_advice": "practice patience and anger management"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "kapha",
+    "description": "Dull heavy headache with sinus pressure",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "light warm food with black pepper and ginger",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "use steam inhalation with eucalyptus"
+  },
+  {
+    "symptom": "headache",
+    "dosha": "kapha",
+    "description": "Morning headache with congestion",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "avoid dairy and heavy breakfast",
+    "yoga_recommendation": "bhastrika pranayama",
+    "lifestyle_advice": "use neti pot for nasal cleansing"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "vata",
+    "description": "Dry rough cracked skin",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "ghee sesame oil and moisturizing foods",
+    "yoga_recommendation": "gentle forward bends",
+    "lifestyle_advice": "apply sesame oil to body daily"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "vata",
+    "description": "Premature wrinkles and skin flaking",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm milk with turmeric and ghee",
+    "yoga_recommendation": "child pose with deep breathing",
+    "lifestyle_advice": "stay hydrated and avoid cold dry wind"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "vata",
+    "description": "Discoloration and uneven skin tone",
+    "herbal_remedy": "kumkumadi tailam",
+    "diet_recommendation": "carrots sweet potatoes and beets",
+    "yoga_recommendation": "sun salutation at slow pace",
+    "lifestyle_advice": "moisturize immediately after bathing"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "pitta",
+    "description": "Rashes redness and inflammatory acne",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "cooling foods like cucumber aloe and coconut",
+    "yoga_recommendation": "moon salutation (chandra namaskar)",
+    "lifestyle_advice": "avoid midday sun and use natural sunscreen"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "pitta",
+    "description": "Burning itchy skin with hives",
+    "herbal_remedy": "manjistha",
+    "diet_recommendation": "bitter greens and turmeric milk",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "wear loose cotton clothing"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "pitta",
+    "description": "Eczema and psoriasis flare-ups",
+    "herbal_remedy": "khadira",
+    "diet_recommendation": "avoid spicy sour and fermented foods",
+    "yoga_recommendation": "supported fish pose",
+    "lifestyle_advice": "apply coconut oil or aloe vera gel to skin"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "kapha",
+    "description": "Oily clogged skin with cystic acne",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "light dry foods with turmeric and bitter melon",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "exfoliate with gram flour (besan) paste"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "kapha",
+    "description": "Fungal infections and excess moisture",
+    "herbal_remedy": "turmeric",
+    "diet_recommendation": "avoid dairy sugar and fried foods",
+    "yoga_recommendation": "sun salutation vigorous pace",
+    "lifestyle_advice": "keep skin dry and clean"
+  },
+  {
+    "symptom": "skin_problems",
+    "dosha": "kapha",
+    "description": "Dull lifeless complexion",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "increase leafy greens and citrus fruits",
+    "yoga_recommendation": "vigorous backbends",
+    "lifestyle_advice": "dry brush skin before bathing"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "vata",
+    "description": "Overwhelm and inability to cope",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm comforting foods with ghee",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "follow a strict daily routine"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "vata",
+    "description": "Racing thoughts and difficulty grounding",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "root vegetables and warm grains",
+    "yoga_recommendation": "tree pose (vrksasana)",
+    "lifestyle_advice": "practice grounding meditation daily"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "vata",
+    "description": "Nervous tension in shoulders and jaw",
+    "herbal_remedy": "jatamansi",
+    "diet_recommendation": "warm herbal teas with chamomile",
+    "yoga_recommendation": "neck and shoulder stretches",
+    "lifestyle_advice": "get regular oil massage (abhyanga)"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "pitta",
+    "description": "Intense pressure with anger outbursts",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods and sweet fruits",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "spend time in nature away from work"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "pitta",
+    "description": "Workaholic tendency with burnout risk",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "reduce coffee and switch to herbal tea",
+    "yoga_recommendation": "restorative yoga sequence",
+    "lifestyle_advice": "set firm work boundaries"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "pitta",
+    "description": "Competitive stress with perfectionism",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "coconut water and cooling herb infusions",
+    "yoga_recommendation": "moon salutation",
+    "lifestyle_advice": "practice gratitude and self-compassion"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "kapha",
+    "description": "Emotional stress with comfort eating",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "light warm meals avoid emotional eating",
+    "yoga_recommendation": "vigorous sun salutation",
+    "lifestyle_advice": "exercise daily and socialize"
+  },
+  {
+    "symptom": "stress",
+    "dosha": "kapha",
+    "description": "Apathetic response to stress with withdrawal",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "stimulating spices like ginger and cinnamon",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "create a structured activity schedule"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "vata",
+    "description": "Crackling stiff joints especially in cold weather",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm soups with turmeric and ginger",
+    "yoga_recommendation": "gentle joint rotations",
+    "lifestyle_advice": "apply warm sesame oil to joints daily"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "vata",
+    "description": "Wandering joint pain that changes location",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "ghee and omega-3 rich foods like walnuts",
+    "yoga_recommendation": "gentle warrior pose",
+    "lifestyle_advice": "avoid cold damp environments"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "vata",
+    "description": "Osteoarthritis with dryness and degeneration",
+    "herbal_remedy": "bala",
+    "diet_recommendation": "milk decoctions with shatavari and ashwagandha",
+    "yoga_recommendation": "supported tree pose",
+    "lifestyle_advice": "take warm baths with epsom salt"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "pitta",
+    "description": "Hot inflamed swollen joints",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cooling anti-inflammatory foods with turmeric",
+    "yoga_recommendation": "gentle forward folds",
+    "lifestyle_advice": "apply cooling castor oil paste to joints"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "pitta",
+    "description": "Rheumatoid arthritis with burning",
+    "herbal_remedy": "manjistha",
+    "diet_recommendation": "bitter gourd and neem leaves",
+    "yoga_recommendation": "seated gentle twists",
+    "lifestyle_advice": "avoid overexertion and heat exposure"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "kapha",
+    "description": "Heavy swollen joints with stiffness",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "light dry food with fenugreek and turmeric",
+    "yoga_recommendation": "sun salutation modified",
+    "lifestyle_advice": "exercise daily to maintain joint mobility"
+  },
+  {
+    "symptom": "joint_pain",
+    "dosha": "kapha",
+    "description": "Joint pain with water retention",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "reduce salt dairy and heavy foods",
+    "yoga_recommendation": "warrior sequence",
+    "lifestyle_advice": "use dry heat therapy on joints"
+  },
+  {
+    "symptom": "weight_gain",
+    "dosha": "kapha",
+    "description": "Unexplained weight gain with slow metabolism",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "light warm food with bitter and pungent tastes",
+    "yoga_recommendation": "vigorous sun salutation",
+    "lifestyle_advice": "exercise for 45 minutes every morning"
+  },
+  {
+    "symptom": "weight_gain",
+    "dosha": "kapha",
+    "description": "Emotional eating and sugar cravings",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "replace sweets with honey and fruit",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "find non-food emotional outlets"
+  },
+  {
+    "symptom": "weight_gain",
+    "dosha": "kapha",
+    "description": "Water retention and puffiness",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "reduce salt and increase barley and millet",
+    "yoga_recommendation": "boat pose (navasana)",
+    "lifestyle_advice": "avoid daytime sleeping"
+  },
+  {
+    "symptom": "weight_gain",
+    "dosha": "kapha",
+    "description": "Stubborn belly fat with lethargy",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "eat largest meal at noon with digestive spices",
+    "yoga_recommendation": "twisted chair pose",
+    "lifestyle_advice": "walk briskly for 30 minutes after dinner"
+  },
+  {
+    "symptom": "weight_gain",
+    "dosha": "pitta",
+    "description": "Stress-related weight gain around midsection",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "moderate portions of balanced meals",
+    "yoga_recommendation": "cooling yoga flow",
+    "lifestyle_advice": "manage stress and avoid late-night eating"
+  },
+  {
+    "symptom": "weight_loss",
+    "dosha": "vata",
+    "description": "Unexplained weight loss with anxiety",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "calorie-dense nourishing foods with ghee",
+    "yoga_recommendation": "restorative yoga",
+    "lifestyle_advice": "rest adequately and reduce excessive activity"
+  },
+  {
+    "symptom": "weight_loss",
+    "dosha": "vata",
+    "description": "Inability to gain weight despite eating",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "warm milk with dates and almonds",
+    "yoga_recommendation": "yoga nidra",
+    "lifestyle_advice": "eat in calm pleasant environment"
+  },
+  {
+    "symptom": "weight_loss",
+    "dosha": "pitta",
+    "description": "Rapid weight loss with high metabolism",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "sweet nourishing foods like rice and ghee",
+    "yoga_recommendation": "gentle seated poses",
+    "lifestyle_advice": "avoid intense exercise and fasting"
+  },
+  {
+    "symptom": "hair_loss",
+    "dosha": "vata",
+    "description": "Dry brittle hair with split ends",
+    "herbal_remedy": "bhringaraj",
+    "diet_recommendation": "sesame oil and iron-rich foods like spinach",
+    "yoga_recommendation": "headstand preparation (downward dog)",
+    "lifestyle_advice": "apply bhringaraj oil to scalp weekly"
+  },
+  {
+    "symptom": "hair_loss",
+    "dosha": "vata",
+    "description": "Hair thinning from stress and poor nutrition",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "protein-rich foods and warm milk with turmeric",
+    "yoga_recommendation": "inversions for scalp circulation",
+    "lifestyle_advice": "reduce stress and maintain sleep schedule"
+  },
+  {
+    "symptom": "hair_loss",
+    "dosha": "pitta",
+    "description": "Premature graying and hair fall from heat",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "cooling foods and amla juice daily",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid chemical hair products and excessive heat"
+  },
+  {
+    "symptom": "hair_loss",
+    "dosha": "pitta",
+    "description": "Receding hairline with oily scalp",
+    "herbal_remedy": "bhringaraj",
+    "diet_recommendation": "bitter greens and coconut water",
+    "yoga_recommendation": "forward fold (uttanasana)",
+    "lifestyle_advice": "apply coconut oil infused with brahmi to scalp"
+  },
+  {
+    "symptom": "hair_loss",
+    "dosha": "kapha",
+    "description": "Oily heavy hair with dandruff",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "light diet with bitter and astringent foods",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "wash hair regularly with shikakai"
+  },
+  {
+    "symptom": "congestion",
+    "dosha": "kapha",
+    "description": "Chronic nasal congestion and sinusitis",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "warm light foods with black pepper and ginger",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "use neti pot with warm saline water daily"
+  },
+  {
+    "symptom": "congestion",
+    "dosha": "kapha",
+    "description": "Excess mucus production and post-nasal drip",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "avoid dairy cold food and sweets",
+    "yoga_recommendation": "bhastrika pranayama",
+    "lifestyle_advice": "inhale steam with turmeric and eucalyptus"
+  },
+  {
+    "symptom": "congestion",
+    "dosha": "kapha",
+    "description": "Sinus headache with facial pressure",
+    "herbal_remedy": "vasambu",
+    "diet_recommendation": "honey with ginger juice on empty stomach",
+    "yoga_recommendation": "lion pose (simhasana)",
+    "lifestyle_advice": "sleep with head elevated"
+  },
+  {
+    "symptom": "congestion",
+    "dosha": "vata",
+    "description": "Dry nasal passages with occasional blockage",
+    "herbal_remedy": "sesame oil nasya",
+    "diet_recommendation": "warm fluids and ghee in diet",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "apply nasya oil (sesame) to nostrils daily"
+  },
+  {
+    "symptom": "congestion",
+    "dosha": "pitta",
+    "description": "Sinus inflammation with yellow discharge",
+    "herbal_remedy": "turmeric",
+    "diet_recommendation": "cooling anti-inflammatory foods",
+    "yoga_recommendation": "sheetali pranayama followed by gentle bhramari",
+    "lifestyle_advice": "avoid dust smoke and pollutants"
+  },
+  {
+    "symptom": "cold_sensitivity",
+    "dosha": "vata",
+    "description": "Always feeling cold especially extremities",
+    "herbal_remedy": "ginger",
+    "diet_recommendation": "warm cooked food with cinnamon and cardamom",
+    "yoga_recommendation": "sun salutation at moderate pace",
+    "lifestyle_advice": "wear warm clothing and avoid cold wind"
+  },
+  {
+    "symptom": "cold_sensitivity",
+    "dosha": "vata",
+    "description": "Poor circulation to hands and feet",
+    "herbal_remedy": "pippali",
+    "diet_recommendation": "warm spiced milk and ghee",
+    "yoga_recommendation": "warrior poses for circulation",
+    "lifestyle_advice": "take warm baths and use heating pad"
+  },
+  {
+    "symptom": "cold_sensitivity",
+    "dosha": "kapha",
+    "description": "Cold and clammy skin with sluggishness",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "hot ginger tea and pungent spices",
+    "yoga_recommendation": "vigorous vinyasa flow",
+    "lifestyle_advice": "exercise to generate internal heat"
+  },
+  {
+    "symptom": "excessive_sweating",
+    "dosha": "pitta",
+    "description": "Profuse sweating especially in heat",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods like coconut water and mint",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "wear light cotton clothing"
+  },
+  {
+    "symptom": "excessive_sweating",
+    "dosha": "pitta",
+    "description": "Night sweats with body heat",
+    "herbal_remedy": "chandanasadi",
+    "diet_recommendation": "sandalwood paste water and cooling herbs",
+    "yoga_recommendation": "restorative supine poses",
+    "lifestyle_advice": "sleep in a well-ventilated cool room"
+  },
+  {
+    "symptom": "excessive_sweating",
+    "dosha": "pitta",
+    "description": "Strong body odor from excessive heat",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "chlorophyll-rich foods and coriander water",
+    "yoga_recommendation": "moon salutation",
+    "lifestyle_advice": "bathe twice daily with neem water"
+  },
+  {
+    "symptom": "irritability",
+    "dosha": "pitta",
+    "description": "Short temper and anger outbursts",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "sweet cooling foods and rose petal jam",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "practice patience through meditation"
+  },
+  {
+    "symptom": "irritability",
+    "dosha": "pitta",
+    "description": "Frustration with critical judgmental attitude",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "reduce caffeine and spicy food",
+    "yoga_recommendation": "moon salutation",
+    "lifestyle_advice": "spend time in cooling nature"
+  },
+  {
+    "symptom": "irritability",
+    "dosha": "pitta",
+    "description": "Impatience and aggressive communication",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cool herbal tea with rose and fennel",
+    "yoga_recommendation": "bhramari pranayama (humming bee)",
+    "lifestyle_advice": "practice compassion meditation"
+  },
+  {
+    "symptom": "irritability",
+    "dosha": "vata",
+    "description": "Mood swings with nervous irritability",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm grounding foods",
+    "yoga_recommendation": "alternate nostril breathing",
+    "lifestyle_advice": "establish calming evening routine"
+  },
+  {
+    "symptom": "depression",
+    "dosha": "kapha",
+    "description": "Persistent sadness and emotional heaviness",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "light warm spiced foods",
+    "yoga_recommendation": "vigorous sun salutation",
+    "lifestyle_advice": "exercise every morning and socialize"
+  },
+  {
+    "symptom": "depression",
+    "dosha": "kapha",
+    "description": "Loss of interest and motivation",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "avoid heavy comfort foods",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "create daily goals and maintain structure"
+  },
+  {
+    "symptom": "depression",
+    "dosha": "kapha",
+    "description": "Social withdrawal and excessive sleeping",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "stimulating foods with ginger and black pepper",
+    "yoga_recommendation": "backbends like cobra pose",
+    "lifestyle_advice": "seek sunlight exposure daily"
+  },
+  {
+    "symptom": "depression",
+    "dosha": "vata",
+    "description": "Hopelessness with anxiety and restlessness",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "nourishing warm meals with ghee",
+    "yoga_recommendation": "yoga nidra",
+    "lifestyle_advice": "follow a stabilizing daily routine"
+  },
+  {
+    "symptom": "depression",
+    "dosha": "pitta",
+    "description": "Depression with self-criticism and anger",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "sweet cooling foods and herbal teas",
+    "yoga_recommendation": "restorative yoga",
+    "lifestyle_advice": "practice self-compassion and journaling"
+  },
+  {
+    "symptom": "memory_problems",
+    "dosha": "vata",
+    "description": "Forgetfulness and scattered thinking",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "ghee and brain-nourishing foods like almonds",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "practice meditation for 15 minutes daily"
+  },
+  {
+    "symptom": "memory_problems",
+    "dosha": "vata",
+    "description": "Poor concentration and mental fog",
+    "herbal_remedy": "shankhpushpi",
+    "diet_recommendation": "warm milk with brahmi powder",
+    "yoga_recommendation": "trataka (candle gazing)",
+    "lifestyle_advice": "get adequate sleep and reduce multitasking"
+  },
+  {
+    "symptom": "memory_problems",
+    "dosha": "kapha",
+    "description": "Slow learning and mental dullness",
+    "herbal_remedy": "bacopa",
+    "diet_recommendation": "light stimulating diet with spices",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "engage in mentally stimulating activities"
+  },
+  {
+    "symptom": "memory_problems",
+    "dosha": "pitta",
+    "description": "Mental burnout affecting recall",
+    "herbal_remedy": "gotu kola",
+    "diet_recommendation": "cooling brain foods like coconut and walnuts",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "take regular work breaks"
+  },
+  {
+    "symptom": "low_immunity",
+    "dosha": "vata",
+    "description": "Frequent colds and infections",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm nourishing soups and kitchari",
+    "yoga_recommendation": "gentle pranayama",
+    "lifestyle_advice": "get consistent rest and avoid overexertion"
+  },
+  {
+    "symptom": "low_immunity",
+    "dosha": "pitta",
+    "description": "Autoimmune tendency with inflammation",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cooling immune foods like amla and turmeric",
+    "yoga_recommendation": "restorative poses",
+    "lifestyle_advice": "reduce stress and avoid overheating"
+  },
+  {
+    "symptom": "low_immunity",
+    "dosha": "kapha",
+    "description": "Recurring respiratory infections",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "honey with ginger and black pepper",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "exercise daily and avoid cold dampness"
+  },
+  {
+    "symptom": "low_immunity",
+    "dosha": "vata",
+    "description": "Weak resistance to seasonal changes",
+    "herbal_remedy": "chyawanprash",
+    "diet_recommendation": "warm milk with turmeric and honey",
+    "yoga_recommendation": "sun salutation gentle pace",
+    "lifestyle_advice": "dress warmly and follow seasonal routines"
+  },
+  {
+    "symptom": "menstrual_problems",
+    "dosha": "vata",
+    "description": "Irregular periods with cramping pain",
+    "herbal_remedy": "ashoka",
+    "diet_recommendation": "warm sesame-rich foods and ghee",
+    "yoga_recommendation": "gentle hip openers",
+    "lifestyle_advice": "apply warm castor oil pack on abdomen"
+  },
+  {
+    "symptom": "menstrual_problems",
+    "dosha": "vata",
+    "description": "Scanty painful periods with anxiety",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "warm spiced milk and nourishing grains",
+    "yoga_recommendation": "supported reclined butterfly",
+    "lifestyle_advice": "rest during menstruation"
+  },
+  {
+    "symptom": "menstrual_problems",
+    "dosha": "pitta",
+    "description": "Heavy periods with clots and irritability",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods avoiding spice and fermented items",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid intense exercise during periods"
+  },
+  {
+    "symptom": "menstrual_problems",
+    "dosha": "pitta",
+    "description": "PMS with acne and bloating",
+    "herbal_remedy": "manjistha",
+    "diet_recommendation": "aloe vera juice and cooling herbs",
+    "yoga_recommendation": "moon salutation gentle",
+    "lifestyle_advice": "keep emotional environment calm"
+  },
+  {
+    "symptom": "menstrual_problems",
+    "dosha": "kapha",
+    "description": "Heavy prolonged periods with lethargy",
+    "herbal_remedy": "ashoka",
+    "diet_recommendation": "light warm diet with ginger and cinnamon",
+    "yoga_recommendation": "gentle flow yoga",
+    "lifestyle_advice": "exercise regularly between periods"
+  },
+  {
+    "symptom": "eye_problems",
+    "dosha": "pitta",
+    "description": "Eye strain with burning and redness",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "cooling foods and carrot juice",
+    "yoga_recommendation": "palming exercise and trataka",
+    "lifestyle_advice": "wash eyes with rose water daily"
+  },
+  {
+    "symptom": "eye_problems",
+    "dosha": "pitta",
+    "description": "Sensitivity to light and dry eyes",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "green leafy vegetables and ghee",
+    "yoga_recommendation": "eye rotation exercises",
+    "lifestyle_advice": "reduce screen time take 20-20-20 breaks"
+  },
+  {
+    "symptom": "eye_problems",
+    "dosha": "vata",
+    "description": "Dry itchy eyes with twitching",
+    "herbal_remedy": "triphala ghrit",
+    "diet_recommendation": "ghee in diet and warm compresses",
+    "yoga_recommendation": "gentle eye exercises",
+    "lifestyle_advice": "apply ghee to eyelids before sleep"
+  },
+  {
+    "symptom": "bloating",
+    "dosha": "vata",
+    "description": "Abdominal distension with gas and discomfort",
+    "herbal_remedy": "hingvastak churna",
+    "diet_recommendation": "warm soups with cumin and coriander",
+    "yoga_recommendation": "wind relieving pose",
+    "lifestyle_advice": "chew food thoroughly and eat slowly"
+  },
+  {
+    "symptom": "bloating",
+    "dosha": "vata",
+    "description": "Post-meal bloating with burping",
+    "herbal_remedy": "ajwain",
+    "diet_recommendation": "avoid beans and raw cruciferous vegetables",
+    "yoga_recommendation": "seated spinal twist",
+    "lifestyle_advice": "sip warm cumin water after meals"
+  },
+  {
+    "symptom": "bloating",
+    "dosha": "pitta",
+    "description": "Bloating with acid and burning",
+    "herbal_remedy": "avipattikar churna",
+    "diet_recommendation": "cooling digestive foods with fennel",
+    "yoga_recommendation": "seated forward bend",
+    "lifestyle_advice": "avoid eating when stressed"
+  },
+  {
+    "symptom": "bloating",
+    "dosha": "kapha",
+    "description": "Heavy bloating with water retention",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "light dry foods with digestive spices",
+    "yoga_recommendation": "boat pose",
+    "lifestyle_advice": "reduce salt and carbohydrate intake"
+  },
+  {
+    "symptom": "constipation",
+    "dosha": "vata",
+    "description": "Hard dry stool with straining",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "warm fluids ghee and fiber-rich foods",
+    "yoga_recommendation": "wind relieving pose",
+    "lifestyle_advice": "drink warm water on waking"
+  },
+  {
+    "symptom": "constipation",
+    "dosha": "vata",
+    "description": "Irregular bowel movements",
+    "herbal_remedy": "isabgol with warm water",
+    "diet_recommendation": "stewed fruits and cooked vegetables",
+    "yoga_recommendation": "malasana (garland pose)",
+    "lifestyle_advice": "establish regular bathroom routine"
+  },
+  {
+    "symptom": "constipation",
+    "dosha": "pitta",
+    "description": "Burning sensation with dry hard stool",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "cooling laxative foods like prunes and figs",
+    "yoga_recommendation": "seated forward fold",
+    "lifestyle_advice": "drink aloe vera juice daily"
+  },
+  {
+    "symptom": "constipation",
+    "dosha": "kapha",
+    "description": "Sluggish bowels with mucus",
+    "herbal_remedy": "triphala with honey",
+    "diet_recommendation": "light diet with lots of vegetables",
+    "yoga_recommendation": "nauli kriya",
+    "lifestyle_advice": "exercise vigorously every morning"
+  },
+  {
+    "symptom": "muscle_cramps",
+    "dosha": "vata",
+    "description": "Painful muscle spasms especially at night",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "magnesium-rich foods and warm milk",
+    "yoga_recommendation": "gentle stretching routine",
+    "lifestyle_advice": "warm oil massage on affected area"
+  },
+  {
+    "symptom": "muscle_cramps",
+    "dosha": "pitta",
+    "description": "Muscle cramps with inflammation",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling mineral-rich foods",
+    "yoga_recommendation": "gentle yoga stretches",
+    "lifestyle_advice": "avoid over-exercising in heat"
+  },
+  {
+    "symptom": "muscle_cramps",
+    "dosha": "vata",
+    "description": "Restless legs and body twitching",
+    "herbal_remedy": "bala",
+    "diet_recommendation": "warm nourishing diet with ghee",
+    "yoga_recommendation": "legs up the wall pose",
+    "lifestyle_advice": "apply warm sesame oil before bed"
+  },
+  {
+    "symptom": "water_retention",
+    "dosha": "kapha",
+    "description": "Swelling in feet and ankles",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "reduce salt and drink barley water",
+    "yoga_recommendation": "inversions and leg raises",
+    "lifestyle_advice": "elevate legs for 15 minutes daily"
+  },
+  {
+    "symptom": "water_retention",
+    "dosha": "kapha",
+    "description": "Puffiness in face and hands",
+    "herbal_remedy": "gokshura",
+    "diet_recommendation": "light diuretic foods like asparagus",
+    "yoga_recommendation": "sun salutation brisk pace",
+    "lifestyle_advice": "avoid sitting for long periods"
+  },
+  {
+    "symptom": "water_retention",
+    "dosha": "pitta",
+    "description": "Inflammatory swelling with heat",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cooling anti-inflammatory diet",
+    "yoga_recommendation": "gentle supported inversions",
+    "lifestyle_advice": "apply cooling compress to swollen areas"
+  },
+  {
+    "symptom": "bad_breath",
+    "dosha": "pitta",
+    "description": "Chronic halitosis from excess heat",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "cooling foods and coriander tea",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "scrape tongue every morning with copper scraper"
+  },
+  {
+    "symptom": "bad_breath",
+    "dosha": "kapha",
+    "description": "Bad breath from sluggish digestion",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "light meals with digestive spices",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "oil pulling with sesame oil daily"
+  },
+  {
+    "symptom": "bad_breath",
+    "dosha": "vata",
+    "description": "Dry mouth causing odor",
+    "herbal_remedy": "cardamom",
+    "diet_recommendation": "hydrating foods and warm herbal teas",
+    "yoga_recommendation": "ujjayi pranayama",
+    "lifestyle_advice": "stay hydrated and chew fennel seeds"
+  },
+  {
+    "symptom": "throat_problems",
+    "dosha": "vata",
+    "description": "Dry scratchy throat with hoarseness",
+    "herbal_remedy": "licorice",
+    "diet_recommendation": "warm honey-ginger water",
+    "yoga_recommendation": "ujjayi pranayama",
+    "lifestyle_advice": "gargle with warm salt water daily"
+  },
+  {
+    "symptom": "throat_problems",
+    "dosha": "pitta",
+    "description": "Sore throat with burning",
+    "herbal_remedy": "yashtimadhu",
+    "diet_recommendation": "cold milk with turmeric",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid shouting and spicy food"
+  },
+  {
+    "symptom": "throat_problems",
+    "dosha": "kapha",
+    "description": "Throat congestion with mucus",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "honey with ginger juice",
+    "yoga_recommendation": "lion pose (simhasana)",
+    "lifestyle_advice": "gargle with turmeric water"
+  },
+  {
+    "symptom": "back_pain",
+    "dosha": "vata",
+    "description": "Lower back pain with stiffness",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm anti-inflammatory foods with turmeric",
+    "yoga_recommendation": "cat-cow pose (marjaryasana)",
+    "lifestyle_advice": "apply warm sesame oil to lower back"
+  },
+  {
+    "symptom": "back_pain",
+    "dosha": "vata",
+    "description": "Sciatica with radiating nerve pain",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "warm nourishing diet with ghee",
+    "yoga_recommendation": "gentle supine twist",
+    "lifestyle_advice": "avoid sitting for long periods"
+  },
+  {
+    "symptom": "back_pain",
+    "dosha": "pitta",
+    "description": "Inflammatory back pain with swelling",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cooling anti-inflammatory foods",
+    "yoga_recommendation": "supported bridge pose",
+    "lifestyle_advice": "apply cooling castor oil to affected area"
+  },
+  {
+    "symptom": "back_pain",
+    "dosha": "kapha",
+    "description": "Heavy dull aching back pain",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "light warm food reducing heaviness",
+    "yoga_recommendation": "cobra pose (bhujangasana)",
+    "lifestyle_advice": "exercise daily and maintain healthy weight"
+  },
+  {
+    "symptom": "high_blood_pressure",
+    "dosha": "pitta",
+    "description": "Hypertension from stress and anger",
+    "herbal_remedy": "arjuna",
+    "diet_recommendation": "low-sodium cooling foods with garlic",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "practice meditation and anger management"
+  },
+  {
+    "symptom": "high_blood_pressure",
+    "dosha": "pitta",
+    "description": "Elevated BP with headache and flushing",
+    "herbal_remedy": "sarpagandha",
+    "diet_recommendation": "reduce caffeine alcohol and salt",
+    "yoga_recommendation": "savasana with breath awareness",
+    "lifestyle_advice": "follow a calm stress-free lifestyle"
+  },
+  {
+    "symptom": "high_blood_pressure",
+    "dosha": "kapha",
+    "description": "BP elevated from weight and inactivity",
+    "herbal_remedy": "arjuna",
+    "diet_recommendation": "light low-salt diet with plenty of vegetables",
+    "yoga_recommendation": "brisk sun salutation",
+    "lifestyle_advice": "exercise 30 minutes daily"
+  },
+  {
+    "symptom": "diabetes_support",
+    "dosha": "kapha",
+    "description": "Elevated blood sugar with sluggish metabolism",
+    "herbal_remedy": "gudmar",
+    "diet_recommendation": "bitter gourd fenugreek and barley",
+    "yoga_recommendation": "sun salutation daily",
+    "lifestyle_advice": "maintain healthy weight through exercise"
+  },
+  {
+    "symptom": "diabetes_support",
+    "dosha": "kapha",
+    "description": "Sugar cravings with weight gain",
+    "herbal_remedy": "turmeric",
+    "diet_recommendation": "reduce refined carbs increase fiber",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "walk for 30 minutes after every meal"
+  },
+  {
+    "symptom": "diabetes_support",
+    "dosha": "pitta",
+    "description": "Blood sugar fluctuations with irritability",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "balanced meals with bitter and astringent tastes",
+    "yoga_recommendation": "gentle yoga flow",
+    "lifestyle_advice": "eat meals at consistent times daily"
+  },
+  {
+    "symptom": "respiratory_problems",
+    "dosha": "kapha",
+    "description": "Asthma with wheezing and mucus",
+    "herbal_remedy": "vasaka",
+    "diet_recommendation": "light warm diet avoiding dairy and cold foods",
+    "yoga_recommendation": "bhastrika pranayama",
+    "lifestyle_advice": "use steam inhalation with eucalyptus"
+  },
+  {
+    "symptom": "respiratory_problems",
+    "dosha": "kapha",
+    "description": "Chronic bronchitis with cough",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "honey ginger tea and warm spiced food",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "avoid cold damp environments"
+  },
+  {
+    "symptom": "respiratory_problems",
+    "dosha": "vata",
+    "description": "Dry cough with breathlessness",
+    "herbal_remedy": "licorice",
+    "diet_recommendation": "warm fluids and ghee-based foods",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "keep chest warm and hydrated"
+  },
+  {
+    "symptom": "respiratory_problems",
+    "dosha": "pitta",
+    "description": "Allergic respiratory issues with inflammation",
+    "herbal_remedy": "turmeric",
+    "diet_recommendation": "cooling anti-allergenic foods",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid allergens and air pollution"
+  },
+  {
+    "symptom": "urinary_problems",
+    "dosha": "pitta",
+    "description": "Burning painful urination",
+    "herbal_remedy": "gokshura",
+    "diet_recommendation": "cooling drinks like coconut water and coriander",
+    "yoga_recommendation": "seated forward bend",
+    "lifestyle_advice": "drink plenty of water throughout the day"
+  },
+  {
+    "symptom": "urinary_problems",
+    "dosha": "kapha",
+    "description": "Frequent cloudy urination",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "light dry diet with cranberry",
+    "yoga_recommendation": "vigorous flow yoga",
+    "lifestyle_advice": "avoid excessive fluid intake at night"
+  },
+  {
+    "symptom": "urinary_problems",
+    "dosha": "vata",
+    "description": "Scanty or difficult urination",
+    "herbal_remedy": "gokshura",
+    "diet_recommendation": "warm fluids and soothing herbal teas",
+    "yoga_recommendation": "hip opening poses",
+    "lifestyle_advice": "stay hydrated with warm water"
+  },
+  {
+    "symptom": "liver_problems",
+    "dosha": "pitta",
+    "description": "Liver congestion with skin issues",
+    "herbal_remedy": "kutki",
+    "diet_recommendation": "bitter greens and turmeric water",
+    "yoga_recommendation": "seated twist (ardha matsyendrasana)",
+    "lifestyle_advice": "avoid alcohol and processed food"
+  },
+  {
+    "symptom": "liver_problems",
+    "dosha": "pitta",
+    "description": "Fatty liver with sluggish bile flow",
+    "herbal_remedy": "bhumyamalaki",
+    "diet_recommendation": "light diet with bitter gourd and dandelion",
+    "yoga_recommendation": "gentle twisting poses",
+    "lifestyle_advice": "eat dinner before 7 PM"
+  },
+  {
+    "symptom": "liver_problems",
+    "dosha": "kapha",
+    "description": "Sluggish liver with weight gain",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "reduce fatty foods increase bitter vegetables",
+    "yoga_recommendation": "twisted chair pose",
+    "lifestyle_advice": "fast once a week with herbal teas"
+  },
+  {
+    "symptom": "anger",
+    "dosha": "pitta",
+    "description": "Explosive anger with aggressive behavior",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "cooling sweet foods and rose water",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "count to 10 before reacting"
+  },
+  {
+    "symptom": "anger",
+    "dosha": "pitta",
+    "description": "Simmering resentment and criticism",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "fresh coconut water and cooling herbs",
+    "yoga_recommendation": "bhramari pranayama",
+    "lifestyle_advice": "practice forgiveness meditation daily"
+  },
+  {
+    "symptom": "anger",
+    "dosha": "pitta",
+    "description": "Frustration with impatience",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "avoid caffeine and switch to cooling teas",
+    "yoga_recommendation": "moon salutation gentle pace",
+    "lifestyle_advice": "walk in nature when feeling angry"
+  },
+  {
+    "symptom": "dental_problems",
+    "dosha": "vata",
+    "description": "Receding gums with sensitivity",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "calcium-rich warm foods",
+    "yoga_recommendation": "ujjayi pranayama",
+    "lifestyle_advice": "oil pull with sesame oil daily"
+  },
+  {
+    "symptom": "dental_problems",
+    "dosha": "pitta",
+    "description": "Bleeding gums with inflammation",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "cooling vitamin C rich foods",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "rinse mouth with neem water"
+  },
+  {
+    "symptom": "dental_problems",
+    "dosha": "kapha",
+    "description": "Excess saliva with gum swelling",
+    "herbal_remedy": "clove",
+    "diet_recommendation": "reduce sugar and sticky foods",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "use neem twig for brushing"
+  },
+  {
+    "symptom": "fever",
+    "dosha": "pitta",
+    "description": "High fever with burning sensation",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "light cooling liquids like rice water",
+    "yoga_recommendation": "complete rest with gentle breathing",
+    "lifestyle_advice": "sponge with cool water on forehead"
+  },
+  {
+    "symptom": "fever",
+    "dosha": "vata",
+    "description": "Low grade fever with chills and body ache",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "warm ginger-tulsi tea with honey",
+    "yoga_recommendation": "complete rest",
+    "lifestyle_advice": "stay warm and get plenty of sleep"
+  },
+  {
+    "symptom": "fever",
+    "dosha": "kapha",
+    "description": "Fever with congestion and heaviness",
+    "herbal_remedy": "tulsi with pippali",
+    "diet_recommendation": "warm light soup with ginger and pepper",
+    "yoga_recommendation": "rest with gentle neck rotation",
+    "lifestyle_advice": "steam inhalation and light fasting"
+  },
+  {
+    "symptom": "nausea",
+    "dosha": "pitta",
+    "description": "Nausea from excess heat and acidity",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "small sips of coconut water with mint",
+    "yoga_recommendation": "gentle seated breathing",
+    "lifestyle_advice": "rest in cool environment"
+  },
+  {
+    "symptom": "nausea",
+    "dosha": "vata",
+    "description": "Nausea from anxiety and air travel",
+    "herbal_remedy": "ginger",
+    "diet_recommendation": "small frequent warm meals with ginger",
+    "yoga_recommendation": "deep belly breathing",
+    "lifestyle_advice": "apply ginger essential oil to wrists"
+  },
+  {
+    "symptom": "nausea",
+    "dosha": "kapha",
+    "description": "Nausea from overeating and heaviness",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "fast until hunger returns then eat light",
+    "yoga_recommendation": "gentle walking",
+    "lifestyle_advice": "avoid lying down immediately after eating"
+  },
+  {
+    "symptom": "dry_mouth",
+    "dosha": "vata",
+    "description": "Chronic dry mouth with thirst",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "hydrating soupy foods with ghee",
+    "yoga_recommendation": "ujjayi pranayama",
+    "lifestyle_advice": "sip warm water frequently throughout day"
+  },
+  {
+    "symptom": "dry_mouth",
+    "dosha": "pitta",
+    "description": "Dry mouth with burning tongue",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "cooling juicy fruits and aloe vera",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "chew fennel or cardamom seeds"
+  },
+  {
+    "symptom": "body_odor",
+    "dosha": "pitta",
+    "description": "Strong body odor from excess heat",
+    "herbal_remedy": "neem",
+    "diet_recommendation": "chlorophyll-rich greens and coriander",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "bathe with neem water twice daily"
+  },
+  {
+    "symptom": "body_odor",
+    "dosha": "kapha",
+    "description": "Musty body odor from toxin buildup",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "light detoxifying diet with turmeric",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "dry brush skin and bathe with gram flour"
+  },
+  {
+    "symptom": "leg_cramps",
+    "dosha": "vata",
+    "description": "Night cramps in calves and feet",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "magnesium-rich foods and warm milk",
+    "yoga_recommendation": "legs up wall pose",
+    "lifestyle_advice": "warm oil massage on legs before bed"
+  },
+  {
+    "symptom": "leg_cramps",
+    "dosha": "pitta",
+    "description": "Cramps with inflammation in muscles",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling mineral-rich bone broth",
+    "yoga_recommendation": "gentle calf stretches",
+    "lifestyle_advice": "apply cooling oil to legs"
+  },
+  {
+    "symptom": "dizziness",
+    "dosha": "vata",
+    "description": "Lightheadedness and vertigo",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "grounding warm foods with iron",
+    "yoga_recommendation": "tree pose with support",
+    "lifestyle_advice": "move slowly and avoid sudden position changes"
+  },
+  {
+    "symptom": "dizziness",
+    "dosha": "pitta",
+    "description": "Dizziness with nausea and heat",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling hydrating foods",
+    "yoga_recommendation": "seated meditation",
+    "lifestyle_advice": "sit or lie down immediately when dizzy"
+  },
+  {
+    "symptom": "dizziness",
+    "dosha": "kapha",
+    "description": "Dizziness with heaviness and fog",
+    "herbal_remedy": "vacha",
+    "diet_recommendation": "light stimulating diet",
+    "yoga_recommendation": "gentle neck rotations",
+    "lifestyle_advice": "avoid sudden movements and stay active"
+  },
+  {
+    "symptom": "poor_appetite",
+    "dosha": "vata",
+    "description": "Variable appetite with no hunger signal",
+    "herbal_remedy": "ginger",
+    "diet_recommendation": "small warm appetizing meals with spices",
+    "yoga_recommendation": "gentle twists before meals",
+    "lifestyle_advice": "eat at consistent times daily"
+  },
+  {
+    "symptom": "poor_appetite",
+    "dosha": "kapha",
+    "description": "Complete loss of appetite with heaviness",
+    "herbal_remedy": "trikatu",
+    "diet_recommendation": "skip breakfast and eat light lunch",
+    "yoga_recommendation": "agni sara kriya",
+    "lifestyle_advice": "drink ginger tea 30 minutes before meals"
+  },
+  {
+    "symptom": "poor_appetite",
+    "dosha": "pitta",
+    "description": "Suppressed appetite from stress",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "small portions of appealing foods",
+    "yoga_recommendation": "gentle walking before meals",
+    "lifestyle_advice": "eat in pleasant relaxed environment"
+  },
+  {
+    "symptom": "swelling",
+    "dosha": "kapha",
+    "description": "Generalized edema and puffiness",
+    "herbal_remedy": "punarnava",
+    "diet_recommendation": "low-salt diet with barley water",
+    "yoga_recommendation": "inversions and leg raises",
+    "lifestyle_advice": "elevate swollen areas and exercise"
+  },
+  {
+    "symptom": "swelling",
+    "dosha": "pitta",
+    "description": "Inflammatory swelling with redness",
+    "herbal_remedy": "guduchi",
+    "diet_recommendation": "cooling anti-inflammatory diet",
+    "yoga_recommendation": "supported bridge pose",
+    "lifestyle_advice": "apply cool compress to affected area"
+  },
+  {
+    "symptom": "swelling",
+    "dosha": "vata",
+    "description": "Swelling with pain in specific joints",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "warm anti-inflammatory foods",
+    "yoga_recommendation": "gentle joint movement",
+    "lifestyle_advice": "warm compress and gentle massage"
+  },
+  {
+    "symptom": "teeth_grinding",
+    "dosha": "vata",
+    "description": "Bruxism from anxiety and stress",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "calming warm foods before bed",
+    "yoga_recommendation": "yoga nidra before sleep",
+    "lifestyle_advice": "warm oil massage on jaw and temples"
+  },
+  {
+    "symptom": "teeth_grinding",
+    "dosha": "pitta",
+    "description": "Grinding from suppressed anger",
+    "herbal_remedy": "brahmi",
+    "diet_recommendation": "cooling dinner avoiding stimulants",
+    "yoga_recommendation": "bhramari pranayama",
+    "lifestyle_advice": "practice expressing emotions constructively"
+  },
+  {
+    "symptom": "hiccups",
+    "dosha": "vata",
+    "description": "Frequent hiccups from dry cold",
+    "herbal_remedy": "ginger",
+    "diet_recommendation": "warm honey water with cardamom",
+    "yoga_recommendation": "deep diaphragmatic breathing",
+    "lifestyle_advice": "sip warm water slowly"
+  },
+  {
+    "symptom": "hiccups",
+    "dosha": "pitta",
+    "description": "Hiccups from overeating spicy food",
+    "herbal_remedy": "mint",
+    "diet_recommendation": "cool water with sugar",
+    "yoga_recommendation": "gentle belly breathing",
+    "lifestyle_advice": "eat slowly and avoid very spicy foods"
+  },
+  {
+    "symptom": "tinnitus",
+    "dosha": "vata",
+    "description": "Ringing in ears from vata aggravation",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm nourishing foods with ghee",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "apply warm sesame oil in ears at bedtime"
+  },
+  {
+    "symptom": "tinnitus",
+    "dosha": "pitta",
+    "description": "Buzzing with ear inflammation",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods and avoid loud noise",
+    "yoga_recommendation": "bhramari pranayama",
+    "lifestyle_advice": "reduce exposure to loud environments"
+  },
+  {
+    "symptom": "dark_circles",
+    "dosha": "vata",
+    "description": "Under-eye circles from poor sleep",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "iron-rich foods and warm milk",
+    "yoga_recommendation": "legs up the wall pose",
+    "lifestyle_advice": "sleep 7-8 hours and apply almond oil"
+  },
+  {
+    "symptom": "dark_circles",
+    "dosha": "pitta",
+    "description": "Dark circles from liver heat",
+    "herbal_remedy": "amla",
+    "diet_recommendation": "cooling liver-supportive foods",
+    "yoga_recommendation": "gentle eye exercises",
+    "lifestyle_advice": "apply rose water soaked cotton pads"
+  },
+  {
+    "symptom": "dark_circles",
+    "dosha": "kapha",
+    "description": "Puffy dark circles from congestion",
+    "herbal_remedy": "triphala",
+    "diet_recommendation": "light diet reducing dairy and salt",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "sleep with head slightly elevated"
+  },
+  {
+    "symptom": "earache",
+    "dosha": "vata",
+    "description": "Ear pain from cold wind and dryness",
+    "herbal_remedy": "sesame oil drops",
+    "diet_recommendation": "warm nourishing foods with ghee",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "apply warm sesame oil drops in ears"
+  },
+  {
+    "symptom": "earache",
+    "dosha": "pitta",
+    "description": "Ear infection with inflammation",
+    "herbal_remedy": "neem oil",
+    "diet_recommendation": "cooling anti-inflammatory foods",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "avoid swimming and keep ears dry"
+  },
+  {
+    "symptom": "earache",
+    "dosha": "kapha",
+    "description": "Ear congestion with fluid buildup",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "avoid dairy and cold foods",
+    "yoga_recommendation": "kapalabhati pranayama",
+    "lifestyle_advice": "use warm garlic oil drops in ears"
+  },
+  {
+    "symptom": "irregular_heartbeat",
+    "dosha": "vata",
+    "description": "Palpitations from anxiety and stress",
+    "herbal_remedy": "arjuna",
+    "diet_recommendation": "warm calming foods with ghee",
+    "yoga_recommendation": "nadi shodhana pranayama",
+    "lifestyle_advice": "practice deep breathing when palpitations occur"
+  },
+  {
+    "symptom": "irregular_heartbeat",
+    "dosha": "pitta",
+    "description": "Rapid heartbeat from anger",
+    "herbal_remedy": "arjuna",
+    "diet_recommendation": "cooling foods and pomegranate juice",
+    "yoga_recommendation": "sheetali pranayama",
+    "lifestyle_advice": "practice meditation and avoid stimulants"
+  },
+  {
+    "symptom": "numbness",
+    "dosha": "vata",
+    "description": "Tingling and numbness in extremities",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm circulation-boosting foods with ginger",
+    "yoga_recommendation": "gentle hand and foot exercises",
+    "lifestyle_advice": "warm oil massage on affected limbs daily"
+  },
+  {
+    "symptom": "numbness",
+    "dosha": "kapha",
+    "description": "Numbness from poor circulation and heaviness",
+    "herbal_remedy": "guggulu",
+    "diet_recommendation": "light warming foods with black pepper",
+    "yoga_recommendation": "vigorous sun salutation",
+    "lifestyle_advice": "exercise daily to improve blood flow"
+  },
+  {
+    "symptom": "chest_tightness",
+    "dosha": "vata",
+    "description": "Chest constriction from anxiety",
+    "herbal_remedy": "ashwagandha",
+    "diet_recommendation": "warm soothing foods with ghee",
+    "yoga_recommendation": "gentle chest-opening poses",
+    "lifestyle_advice": "practice deep diaphragmatic breathing"
+  },
+  {
+    "symptom": "chest_tightness",
+    "dosha": "kapha",
+    "description": "Chest heaviness from congestion",
+    "herbal_remedy": "tulsi",
+    "diet_recommendation": "light warm diet with ginger and honey",
+    "yoga_recommendation": "bhastrika pranayama",
+    "lifestyle_advice": "do steam inhalation before bed"
+  },
+  {
+    "symptom": "night_sweats",
+    "dosha": "pitta",
+    "description": "Sweating during sleep from excess heat",
+    "herbal_remedy": "shatavari",
+    "diet_recommendation": "cooling foods and sandalwood water",
+    "yoga_recommendation": "sheetali pranayama before bed",
+    "lifestyle_advice": "sleep in cool well-ventilated room with cotton sheets"
+  }
+]
