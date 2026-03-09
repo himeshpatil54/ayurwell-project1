@@ -1,4 +1,5 @@
 // Authentication Context - Manages user authentication state
+// Updated: Magic Link authentication (no OTP)
 import { createContext, useContext, useState, useEffect } from 'react';
 import { supabase, isDemoMode, demoStorage } from '../lib/supabase';
 
@@ -7,7 +8,6 @@ const AuthContext = createContext(null);
 export function AuthProvider({ children }) {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
-    const [pendingAuth, setPendingAuth] = useState(null);
 
     // Check for existing session on mount
     useEffect(() => {
@@ -24,7 +24,7 @@ export function AuthProvider({ children }) {
                 setLoading(false);
             });
 
-            // Listen for auth changes
+            // Listen for auth changes (handles magic link callback)
             const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
                 setUser(session?.user ?? null);
             });
@@ -33,22 +33,30 @@ export function AuthProvider({ children }) {
         }
     }, []);
 
-    // Send OTP (Email only)
-    const sendOTP = async ({ email, fullName }) => {
+    // Send Magic Link
+    const sendMagicLink = async ({ email }) => {
         try {
             if (isDemoMode) {
-                // Demo mode - just save pending auth
-                setPendingAuth({ email, fullName, type: 'email' });
-                return { success: true, message: 'Demo OTP sent. Use 123456 to verify.' };
+                // Demo mode - simulate login directly
+                const demoUser = {
+                    id: 'demo-user-' + Date.now(),
+                    email: email || 'demo@example.com',
+                    fullName: email?.split('@')[0] || 'Demo User',
+                    createdAt: new Date().toISOString()
+                };
+                demoStorage.setUser(demoUser);
+                setUser(demoUser);
+                return { success: true, message: 'Demo mode: Logged in automatically.' };
             }
 
             const { error } = await supabase.auth.signInWithOtp({
                 email,
-                options: { data: { full_name: fullName } }
+                options: {
+                    emailRedirectTo: window.location.origin + '/dashboard'
+                }
             });
             if (error) throw error;
-            setPendingAuth({ email, fullName, type: 'email' });
-            return { success: true, message: 'OTP sent to your email' };
+            return { success: true, message: 'A secure login link has been sent to your email. Please click the link in your email to log in.' };
         } catch (error) {
             return { success: false, message: error.message };
         }
@@ -58,7 +66,6 @@ export function AuthProvider({ children }) {
     const signInWithGoogle = async () => {
         try {
             if (isDemoMode) {
-                // Demo mode - simulate Google sign in
                 const demoUser = {
                     id: 'demo-google-user-' + Date.now(),
                     email: 'demo.google@example.com',
@@ -85,43 +92,6 @@ export function AuthProvider({ children }) {
         }
     };
 
-    // Verify OTP
-    const verifyOTP = async (otp) => {
-        try {
-            if (isDemoMode) {
-                // Demo mode - accept 123456
-                if (otp === '123456') {
-                    const demoUser = {
-                        id: 'demo-user-' + Date.now(),
-                        email: pendingAuth?.email || 'demo@example.com',
-                        fullName: pendingAuth?.fullName || 'Demo User',
-                        createdAt: new Date().toISOString()
-                    };
-                    demoStorage.setUser(demoUser);
-                    setUser(demoUser);
-                    setPendingAuth(null);
-                    return { success: true };
-                } else {
-                    return { success: false, message: 'Invalid OTP. Demo code is 123456' };
-                }
-            }
-
-            // Real Supabase verification
-            const { error } = await supabase.auth.verifyOtp({
-                email: pendingAuth.email,
-                token: otp,
-                type: 'email'
-            });
-
-            if (error) throw error;
-
-            setPendingAuth(null);
-            return { success: true };
-        } catch (error) {
-            return { success: false, message: error.message };
-        }
-    };
-
     // Sign out
     const signOut = async () => {
         if (isDemoMode) {
@@ -142,7 +112,6 @@ export function AuthProvider({ children }) {
             return { success: true };
         }
 
-        // Real Supabase update
         const { error } = await supabase
             .from('profiles')
             .upsert({ id: user.id, ...updates });
@@ -158,11 +127,9 @@ export function AuthProvider({ children }) {
     const value = {
         user,
         loading,
-        pendingAuth,
         isDemoMode,
-        sendOTP,
+        sendMagicLink,
         signInWithGoogle,
-        verifyOTP,
         signOut,
         updateProfile
     };

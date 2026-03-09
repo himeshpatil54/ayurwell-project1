@@ -6,10 +6,10 @@ import { ChatProvider } from './context/ChatContext';
 // Pages
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
-import OTPVerificationPage from './pages/OTPVerificationPage';
-import DashboardPage from './pages/DashboardPage';
+import ChatbotPage from './pages/ChatbotPage';
+import HerbalRemediesPage from './pages/HerbalRemediesPage';
+import MedicalAnalyzerPage from './pages/MedicalAnalyzerPage';
 import AboutPage from './pages/AboutPage';
-import ReportsPage from './pages/ReportsPage';
 import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
 
@@ -45,7 +45,7 @@ function PublicRoute({ children }) {
   }
 
   if (user) {
-    return <Navigate to="/dashboard" replace />;
+    return <Navigate to="/chatbot" replace />;
   }
 
   return children;
@@ -65,21 +65,21 @@ function AppRoutes() {
           <AuthPage />
         </PublicRoute>
       } />
-      <Route path="/verify" element={
-        <PublicRoute>
-          <OTPVerificationPage />
-        </PublicRoute>
-      } />
 
       {/* Protected Routes */}
-      <Route path="/dashboard" element={
+      <Route path="/chatbot" element={
         <ProtectedRoute>
-          <DashboardPage />
+          <ChatbotPage />
         </ProtectedRoute>
       } />
-      <Route path="/reports" element={
+      <Route path="/herbal-remedies" element={
         <ProtectedRoute>
-          <ReportsPage />
+          <HerbalRemediesPage />
+        </ProtectedRoute>
+      } />
+      <Route path="/medical-analyzer" element={
+        <ProtectedRoute>
+          <MedicalAnalyzerPage />
         </ProtectedRoute>
       } />
       <Route path="/profile" element={
@@ -87,6 +87,10 @@ function AppRoutes() {
           <ProfilePage />
         </ProtectedRoute>
       } />
+
+      {/* Legacy redirects */}
+      <Route path="/dashboard" element={<Navigate to="/chatbot" replace />} />
+      <Route path="/reports" element={<Navigate to="/herbal-remedies" replace />} />
 
       {/* Fallback */}
       <Route path="*" element={<Navigate to="/" replace />} />

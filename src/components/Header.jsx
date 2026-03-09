@@ -31,14 +31,17 @@ function Header({ showNav = true }) {
 
             {showNav && (
                 <nav className="header-nav">
-                    <Link to="/about">About</Link>
                     {user ? (
                         <>
-                            <Link to="/dashboard">Dashboard</Link>
-                            <Link to="/reports">Reports</Link>
+                            <Link to="/chatbot">Chatbot</Link>
+                            <Link to="/herbal-remedies">Herbal Remedies</Link>
+                            <Link to="/medical-analyzer">Analyzer</Link>
                         </>
                     ) : (
-                        <Link to="/login">Login</Link>
+                        <>
+                            <Link to="/about">About</Link>
+                            <Link to="/login">Login</Link>
+                        </>
                     )}
                 </nav>
             )}

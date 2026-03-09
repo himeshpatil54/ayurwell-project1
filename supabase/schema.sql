@@ -213,3 +213,45 @@ DROP TRIGGER IF EXISTS update_users_updated_at ON users;
 CREATE TRIGGER update_users_updated_at
   BEFORE UPDATE ON users
   FOR EACH ROW EXECUTE FUNCTION update_updated_at_column();
+
+-- ============================================
+-- HERBAL REMEDIES (Knowledge Base)
+-- ============================================
+CREATE TABLE IF NOT EXISTS herbal_remedies (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  herb_name TEXT NOT NULL,
+  benefits TEXT,
+  preparation_method TEXT,
+  dosage TEXT,
+  precautions TEXT,
+  related_symptoms TEXT[],
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE herbal_remedies ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public can view herbal remedies" ON herbal_remedies
+  FOR SELECT USING (true);
+
+CREATE POLICY "Public can insert herbal remedies" ON herbal_remedies
+  FOR INSERT WITH CHECK (true);
+
+-- ============================================
+-- MEDICAL REPORT ANALYSIS (Results Storage)
+-- ============================================
+CREATE TABLE IF NOT EXISTS medical_report_analysis (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  file_name TEXT NOT NULL,
+  extracted_text TEXT,
+  detected_conditions TEXT,
+  ayurvedic_suggestions TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE medical_report_analysis ENABLE ROW LEVEL SECURITY;
+
+CREATE POLICY "Public can view analysis" ON medical_report_analysis
+  FOR SELECT USING (true);
+
+CREATE POLICY "Public can insert analysis" ON medical_report_analysis
+  FOR INSERT WITH CHECK (true);

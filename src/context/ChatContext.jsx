@@ -192,6 +192,24 @@ export function ChatProvider({ children }) {
         setIsTyping(false);
     };
 
+    // ========== SEVERITY ESTIMATION ==========
+    const estimateSeverity = (text) => {
+        const t = text.toLowerCase();
+        const severeWords = ['severe', 'extreme', 'unbearable', 'worst', 'intense', 'excruciating', 'chronic', 'days', 'weeks', 'constant'];
+        const moderateWords = ['moderate', 'persistent', 'recurring', 'uncomfortable', 'bothering', 'regular', 'frequent', 'noticeable'];
+        const mildWords = ['mild', 'slight', 'little', 'minor', 'occasional', 'sometimes'];
+
+        let severeScore = severeWords.filter(w => t.includes(w)).length;
+        let moderateScore = moderateWords.filter(w => t.includes(w)).length;
+        let mildScore = mildWords.filter(w => t.includes(w)).length;
+
+        if (severeScore >= 2 || t.includes('severe') || t.includes('extreme')) return 'Severe';
+        if (moderateScore >= 2 || t.includes('moderate') || t.includes('persistent')) return 'Moderate';
+        if (mildScore >= 1) return 'Mild';
+        // Default estimation based on message length/detail
+        return text.length > 80 ? 'Moderate' : 'Mild';
+    };
+
     // ========== KB SEARCH — THE MAIN HANDLER ==========
     // This handles ALL symptom/health queries by searching Supabase directly
     const handleKBSearch = async (message) => {
@@ -203,17 +221,22 @@ export function ChatProvider({ children }) {
         console.log('[Chat] Supabase KB returned:', kbResult.results.length, 'results, confidence:', kbResult.confidence, 'source:', kbResult.source);
 
         if (kbResult.results.length > 0 && kbResult.confidence >= 0.3) {
-            // Found data from Supabase!
-            console.log('[Chat] Showing Supabase results for:', message);
+            // Detect dosha from top result
+            const topDosha = (kbResult.results[0].dosha || '').charAt(0).toUpperCase() + (kbResult.results[0].dosha || '').slice(1);
+            const severity = estimateSeverity(message);
+
+            // Build response with dosha + severity header
+            let response = '';
+            response += `**Possible Dosha Imbalance:** ${topDosha || 'General'}\n`;
+            response += `**Symptom Severity:** ${severity}\n\n`;
+            response += `---\n\n`;
+
             const formatted = formatKBResponse(kbResult.results, message);
-            const intros = [
-                "Great question! Here's what our Ayurvedic knowledge base says:\n\n",
-                "I looked that up for you! Here's what I found:\n\n",
-                "Here's some Ayurvedic guidance from our knowledge base:\n\n",
-                "I found some helpful information for you! 😊\n\n"
-            ];
-            const intro = intros[Math.floor(Math.random() * intros.length)];
-            addMessage('assistant', `${intro}${formatted}`);
+            response += formatted;
+            response += `\n\n---\n`;
+            response += `\n💡 *For herbal treatments and remedies, please check the [Herbal Remedies](/herbal-remedies) section.*`;
+
+            addMessage('assistant', response);
         } else {
             // No match in KB — friendly fallback
             console.log('[Chat] No Supabase results for:', message);
