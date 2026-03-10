@@ -6,6 +6,7 @@ import { ChatProvider } from './context/ChatContext';
 // Pages
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
+import AuthCallback from './pages/AuthCallback';
 import ChatbotPage from './pages/ChatbotPage';
 import HerbalRemediesPage from './pages/HerbalRemediesPage';
 import MedicalAnalyzerPage from './pages/MedicalAnalyzerPage';
@@ -65,6 +66,7 @@ function AppRoutes() {
           <AuthPage />
         </PublicRoute>
       } />
+      <Route path="/auth/callback" element={<AuthCallback />} />
 
       {/* Protected Routes */}
       <Route path="/chatbot" element={

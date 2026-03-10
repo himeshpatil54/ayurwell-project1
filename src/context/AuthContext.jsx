@@ -24,8 +24,9 @@ export function AuthProvider({ children }) {
                 setLoading(false);
             });
 
-            // Listen for auth changes (handles magic link callback)
-            const { data: { subscription } } = supabase.auth.onAuthStateChange((_event, session) => {
+            // Listen for auth changes (handles magic link & OAuth callbacks)
+            const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
+                console.log('[Auth] onAuthStateChange:', event, session?.user?.email || 'no user');
                 setUser(session?.user ?? null);
             });
 
@@ -52,7 +53,7 @@ export function AuthProvider({ children }) {
             const { error } = await supabase.auth.signInWithOtp({
                 email,
                 options: {
-                    emailRedirectTo: window.location.origin + '/dashboard'
+                    emailRedirectTo: window.location.origin + '/auth/callback'
                 }
             });
             if (error) throw error;
@@ -78,10 +79,11 @@ export function AuthProvider({ children }) {
                 return { success: true };
             }
 
+            console.log('[Auth] Starting Google OAuth, redirectTo:', window.location.origin + '/auth/callback');
             const { error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: window.location.origin + '/dashboard'
+                    redirectTo: window.location.origin + '/auth/callback'
                 }
             });
 
