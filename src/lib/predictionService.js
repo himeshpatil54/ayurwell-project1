@@ -1,15 +1,16 @@
 // Prediction Service — Loads dataset, trains model, provides predictions
-// Manages the ML pipeline: CSV parsing → encoding → training → prediction → history
+// ML pipeline: CSV parsing → cleaning → encoding → cross-validation → training → prediction → history
 
 import {
     trainRandomForest,
     predictRandomForest,
     evaluateModel,
+    crossValidate,
+    cleanDataset,
     splitDataset,
     encodeFeatures,
     encodeInput
 } from './predictionEngine';
-import { demoStorage } from './supabase';
 
 // ========== STATE ==========
 let model = null;
@@ -17,7 +18,6 @@ let encoders = null;
 let datasetRows = null;
 let symptomList = null;
 let diseaseRemedyMap = null;
-let evaluationResults = null;
 let isTraining = false;
 let trainPromise = null;
 
@@ -30,7 +30,6 @@ function parseCSV(csvText) {
     for (let i = 1; i < lines.length; i++) {
         const line = lines[i].trim();
         if (!line) continue;
-        // Simple CSV parse (no quoted commas in our data)
         const values = line.split(',').map(v => v.trim());
         if (values.length === headers.length) {
             const row = {};
@@ -41,26 +40,36 @@ function parseCSV(csvText) {
     return { headers, rows };
 }
 
+// ========== MODEL CONFIG (optimized hyperparameters) ==========
+const MODEL_CONFIG = {
+    nTrees: 120,
+    maxDepth: 15,
+    minSize: 1,
+    minSamplesSplit: 3,
+    featureRatio: 1.0
+};
+
+const CV_FOLDS = 5;
+
 // ========== INIT & TRAIN ==========
 
 async function loadAndTrain() {
-    if (model) return; // Already trained
-    if (isTraining) return trainPromise; // Training in progress
+    if (model) return;
+    if (isTraining) return trainPromise;
 
     isTraining = true;
     trainPromise = (async () => {
         try {
             console.log('[PredictionService] Loading dataset...');
 
-            // Fetch CSV from the dataset directory
+            let csvText;
             const response = await fetch('/dataset/ayurvedic_symptom_dataset.csv');
             if (!response.ok) {
-                // Try alternate path for dev
                 const resp2 = await fetch('./dataset/ayurvedic_symptom_dataset.csv');
                 if (!resp2.ok) throw new Error('Failed to load dataset CSV');
-                var csvText = await resp2.text();
+                csvText = await resp2.text();
             } else {
-                var csvText = await response.text();
+                csvText = await response.text();
             }
 
             const { rows } = parseCSV(csvText);
@@ -77,7 +86,7 @@ async function loadAndTrain() {
             }
             symptomList = [...symptomSet].sort();
 
-            // Build remedy lookup: disease → { remedy, herbs, diet }
+            // Build remedy lookup: disease → [{ remedy, herbs, diet }]
             diseaseRemedyMap = {};
             for (const row of rows) {
                 if (!diseaseRemedyMap[row.disease]) {
@@ -93,27 +102,23 @@ async function loadAndTrain() {
             // Prepare data for ML: [symptom_1, symptom_2, symptom_3, symptom_4, disease]
             const rawData = rows.map(r => [r.symptom_1, r.symptom_2, r.symptom_3, r.symptom_4, r.disease]);
 
+            // Clean dataset (remove duplicates, empty values, normalize)
+            const cleanedData = cleanDataset(rawData);
+
             // Encode features
-            const { encoded, encoders: enc } = encodeFeatures(rawData);
+            const { encoded, encoders: enc } = encodeFeatures(cleanedData);
             encoders = enc;
 
-            // Split 80/20
+            // Run k-fold cross-validation (logs metrics to console only — not shown to users)
+            crossValidate(encoded, CV_FOLDS, MODEL_CONFIG);
+
+            // Train final model on full dataset with optimized hyperparameters
+            model = trainRandomForest(encoded, MODEL_CONFIG);
+
+            // Final evaluation on held-out test split (console only)
             const { train, test } = splitDataset(encoded, 0.8);
-            console.log(`[PredictionService] Train: ${train.length}, Test: ${test.length}`);
-
-            // Train Random Forest
-            model = trainRandomForest(train, {
-                nTrees: 50,
-                maxDepth: 12,
-                minSize: 2,
-                featureRatio: 0.8
-            });
-
-            // Evaluate
-            evaluationResults = evaluateModel(model, test);
-            console.log(`[PredictionService] Model Accuracy: ${(evaluationResults.accuracy * 100).toFixed(1)}%`);
-            console.log(`[PredictionService] Precision: ${(evaluationResults.precision * 100).toFixed(1)}%`);
-            console.log(`[PredictionService] Recall: ${(evaluationResults.recall * 100).toFixed(1)}%`);
+            const evalResults = evaluateModel(trainRandomForest(train, MODEL_CONFIG), test);
+            console.log(`[PredictionService] Final Holdout — Accuracy: ${(evalResults.accuracy * 100).toFixed(1)}%, Precision: ${(evalResults.precision * 100).toFixed(1)}%, Recall: ${(evalResults.recall * 100).toFixed(1)}%, F1: ${(evalResults.f1Score * 100).toFixed(1)}%`);
             console.log('[PredictionService] Model ready.');
 
         } catch (err) {
@@ -141,7 +146,7 @@ export async function getSymptomList() {
 /**
  * Predict disease from symptoms.
  * @param {string[]} symptoms - Array of 1-4 symptom strings
- * @returns {{ predicted_disease, confidence_score, remedy, recommended_herbs, diet }}
+ * @returns {{ predicted_disease, remedy, recommended_herbs, diet }}
  */
 export async function predictDisease(symptoms) {
     await loadAndTrain();
@@ -153,12 +158,12 @@ export async function predictDisease(symptoms) {
     // Pad symptoms to 4 (the model expects 4 features)
     const padded = [...symptoms];
     while (padded.length < 4) {
-        // Duplicate a random symptom from the input to fill
         padded.push(padded[Math.floor(Math.random() * symptoms.length)]);
     }
 
-    // Encode the input
-    const encodedInput = encodeInput(padded.slice(0, 4), encoders);
+    // Encode the input (lowercase to match cleaned dataset)
+    const normalizedInput = padded.slice(0, 4).map(s => s.toLowerCase().trim());
+    const encodedInput = encodeInput(normalizedInput, encoders);
 
     // Predict
     const result = predictRandomForest(model, encodedInput);
@@ -171,7 +176,6 @@ export async function predictDisease(symptoms) {
 
     const prediction = {
         predicted_disease: result.prediction,
-        confidence_score: Math.round(result.confidence * 100) / 100,
         remedy: remedy.remedy,
         recommended_herbs: remedy.herbs ? remedy.herbs.split(';').map(h => h.trim()) : [],
         diet: remedy.diet,
@@ -183,14 +187,6 @@ export async function predictDisease(symptoms) {
     savePrediction(prediction);
 
     return prediction;
-}
-
-/**
- * Get model evaluation metrics.
- */
-export async function getModelMetrics() {
-    await loadAndTrain();
-    return evaluationResults;
 }
 
 /**
@@ -212,7 +208,6 @@ function savePrediction(prediction) {
             id: Date.now(),
             ...prediction
         });
-        // Keep last 50 predictions
         const trimmed = history.slice(0, 50);
         localStorage.setItem(PREDICTION_HISTORY_KEY, JSON.stringify(trimmed));
     } catch (e) {

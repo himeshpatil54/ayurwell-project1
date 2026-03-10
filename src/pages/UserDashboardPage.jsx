@@ -155,7 +155,6 @@ function UserDashboardPage() {
                                                     <th>Date</th>
                                                     <th>Symptoms</th>
                                                     <th>Predicted Disease</th>
-                                                    <th>Confidence</th>
                                                     <th>Remedies</th>
                                                 </tr>
                                             </thead>
@@ -177,17 +176,6 @@ function UserDashboardPage() {
                                                         </td>
                                                         <td>
                                                             <strong style={{ color: 'var(--color-primary)' }}>{p.predicted_disease}</strong>
-                                                        </td>
-                                                        <td>
-                                                            <div className="dash-confidence">
-                                                                <div className="dash-confidence-bar">
-                                                                    <div
-                                                                        className="dash-confidence-fill"
-                                                                        style={{ width: `${(p.confidence_score || 0) * 100}%` }}
-                                                                    ></div>
-                                                                </div>
-                                                                <span>{((p.confidence_score || 0) * 100).toFixed(0)}%</span>
-                                                            </div>
                                                         </td>
                                                         <td>
                                                             <span className="dash-remedy-text">{p.remedy || '—'}</span>

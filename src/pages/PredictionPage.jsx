@@ -1,8 +1,10 @@
 // Prediction Page — AI Symptom-Based Disease Prediction Interface
+// Users select symptoms from searchable dropdown, get disease + remedy results
+// NO model metrics, accuracy, precision, recall, or confidence shown to users
 import { useState, useEffect, useRef } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Header from '../components/Header';
-import { getSymptomList, predictDisease, getModelMetrics } from '../lib/predictionService';
+import { getSymptomList, predictDisease } from '../lib/predictionService';
 
 function PredictionPage() {
     const [allSymptoms, setAllSymptoms] = useState([]);
@@ -13,19 +15,16 @@ function PredictionPage() {
     const [isInitializing, setIsInitializing] = useState(true);
     const [result, setResult] = useState(null);
     const [error, setError] = useState(null);
-    const [modelMetrics, setModelMetrics] = useState(null);
     const dropdownRef = useRef(null);
     const inputRef = useRef(null);
     const navigate = useNavigate();
 
-    // Load symptoms on mount
+    // Load symptoms on mount (model trains in background)
     useEffect(() => {
         (async () => {
             try {
                 const symptoms = await getSymptomList();
                 setAllSymptoms(symptoms);
-                const metrics = await getModelMetrics();
-                setModelMetrics(metrics);
             } catch (err) {
                 setError('Failed to initialize prediction model. Please refresh.');
                 console.error(err);
@@ -84,11 +83,9 @@ function PredictionPage() {
     };
 
     const handleChatbotRedirect = () => {
-        // Store prediction context for the chatbot
         if (result) {
             localStorage.setItem('ayurwell_prediction_context', JSON.stringify({
                 disease: result.predicted_disease,
-                confidence: result.confidence_score,
                 symptoms: result.symptoms_used,
                 remedy: result.remedy
             }));
@@ -96,16 +93,15 @@ function PredictionPage() {
         navigate('/chatbot');
     };
 
-    const getConfidenceColor = (score) => {
-        if (score >= 0.8) return 'var(--color-primary)';
-        if (score >= 0.6) return 'var(--color-secondary)';
-        return 'var(--color-accent)';
-    };
-
-    const getConfidenceLabel = (score) => {
-        if (score >= 0.8) return 'High Confidence';
-        if (score >= 0.6) return 'Moderate Confidence';
-        return 'Low Confidence';
+    // Prevent form submission / Enter key from adding free text
+    const handleKeyDown = (e) => {
+        if (e.key === 'Enter') {
+            e.preventDefault();
+            // If exactly one match in dropdown, select it
+            if (filteredSymptoms.length === 1 && selectedSymptoms.length < 4) {
+                addSymptom(filteredSymptoms[0]);
+            }
+        }
     };
 
     return (
@@ -122,12 +118,6 @@ function PredictionPage() {
                             Enter your symptoms and our AI model will predict potential conditions
                             with personalized Ayurvedic remedies.
                         </p>
-                        {modelMetrics && (
-                            <div className="predict-accuracy-badge">
-                                <span className="accuracy-dot"></span>
-                                Model Accuracy: {(modelMetrics.accuracy * 100).toFixed(1)}%
-                            </div>
-                        )}
                     </div>
 
                     {/* Initialization Loader */}
@@ -148,7 +138,7 @@ function PredictionPage() {
                                     Select Your Symptoms
                                 </h3>
                                 <p className="text-muted" style={{ marginBottom: 'var(--space-lg)' }}>
-                                    Choose up to 4 symptoms you're experiencing
+                                    Choose up to 4 symptoms you're experiencing from the dropdown
                                 </p>
 
                                 {/* Selected symptom chips */}
@@ -167,7 +157,7 @@ function PredictionPage() {
                                     </div>
                                 )}
 
-                                {/* Search input */}
+                                {/* Searchable dropdown */}
                                 <div className="symptom-search-wrapper" ref={dropdownRef}>
                                     <input
                                         ref={inputRef}
@@ -183,25 +173,35 @@ function PredictionPage() {
                                             setShowDropdown(true);
                                         }}
                                         onFocus={() => setShowDropdown(true)}
+                                        onKeyDown={handleKeyDown}
                                         disabled={selectedSymptoms.length >= 4}
+                                        autoComplete="off"
                                         id="symptom-search"
                                     />
                                     <span className="symptom-search-icon">🔍</span>
 
-                                    {showDropdown && filteredSymptoms.length > 0 && selectedSymptoms.length < 4 && (
+                                    {showDropdown && selectedSymptoms.length < 4 && (
                                         <div className="symptom-dropdown">
-                                            {filteredSymptoms.slice(0, 8).map(s => (
-                                                <button
-                                                    key={s}
-                                                    className="symptom-dropdown-item"
-                                                    onClick={() => addSymptom(s)}
-                                                >
-                                                    {formatSymptom(s)}
-                                                </button>
-                                            ))}
-                                            {filteredSymptoms.length > 8 && (
-                                                <div className="symptom-dropdown-more">
-                                                    +{filteredSymptoms.length - 8} more — type to filter
+                                            {filteredSymptoms.length > 0 ? (
+                                                <>
+                                                    {filteredSymptoms.slice(0, 10).map(s => (
+                                                        <button
+                                                            key={s}
+                                                            className="symptom-dropdown-item"
+                                                            onClick={() => addSymptom(s)}
+                                                        >
+                                                            {formatSymptom(s)}
+                                                        </button>
+                                                    ))}
+                                                    {filteredSymptoms.length > 10 && (
+                                                        <div className="symptom-dropdown-more">
+                                                            +{filteredSymptoms.length - 10} more — type to filter
+                                                        </div>
+                                                    )}
+                                                </>
+                                            ) : (
+                                                <div className="symptom-dropdown-empty">
+                                                    No matching symptoms found
                                                 </div>
                                             )}
                                         </div>
@@ -265,25 +265,6 @@ function PredictionPage() {
                                         Predicted Condition
                                     </div>
                                     <h2 className="predict-result-disease">{result.predicted_disease}</h2>
-                                </div>
-
-                                {/* Confidence Meter */}
-                                <div className="predict-confidence-section">
-                                    <div className="predict-confidence-label">
-                                        <span>Confidence Score</span>
-                                        <span style={{ color: getConfidenceColor(result.confidence_score), fontWeight: 600 }}>
-                                            {(result.confidence_score * 100).toFixed(0)}% — {getConfidenceLabel(result.confidence_score)}
-                                        </span>
-                                    </div>
-                                    <div className="predict-confidence-bar">
-                                        <div
-                                            className="predict-confidence-fill"
-                                            style={{
-                                                width: `${result.confidence_score * 100}%`,
-                                                background: `linear-gradient(90deg, ${getConfidenceColor(result.confidence_score)}, ${getConfidenceColor(result.confidence_score)}dd)`
-                                            }}
-                                        ></div>
-                                    </div>
                                 </div>
 
                                 {/* Remedy Details Grid */}
