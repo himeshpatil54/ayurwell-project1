@@ -4,9 +4,16 @@ import { useAuth } from '../context/AuthContext';
 
 function LandingPage() {
     const { user } = useAuth();
-    const linkBase = user ? '' : '/login';
 
     const modules = [
+        {
+            title: 'Health Prediction',
+            icon: '🔮',
+            description: 'Enter your symptoms and our AI model predicts potential conditions with personalized Ayurvedic remedies, herbs, and diet suggestions.',
+            path: user ? '/predict' : '/login',
+            color: 'var(--color-secondary)',
+            primary: true
+        },
         {
             title: 'Symptom Chatbot',
             icon: '💬',
@@ -19,14 +26,14 @@ function LandingPage() {
             icon: '🌿',
             description: 'Explore a curated knowledge base of Ayurvedic herbs, their benefits, preparation methods, and dosage.',
             path: user ? '/herbal-remedies' : '/login',
-            color: 'var(--color-secondary)'
+            color: 'var(--color-accent)'
         },
         {
-            title: 'Medical Report Analyzer',
-            icon: '📋',
-            description: 'Upload medical reports for AI-powered analysis. Detect health indicators and get personalized Ayurvedic suggestions.',
-            path: user ? '/medical-analyzer' : '/login',
-            color: 'var(--color-accent)'
+            title: 'User Dashboard',
+            icon: '📊',
+            description: 'Track your prediction history, view health statistics, and review past chatbot conversations in one place.',
+            path: user ? '/user-dashboard' : '/login',
+            color: 'var(--color-primary-light)'
         }
     ];
 
@@ -47,7 +54,7 @@ function LandingPage() {
                 <nav className="landing-nav">
                     <Link to="/about">About</Link>
                     {user ? (
-                        <Link to="/chatbot" className="btn btn-primary btn-sm">Dashboard</Link>
+                        <Link to="/predict" className="btn btn-primary btn-sm">Get Started</Link>
                     ) : (
                         <Link to="/login" className="btn btn-primary btn-sm">Sign In</Link>
                     )}
@@ -57,15 +64,16 @@ function LandingPage() {
             {/* Hero Section */}
             <section className="landing-hero">
                 <div className="landing-hero-content animate-fade-in-up">
-                    <div className="landing-badge">🌿 Ayurvedic AI Health Assistant</div>
-                    <h1 className="landing-title">Your Path to<br />Natural Balance</h1>
+                    <div className="landing-badge">🧬 AI-Powered Ayurvedic Health Prediction</div>
+                    <h1 className="landing-title">Predict & Heal<br />With Ayurveda</h1>
                     <p className="landing-subtitle">
-                        Harness the wisdom of Ayurveda with intelligent symptom analysis,
-                        herbal remedy guidance, and medical report insights — all in one place.
+                        Enter your symptoms and let our AI predict potential health conditions —
+                        then receive personalized Ayurvedic remedies, herbal treatments,
+                        and dietary guidance — all in one place.
                     </p>
                     <div className="landing-hero-cta">
-                        <Link to={user ? '/chatbot' : '/login'} className="btn btn-primary btn-lg">
-                            Get Started
+                        <Link to={user ? '/predict' : '/login'} className="btn btn-primary btn-lg">
+                            Start Health Prediction
                         </Link>
                         <Link to="/about" className="btn btn-secondary btn-lg">
                             Learn More
@@ -78,8 +86,8 @@ function LandingPage() {
             <section className="landing-modules" id="modules">
                 <div className="container">
                     <div className="landing-section-header">
-                        <h2>Three Intelligent Modules</h2>
-                        <p>Comprehensive Ayurvedic wellness tools designed for modern health needs.</p>
+                        <h2>Intelligent Health Modules</h2>
+                        <p>AI-powered Ayurvedic wellness tools designed for modern health needs.</p>
                     </div>
 
                     <div className="module-cards-grid">
@@ -87,7 +95,7 @@ function LandingPage() {
                             <Link
                                 key={idx}
                                 to={mod.path}
-                                className="module-card animate-fade-in-up"
+                                className={`module-card animate-fade-in-up${mod.primary ? ' module-card-primary' : ''}`}
                                 style={{ animationDelay: `${idx * 100 + 100}ms` }}
                                 id={`module-card-${idx}`}
                             >
@@ -145,9 +153,9 @@ function LandingPage() {
             <section className="landing-cta">
                 <div className="container text-center">
                     <h2>Start Your Wellness Journey Today</h2>
-                    <p>Free, private, and powered by traditional Ayurvedic wisdom.</p>
-                    <Link to={user ? '/chatbot' : '/login'} className="btn btn-primary btn-lg">
-                        Begin Now →
+                    <p>Free, private, and powered by AI + traditional Ayurvedic wisdom.</p>
+                    <Link to={user ? '/predict' : '/login'} className="btn btn-primary btn-lg">
+                        Begin Health Prediction →
                     </Link>
                 </div>
             </section>
@@ -169,3 +177,4 @@ function LandingPage() {
 }
 
 export default LandingPage;
+

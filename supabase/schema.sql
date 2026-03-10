@@ -255,3 +255,71 @@ CREATE POLICY "Public can view analysis" ON medical_report_analysis
 
 CREATE POLICY "Public can insert analysis" ON medical_report_analysis
   FOR INSERT WITH CHECK (true);
+
+-- ============================================
+-- SYMPTOM PREDICTIONS (AI Disease Prediction)
+-- ============================================
+CREATE TABLE IF NOT EXISTS symptom_predictions (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  symptoms TEXT[] NOT NULL,
+  predicted_disease TEXT NOT NULL,
+  confidence_score NUMERIC CHECK (confidence_score >= 0 AND confidence_score <= 1),
+  remedy TEXT,
+  recommended_herbs TEXT,
+  diet_recommendation TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE symptom_predictions ENABLE ROW LEVEL SECURITY;
+
+CREATE INDEX IF NOT EXISTS idx_symptom_predictions_user_id ON symptom_predictions(user_id);
+CREATE INDEX IF NOT EXISTS idx_symptom_predictions_created_at ON symptom_predictions(created_at);
+
+CREATE POLICY "Users can view own predictions" ON symptom_predictions
+  FOR SELECT USING (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));
+
+CREATE POLICY "Users can create own predictions" ON symptom_predictions
+  FOR INSERT WITH CHECK (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));
+
+-- ============================================
+-- CHATBOT LOGS
+-- ============================================
+CREATE TABLE IF NOT EXISTS chatbot_logs (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  user_message TEXT NOT NULL,
+  bot_response TEXT NOT NULL,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE chatbot_logs ENABLE ROW LEVEL SECURITY;
+
+CREATE INDEX IF NOT EXISTS idx_chatbot_logs_user_id ON chatbot_logs(user_id);
+
+CREATE POLICY "Users can view own chatbot logs" ON chatbot_logs
+  FOR SELECT USING (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));
+
+CREATE POLICY "Users can create own chatbot logs" ON chatbot_logs
+  FOR INSERT WITH CHECK (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));
+
+-- ============================================
+-- USER ACTIVITY TRACKING
+-- ============================================
+CREATE TABLE IF NOT EXISTS user_activity (
+  id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+  user_id UUID REFERENCES users(id) ON DELETE CASCADE,
+  activity_type TEXT NOT NULL,
+  page_visited TEXT,
+  created_at TIMESTAMPTZ DEFAULT NOW()
+);
+
+ALTER TABLE user_activity ENABLE ROW LEVEL SECURITY;
+
+CREATE INDEX IF NOT EXISTS idx_user_activity_user_id ON user_activity(user_id);
+
+CREATE POLICY "Users can view own activity" ON user_activity
+  FOR SELECT USING (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));
+
+CREATE POLICY "Users can create own activity" ON user_activity
+  FOR INSERT WITH CHECK (user_id IN (SELECT id FROM users WHERE auth_id = auth.uid()));

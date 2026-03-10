@@ -33,9 +33,10 @@ function Header({ showNav = true }) {
                 <nav className="header-nav">
                     {user ? (
                         <>
+                            <Link to="/predict">Predict</Link>
                             <Link to="/chatbot">Chatbot</Link>
                             <Link to="/herbal-remedies">Herbal Remedies</Link>
-                            <Link to="/medical-analyzer">Analyzer</Link>
+                            <Link to="/user-dashboard">Dashboard</Link>
                         </>
                     ) : (
                         <>

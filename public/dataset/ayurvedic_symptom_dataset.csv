@@ -1,0 +1,251 @@
+symptom_1,symptom_2,symptom_3,symptom_4,disease,ayurvedic_remedy,recommended_herbs,diet_recommendation
+high_temperature,body_ache,chills,fatigue,Fever,Tulsi tea and turmeric milk with rest,Tulsi;Ginger;Turmeric,Warm fluids and light khichdi
+high_temperature,headache,sweating,weakness,Fever,Giloy kashayam and adequate hydration,Giloy;Tulsi;Neem,Light soups and herbal teas
+high_temperature,loss_of_appetite,body_ache,sweating,Fever,Sudarshan churna with warm water,Sudarshan;Tulsi;Giloy,Avoid heavy and oily food
+high_temperature,chills,sore_throat,fatigue,Fever,Tulsi ginger tea and steam inhalation,Tulsi;Ginger;Black Pepper,Warm liquids and moong dal soup
+high_temperature,muscle_pain,headache,chills,Fever,Giloy juice and turmeric milk,Giloy;Turmeric;Ashwagandha,Rest with warm herbal fluids
+body_ache,high_temperature,weakness,nausea,Fever,Tribhuvankirti ras with honey,Tribhuvankirti;Tulsi;Ginger,Light vegetable broth and rice
+high_temperature,fatigue,joint_pain,sweating,Fever,Mahasudarshan churna with warm water,Mahasudarshan;Giloy;Neem,Avoid dairy and eat light meals
+high_temperature,loss_of_appetite,chills,cough,Fever,Sitopaladi churna and honey,Sitopaladi;Tulsi;Pippali,Warm soups and avoid cold foods
+sweating,body_ache,high_temperature,dizziness,Fever,Amritarishta tonic after meals,Amritarishta;Giloy;Guduchi,Stay hydrated with electrolyte drinks
+high_temperature,sore_throat,body_ache,headache,Fever,Khadiradi vati and tulsi decoction,Khadiradi;Tulsi;Yashtimadhu,Soft warm foods only
+chills,fatigue,high_temperature,loss_of_appetite,Fever,Giloy satva with warm milk,Giloy;Ashwagandha;Shatavari,Easy to digest meals and rest
+high_temperature,nausea,headache,fatigue,Fever,Tulsi drops in warm water with honey,Tulsi;Ginger;Lemon,Avoid fried food and eat fruits
+body_ache,sweating,weakness,high_temperature,Fever,Rest with triphala kashayam,Triphala;Giloy;Haritaki,Light dal and steamed vegetables
+high_temperature,cough,runny_nose,fatigue,Fever,Talisadi churna with warm milk,Talisadi;Pippali;Ginger,Avoid cold items and dairy
+high_temperature,body_ache,dizziness,chills,Fever,Mahasudarshan ghanvati tablets,Mahasudarshan;Giloy;Tulsi,Drink warm water throughout the day
+headache,chills,high_temperature,muscle_pain,Fever,Jwarnashak kwath decoction,Tulsi;Giloy;Sunthi,Light porridge and warm soups
+high_temperature,sore_throat,weakness,sweating,Fever,Vyoshadi vati and warm saline gargle,Vyoshadi;Yashtimadhu;Tulsi,Warm fluids and avoid spicy food
+high_temperature,loss_of_appetite,nausea,body_ache,Fever,Chitrakadi vati with buttermilk,Chitrakadi;Ginger;Tulsi,Small frequent meals
+high_temperature,fatigue,runny_nose,cough,Fever,Trikatu churna with honey,Trikatu;Pippali;Maricha,Warm ginger lemon water
+sweating,high_temperature,muscle_pain,weakness,Fever,Guduchi satva with warm water,Guduchi;Ashwagandha;Shatavari,Lukewarm water and boiled rice
+high_temperature,body_ache,headache,loss_of_appetite,Fever,Mrityunjay ras with honey,Mrityunjay;Giloy;Tulsi,Avoid raw food and eat cooked warm meals
+high_temperature,chills,dizziness,sore_throat,Fever,Sudarshan ghanvati with warm water,Sudarshan;Ginger;Tulsi,Warm vegetable broth and herbal tea
+body_ache,fatigue,high_temperature,cough,Fever,Panchagavya ghrita internally,Panchagavya;Tulsi;Giloy,Hot soupy meals and rest
+high_temperature,weakness,sweating,runny_nose,Fever,Sitopaladi with warm milk,Sitopaladi;Pippali;Ginger,Avoid heavy meals
+high_temperature,headache,nausea,muscle_pain,Fever,Laghu malini vasant ras,Laghu Malini;Giloy;Tulsi,Light warm porridge
+high_temperature,fatigue,body_ache,loss_of_appetite,Fever,Amritarishta after meals,Amritarishta;Giloy;Neem,Moong dal soup and warm rice
+high_temperature,chills,cough,body_ache,Fever,Sitopaladi churna with honey,Sitopaladi;Trikatu;Tulsi,Warm fluids only
+high_temperature,sweating,sore_throat,weakness,Fever,Tulsi ginger kadha,Tulsi;Ginger;Black Pepper,Light meals and rest
+high_temperature,muscle_pain,loss_of_appetite,nausea,Fever,Giloy ghanvati tablets,Giloy;Guduchi;Ashwagandha,Avoid cold and oily food
+high_temperature,dizziness,fatigue,headache,Fever,Chandraprabha vati with water,Chandraprabha;Giloy;Tulsi,Light food and frequent water intake
+runny_nose,sneezing,sore_throat,congestion,Cold,Trikatu churna with honey and warm water,Trikatu;Ginger;Tulsi,Avoid cold foods and dairy products
+sneezing,congestion,cough,fatigue,Cold,Steam inhalation with eucalyptus and tulsi tea,Tulsi;Eucalyptus;Pippali,Warm soups and avoid ice cream
+runny_nose,headache,sneezing,body_ache,Cold,Sitopaladi churna with honey,Sitopaladi;Trikatu;Ginger,Warm ginger tea and light meals
+congestion,sore_throat,fatigue,sneezing,Cold,Yashtimadhu gargle and tulsi drops,Yashtimadhu;Tulsi;Mulethi,Avoid sour and cold foods
+cough,runny_nose,sneezing,weakness,Cold,Talisadi churna with warm water,Talisadi;Pippali;Sitopladi,Hot herbal teas and khichdi
+sneezing,watery_eyes,congestion,sore_throat,Cold,Laxmi vilas ras with honey,Laxmi Vilas;Tulsi;Ginger,Warm fluids and turmeric milk
+runny_nose,body_ache,headache,congestion,Cold,Tribhuvankirti ras and steam therapy,Tribhuvankirti;Ginger;Pippali,Avoid heavy meals and eat soups
+congestion,cough,sneezing,chills,Cold,Kantakari avaleha with warm milk,Kantakari;Ginger;Tulsi,Warm porridge and herbal decoctions
+runny_nose,fatigue,sore_throat,sneezing,Cold,Agastya haritaki avaleha,Agastya;Haritaki;Pippali,Hot water with honey and lemon
+sneezing,congestion,headache,cough,Cold,Vyoshadi vati and nasal drops,Vyoshadi;Tulsi;Eucalyptus,Freshly cooked warm meals only
+sore_throat,sneezing,runny_nose,watery_eyes,Cold,Khadiradi vati and steam inhalation,Khadiradi;Yashtimadhu;Tulsi,Avoid refrigerated items
+congestion,body_ache,cough,runny_nose,Cold,Chitrak haritaki with warm milk,Chitrak;Haritaki;Ginger,Hot soups and avoid bananas
+sneezing,fatigue,congestion,headache,Cold,Lavangadi vati and tulsi tea,Lavangadi;Tulsi;Clove,Warm spiced foods
+runny_nose,cough,sore_throat,chills,Cold,Trikatu with honey three times daily,Trikatu;Maricha;Pippali,Avoid yogurt and cold drinks
+congestion,sneezing,weakness,watery_eyes,Cold,Anu taila nasal drops and steam,Anu Taila;Tulsi;Ginger,Light warm meals
+sore_throat,congestion,cough,fatigue,Cold,Sitopaladi churna with ghee,Sitopaladi;Yashtimadhu;Tulsi,Warm milk with turmeric
+sneezing,runny_nose,body_ache,chills,Cold,Sudarshan churna with warm water,Sudarshan;Giloy;Ginger,Hot vegetable soup and rest
+cough,sneezing,congestion,headache,Cold,Trikatu churna and steam therapy,Trikatu;Tulsi;Black Pepper,Avoid cold water completely
+runny_nose,watery_eyes,fatigue,sneezing,Cold,Tulsi ginger kadha twice daily,Tulsi;Ginger;Lemon,Warm khichdi and herbal tea
+congestion,sore_throat,sneezing,body_ache,Cold,Tribhuvankirti ras with ginger juice,Tribhuvankirti;Ginger;Tulsi,Warm soups and steamed vegetables
+runny_nose,cough,chills,weakness,Cold,Kantakari ghrita with warm milk,Kantakari;Pippali;Ginger,Hot fluids and light meals
+sneezing,headache,congestion,fatigue,Cold,Mahalaxmi vilas ras tablets,Mahalaxmi Vilas;Tulsi;Ginger,Warm dal soup
+sore_throat,runny_nose,sneezing,cough,Cold,Khadiradi vati with honey,Khadiradi;Mulethi;Tulsi,Avoid fried food and eat warm meals
+congestion,watery_eyes,body_ache,sneezing,Cold,Anu taila nasya and steam,Anu Taila;Eucalyptus;Tulsi,Hot ginger lemon water
+sneezing,fatigue,chills,runny_nose,Cold,Giloy tulsi kadha,Giloy;Tulsi;Ginger,Warm food and avoid cold items
+headache,nausea,sensitivity_to_light,dizziness,Migraine,Brahmi herbal tea and proper rest,Brahmi;Ashwagandha;Shankhpushpi,Avoid spicy and oily food
+headache,blurred_vision,nausea,neck_stiffness,Migraine,Shirashooladi vajra ras with milk,Shirashooladi;Brahmi;Jatamansi,Light meals and avoid screen time
+throbbing_headache,sensitivity_to_light,vomiting,fatigue,Migraine,Pathyadi kwath and nasya therapy,Pathyadi;Brahmi;Ashwagandha,Avoid cheese and fermented food
+headache,dizziness,irritability,nausea,Migraine,Brahmi ghritam and shirodhara therapy,Brahmi;Shankhpushpi;Jatamansi,Avoid caffeine and chocolate
+sensitivity_to_light,headache,neck_stiffness,blurred_vision,Migraine,Godanti bhasma with honey,Godanti;Brahmi;Vacha,Cool and calming foods
+nausea,throbbing_headache,fatigue,irritability,Migraine,Shirashuladi ras and rest in dark room,Shirashuladi;Jatamansi;Ashwagandha,Reduce salt and avoid preservatives
+headache,vomiting,dizziness,sensitivity_to_light,Migraine,Brahmi vati with warm milk,Brahmi;Shankhpushpi;Guduchi,Light sattvic diet
+blurred_vision,nausea,headache,stress,Migraine,Saraswatarishta after meals,Saraswatarishta;Brahmi;Ashwagandha,Avoid spicy food and late nights
+throbbing_headache,neck_stiffness,sensitivity_to_light,fatigue,Migraine,Chandanadi taila for head massage,Chandanadi;Brahmi;Jatamansi,Cool foods and adequate hydration
+headache,irritability,nausea,dizziness,Migraine,Manasamitra vatakam tablets,Manasamitra;Brahmi;Vacha,Fresh fruits and light meals
+headache,sensitivity_to_light,vomiting,neck_stiffness,Migraine,Pathyadi kadha and shirodhara,Pathyadi;Jatamansi;Brahmi,Avoid processed and fried food
+throbbing_headache,nausea,blurred_vision,fatigue,Migraine,Godanti mishran with warm milk,Godanti;Brahmi;Ashwagandha,Reduce screen time and eat light
+dizziness,headache,stress,sensitivity_to_light,Migraine,Brahmi ghritam with warm water,Brahmi;Shankhpushpi;Jatamansi,Avoid loud noise and rest well
+headache,neck_stiffness,irritability,vomiting,Migraine,Shirashooladi vajra ras tablets,Shirashooladi;Brahmi;Vacha,Cool pitta-pacifying foods
+nausea,sensitivity_to_light,throbbing_headache,stress,Migraine,Saraswatarishta and nasya therapy,Saraswatarishta;Jatamansi;Brahmi,Avoid coffee and eat sattvic food
+headache,dizziness,fatigue,blurred_vision,Migraine,Brahmi vati and shiroabhyanga,Brahmi;Ashwagandha;Bala,Fresh vegetable juices and rest
+throbbing_headache,vomiting,neck_stiffness,nausea,Migraine,Chandanadi taila head massage daily,Chandanadi;Brahmi;Jatamansi,Avoid sour food and bakery items
+irritability,headache,sensitivity_to_light,dizziness,Migraine,Manasamitra vatakam with milk,Manasamitra;Brahmi;Shankhpushpi,Light dinner and early sleep
+headache,nausea,fatigue,neck_stiffness,Migraine,Pathyadi kwath twice daily,Pathyadi;Brahmi;Guduchi,Avoid triggers like bright lights
+blurred_vision,throbbing_headache,stress,vomiting,Migraine,Godanti bhasma and brahmi tea,Godanti;Brahmi;Jatamansi,Pitta-calming diet with ghee
+headache,sensitivity_to_light,fatigue,irritability,Migraine,Shirashooladi ras and rest,Shirashooladi;Brahmi;Ashwagandha,Cool foods and reduce stress
+throbbing_headache,nausea,dizziness,neck_stiffness,Migraine,Brahmi ghritam nasya therapy,Brahmi;Vacha;Jatamansi,Sattvic meals thrice daily
+headache,vomiting,stress,blurred_vision,Migraine,Chandanadi lepam on forehead,Chandanadi;Brahmi;Shankhpushpi,Fresh fruits and light food
+sensitivity_to_light,headache,fatigue,dizziness,Migraine,Manasamitra vatakam and brahmi,Manasamitra;Brahmi;Jatamansi,Avoid late night screen usage
+throbbing_headache,irritability,nausea,neck_stiffness,Migraine,Godanti bhasma with honey,Godanti;Brahmi;Ashwagandha,Cool buttermilk and light meals
+acidity,heartburn,sour_taste,belching,Acidity,Avipattikar churna with cold milk,Avipattikar;Shatavari;Yashtimadhu,Avoid spicy oily and fried food
+heartburn,nausea,bloating,acidity,Acidity,Kamdudha ras with cold water,Kamdudha;Praval Pishti;Mukta Pishti,Eat cooling foods like cucumber
+sour_taste,burning_sensation,belching,loss_of_appetite,Acidity,Sukumara kashayam before meals,Sukumara;Amalaki;Shatavari,Avoid citrus and eat bland food
+acidity,stomach_pain,heartburn,nausea,Acidity,Avipattikar churna twice daily,Avipattikar;Guduchi;Yashtimadhu,Small frequent meals
+bloating,heartburn,sour_taste,fatigue,Acidity,Praval pishti with honey,Praval Pishti;Shatavari;Amalaki,Cool coconut water and rice
+burning_sensation,acidity,belching,headache,Acidity,Kamdudha ras and cold milk,Kamdudha;Mukta Pishti;Guduchi,Avoid tea coffee and alcohol
+heartburn,loss_of_appetite,nausea,acidity,Acidity,Yashtimadhu churna with cold water,Yashtimadhu;Shatavari;Amalaki,Eat on time and avoid fasting
+sour_taste,stomach_pain,bloating,belching,Acidity,Avipattikar with buttermilk,Avipattikar;Jeera;Saunf,Light meals with curd rice
+acidity,nausea,burning_sensation,fatigue,Acidity,Sutshekhar ras with cold water,Sutshekhar;Praval Pishti;Shatavari,Avoid pickles and fermented food
+heartburn,headache,sour_taste,bloating,Acidity,Kamdudha ras tablets twice daily,Kamdudha;Amalaki;Yashtimadhu,Cool buttermilk after meals
+acidity,belching,stomach_pain,burning_sensation,Acidity,Praval pishti with warm water,Praval Pishti;Shatavari;Guduchi,Plain rice and steamed vegetables
+loss_of_appetite,heartburn,nausea,acidity,Acidity,Sukumara kashayam before food,Sukumara;Amalaki;Yashtimadhu,Avoid spicy food completely
+bloating,sour_taste,acidity,headache,Acidity,Avipattikar churna with cold milk,Avipattikar;Shatavari;Mukta Pishti,Eat meals at fixed times
+burning_sensation,stomach_pain,heartburn,fatigue,Acidity,Sutshekhar ras and cooling diet,Sutshekhar;Praval;Guduchi,Fresh coconut water daily
+acidity,nausea,sour_taste,loss_of_appetite,Acidity,Dhatri lauha with honey,Dhatri;Amalaki;Shatavari,Avoid heavy dinner
+bloating,indigestion,loss_of_appetite,nausea,Indigestion,Hingvastak churna with warm water before meals,Hingvastak;Ajwain;Jeera,Eat small frequent meals and avoid heavy food
+stomach_pain,gas,bloating,heaviness,Indigestion,Lavanbhaskar churna with buttermilk,Lavanbhaskar;Ajwain;Saunf,Light meals with ginger and cumin
+nausea,loss_of_appetite,heaviness,belching,Indigestion,Chitrakadi vati before meals,Chitrakadi;Pippali;Ginger,Avoid raw food and eat cooked meals
+indigestion,bloating,stomach_pain,fatigue,Indigestion,Agnitundi vati with warm water,Agnitundi;Ajwain;Hing,Small portions and no late eating
+gas,heaviness,nausea,loss_of_appetite,Indigestion,Hingvastak churna and warm water,Hingvastak;Ginger;Jeera,Avoid beans and heavy grains
+belching,stomach_pain,bloating,indigestion,Indigestion,Lavanbhaskar churna after meals,Lavanbhaskar;Saunf;Ajwain,Light khichdi and buttermilk
+loss_of_appetite,heaviness,nausea,gas,Indigestion,Chitrakadi vati with ginger juice,Chitrakadi;Trikatu;Pippali,Warm cooked food only
+bloating,fatigue,indigestion,stomach_pain,Indigestion,Deepan pachan treatment with ajwain,Ajwain;Hing;Jeera,Avoid cold drinks and heavy meals
+nausea,belching,gas,heaviness,Indigestion,Agnitundi vati twice daily,Agnitundi;Pippali;Ginger,Small meals at regular intervals
+stomach_pain,loss_of_appetite,bloating,indigestion,Indigestion,Shankha vati with warm water,Shankha;Ajwain;Hing,Avoid dairy and oily food
+gas,nausea,fatigue,heaviness,Indigestion,Hingvastak with lukewarm water,Hingvastak;Jeera;Ajwain,Light soups and steamed vegetables
+bloating,stomach_pain,belching,loss_of_appetite,Indigestion,Chitrakadi vati and ginger tea,Chitrakadi;Ginger;Pippali,Avoid overeating
+indigestion,heaviness,nausea,gas,Indigestion,Lavanbhaskar churna daily,Lavanbhaskar;Saunf;Hing,Eat mindfully and chew well
+stomach_pain,fatigue,bloating,belching,Indigestion,Agnitundi ras with buttermilk,Agnitundi;Ajwain;Ginger,Small warm meals
+loss_of_appetite,gas,heaviness,nausea,Indigestion,Shankha bhasma with honey,Shankha;Pippali;Jeera,Avoid raw salads and cold items
+skin_rash,itching,redness,swelling,Skin Allergy,Khadirarishta and neem paste application,Khadirarishta;Neem;Manjistha,Avoid spicy food and allergens
+itching,dry_skin,redness,bumps,Skin Allergy,Mahamanjisthadi kashayam twice daily,Mahamanjisthadi;Neem;Turmeric,Drink neem water and eat bitter gourd
+redness,skin_rash,burning_sensation,itching,Skin Allergy,Gandhak rasayana and neem oil application,Gandhak;Neem;Haridra,Avoid dairy and non-veg food
+swelling,bumps,itching,skin_rash,Skin Allergy,Arogyavardhini vati with water,Arogyavardhini;Neem;Manjistha,Eat cooling foods like cucumber
+dry_skin,redness,itching,flaking,Skin Allergy,Kumkumadi taila application externally,Kumkumadi;Manjistha;Sariva,Hydrating foods and avoid preservatives
+skin_rash,burning_sensation,swelling,redness,Skin Allergy,Raktamokshana therapy and neem oil,Neem;Khadira;Sariva,Bitter vegetables and leafy greens
+itching,bumps,dry_skin,skin_rash,Skin Allergy,Haridra capsules twice daily,Haridra;Neem;Manjistha,Avoid seafood and fermented items
+redness,flaking,burning_sensation,itching,Skin Allergy,Mahamanjisthadi kashayam with neem,Mahamanjisthadi;Sariva;Turmeric,Cooling diet with aloe vera juice
+skin_rash,swelling,dry_skin,bumps,Skin Allergy,Khadirarishta and arogyavardhini,Khadirarishta;Arogyavardhini;Neem,Avoid junk food and eat fruits
+itching,redness,burning_sensation,flaking,Skin Allergy,Gandhak rasayana tablets,Gandhak;Haridra;Neem,Light meals and coconut water
+bumps,skin_rash,swelling,dry_skin,Skin Allergy,Panchatikta ghritam internally,Panchatikta;Neem;Manjistha,Avoid alcohol and fried food
+redness,itching,skin_rash,burning_sensation,Skin Allergy,Haridra khand with milk,Haridra;Neem;Sariva,Avoid hot spicy food
+dry_skin,flaking,itching,bumps,Skin Allergy,Kumkumadi oil and neem paste,Kumkumadi;Manjistha;Turmeric,Drink plenty of water
+swelling,burning_sensation,redness,skin_rash,Skin Allergy,Arogyavardhini vati and neem wash,Arogyavardhini;Neem;Khadira,Eat bland cooling food
+itching,skin_rash,dry_skin,redness,Skin Allergy,Mahamanjisthadi kashayam daily,Mahamanjisthadi;Neem;Guduchi,Green leafy diet
+anxiety,tension,irritability,difficulty_concentrating,Stress,Ashwagandha churna with warm milk before bed,Ashwagandha;Brahmi;Jatamansi,Warm milk with nutmeg before sleep
+insomnia,fatigue,irritability,headache,Stress,Brahmi vati and shirodhara therapy,Brahmi;Shankhpushpi;Ashwagandha,Avoid caffeine and eat calming foods
+tension,anxiety,muscle_tension,restlessness,Stress,Saraswatarishta after meals,Saraswatarishta;Ashwagandha;Jatamansi,Regular meal times with sattvic food
+difficulty_concentrating,mood_swings,fatigue,anxiety,Stress,Manasamitra vatakam with milk,Manasamitra;Brahmi;Shankhpushpi,Fresh fruits and whole grains
+irritability,headache,insomnia,tension,Stress,Ashwagandha ksheera paka at night,Ashwagandha;Jatamansi;Vacha,Avoid processed food and sugar
+restlessness,anxiety,muscle_tension,difficulty_concentrating,Stress,Brahmi ghritam and meditation,Brahmi;Ashwagandha;Shankhpushpi,Regular warm meals
+mood_swings,fatigue,irritability,headache,Stress,Saraswatarishta and pranayama,Saraswatarishta;Brahmi;Jatamansi,Nuts and seeds with warm milk
+tension,insomnia,anxiety,restlessness,Stress,Ashwagandha with warm water at night,Ashwagandha;Tagara;Jatamansi,Avoid late dinners
+muscle_tension,difficulty_concentrating,mood_swings,fatigue,Stress,Manasamitra vatakam daily,Manasamitra;Brahmi;Ashwagandha,Sattvic balanced meals
+headache,anxiety,irritability,insomnia,Stress,Brahmi vati and abhyanga massage,Brahmi;Shankhpushpi;Jatamansi,Warm turmeric milk before bed
+restlessness,tension,mood_swings,muscle_tension,Stress,Saraswatarishta with water,Saraswatarishta;Ashwagandha;Vacha,Regular exercise and light food
+fatigue,difficulty_concentrating,anxiety,headache,Stress,Ashwagandha churna with ghee,Ashwagandha;Brahmi;Guduchi,Avoid stimulants
+irritability,insomnia,restlessness,tension,Stress,Jatamansi churna at bedtime,Jatamansi;Ashwagandha;Tagara,Calming herbal teas
+mood_swings,muscle_tension,fatigue,anxiety,Stress,Brahmi ghritam with warm milk,Brahmi;Shankhpushpi;Ashwagandha,Fresh home-cooked food
+difficulty_concentrating,headache,insomnia,irritability,Stress,Manasamitra vatakam and nasya,Manasamitra;Brahmi;Jatamansi,Avoid screen time before sleep
+anxiety,restlessness,tension,mood_swings,Stress,Saraswatarishta daily,Saraswatarishta;Ashwagandha;Shankhpushpi,Eat warm nourishing food
+fatigue,insomnia,muscle_tension,headache,Stress,Ashwagandha with warm milk,Ashwagandha;Jatamansi;Brahmi,Regular daily routine
+irritability,difficulty_concentrating,anxiety,restlessness,Stress,Brahmi vati tablets twice daily,Brahmi;Shankhpushpi;Vacha,Calming sattvic diet
+tension,mood_swings,headache,fatigue,Stress,Jatamansi churna with honey,Jatamansi;Ashwagandha;Brahmi,Fresh fruits and vegetables
+insomnia,anxiety,muscle_tension,irritability,Stress,Ashwagandharishta after meals,Ashwagandharishta;Jatamansi;Brahmi,Avoid heavy dinner
+difficulty_sleeping,restlessness,anxiety,fatigue,Insomnia,Ashwagandha ksheera paka before bed,Ashwagandha;Tagara;Jatamansi,Warm milk with nutmeg and saffron
+insomnia,irritability,difficulty_concentrating,restlessness,Insomnia,Brahmi vati and shirodhara therapy,Brahmi;Shankhpushpi;Ashwagandha,Avoid caffeine after noon
+difficulty_sleeping,racing_thoughts,fatigue,headache,Insomnia,Jatamansi churna with warm milk,Jatamansi;Tagara;Vacha,Light dinner two hours before bed
+restlessness,anxiety,difficulty_sleeping,mood_swings,Insomnia,Nidrari ras and foot massage with oil,Nidrari;Ashwagandha;Tagara,Avoid screen time before sleep
+insomnia,fatigue,irritability,difficulty_concentrating,Insomnia,Saraswatarishta and meditation,Saraswatarishta;Brahmi;Jatamansi,Calming herbal teas before bed
+racing_thoughts,difficulty_sleeping,restlessness,anxiety,Insomnia,Ashwagandha churna and abhyanga,Ashwagandha;Tagara;Jatamansi,Warm golden milk at night
+headache,insomnia,mood_swings,fatigue,Insomnia,Brahmi ghritam before sleep,Brahmi;Shankhpushpi;Ashwagandha,Sattvic light dinner
+difficulty_sleeping,difficulty_concentrating,irritability,restlessness,Insomnia,Jatamansi with warm water at night,Jatamansi;Tagara;Ashwagandha,Avoid spicy food at night
+anxiety,racing_thoughts,insomnia,headache,Insomnia,Manasamitra vatakam at bedtime,Manasamitra;Brahmi;Jatamansi,Warm milk with cardamom
+fatigue,restlessness,difficulty_sleeping,mood_swings,Insomnia,Ashwagandha with warm milk,Ashwagandha;Jatamansi;Sarpagandha,Regular sleep schedule
+insomnia,headache,anxiety,difficulty_concentrating,Insomnia,Nidrari ras tablets at night,Nidrari;Tagara;Brahmi,Chamomile tea before bed
+difficulty_sleeping,irritability,racing_thoughts,fatigue,Insomnia,Saraswatarishta after dinner,Saraswatarishta;Jatamansi;Ashwagandha,Light meals and early dinner
+restlessness,mood_swings,insomnia,anxiety,Insomnia,Jatamansi churna with ghee,Jatamansi;Tagara;Vacha,Avoid caffeine and alcohol
+difficulty_sleeping,headache,fatigue,restlessness,Insomnia,Brahmi vati and shirodhara,Brahmi;Ashwagandha;Shankhpushpi,Warm baths before sleep
+insomnia,racing_thoughts,irritability,difficulty_concentrating,Insomnia,Ashwagandha ksheera paka,Ashwagandha;Tagara;Jatamansi,Avoid heavy meals at night
+joint_pain,stiffness,swelling,difficulty_moving,Joint Pain,Maharasnadi kashayam and joint massage with oil,Maharasnadi;Ashwagandha;Guggulu,Warm food and avoid cold items
+stiffness,joint_pain,cracking_sound,pain_while_walking,Joint Pain,Yogaraja guggulu with warm water,Yogaraja;Guggulu;Rasna,Anti-inflammatory diet with turmeric
+swelling,joint_pain,redness,difficulty_moving,Joint Pain,Dashamoola kashayam and warm oil massage,Dashamoola;Nirgundi;Ashwagandha,Avoid sour and cold foods
+joint_pain,muscle_pain,stiffness,fatigue,Joint Pain,Ashwagandha churna with warm milk,Ashwagandha;Bala;Guggulu,Warm soups with turmeric and ginger
+cracking_sound,pain_while_walking,joint_pain,swelling,Joint Pain,Maharasnadi kwath and guggulu,Maharasnadi;Guggulu;Eranda,Avoid cold and damp foods
+difficulty_moving,stiffness,joint_pain,redness,Joint Pain,Kottamchukkadi taila massage,Kottamchukkadi;Nirgundi;Rasna,Warm foods with ginger
+joint_pain,fatigue,muscle_pain,cracking_sound,Joint Pain,Rasnasaptak kashayam daily,Rasnasaptak;Ashwagandha;Guggulu,Avoid excessive exercise
+stiffness,swelling,pain_while_walking,joint_pain,Joint Pain,Yogaraja guggulu tablets,Yogaraja;Rasna;Eranda,Anti-inflammatory herbs in cooking
+joint_pain,redness,difficulty_moving,muscle_pain,Joint Pain,Dashamoola kwath and abhyanga,Dashamoola;Nirgundi;Bala,Warm cooked meals with ghee
+fatigue,cracking_sound,stiffness,joint_pain,Joint Pain,Ashwagandha bala taila massage,Ashwagandha;Bala;Guggulu,Include turmeric in daily diet
+joint_pain,pain_while_walking,swelling,stiffness,Joint Pain,Maharasnadi kashayam twice daily,Maharasnadi;Guggulu;Rasna,Avoid cold water and raw salads
+muscle_pain,redness,joint_pain,difficulty_moving,Joint Pain,Kottamchukkadi taila and guggulu,Kottamchukkadi;Guggulu;Nirgundi,Warm food with cumin and turmeric
+stiffness,fatigue,cracking_sound,joint_pain,Joint Pain,Rasnasaptak kwath daily,Rasnasaptak;Ashwagandha;Bala,Light exercise and warm meals
+joint_pain,swelling,muscle_pain,pain_while_walking,Joint Pain,Yogaraja guggulu with warm milk,Yogaraja;Guggulu;Rasna,Reduce sour food intake
+difficulty_moving,redness,stiffness,joint_pain,Joint Pain,Dashamoola and nirgundi oil,Dashamoola;Nirgundi;Eranda,Avoid heavy meals at night
+constipation,hard_stool,bloating,abdominal_pain,Constipation,Triphala churna with warm water at bedtime,Triphala;Haritaki;Isabgol,High fiber diet with fruits and vegetables
+hard_stool,straining,bloating,gas,Constipation,Abhayarishta after meals,Abhayarishta;Haritaki;Trivrut,Drink warm water first thing in morning
+abdominal_pain,constipation,heaviness,loss_of_appetite,Constipation,Panchasakar churna at bedtime,Panchasakar;Senna;Haritaki,Include papaya and figs in diet
+gas,hard_stool,bloating,constipation,Constipation,Triphala with warm milk at night,Triphala;Isabgol;Castor oil,Eat more green vegetables and whole grains
+straining,abdominal_pain,hard_stool,heaviness,Constipation,Eranda taila with warm milk at night,Eranda;Haritaki;Triphala,Avoid refined flour and maida products
+bloating,constipation,gas,loss_of_appetite,Constipation,Abhayarishta with equal water after food,Abhayarishta;Haritaki;Saunf,Fiber-rich meals and lukewarm water
+constipation,heaviness,hard_stool,abdominal_pain,Constipation,Panchasakar churna with warm water,Panchasakar;Trivrut;Haritaki,Prunes and soaked raisins daily
+hard_stool,gas,straining,bloating,Constipation,Triphala churna twice daily,Triphala;Isabgol;Haritaki,Drink 8-10 glasses of water daily
+loss_of_appetite,constipation,abdominal_pain,heaviness,Constipation,Eranda taila with warm milk,Eranda;Triphala;Haritaki,Whole grain bread and oats
+bloating,hard_stool,gas,straining,Constipation,Avipattikar churna at bedtime,Avipattikar;Triphala;Senna,Fresh fruits especially papaya
+constipation,abdominal_pain,heaviness,gas,Constipation,Panchasakar churna daily,Panchasakar;Haritaki;Trivrut,Include flaxseeds in diet
+hard_stool,loss_of_appetite,bloating,straining,Constipation,Abhayarishta and triphala combination,Abhayarishta;Triphala;Isabgol,High fiber vegetables and fruits
+gas,constipation,abdominal_pain,hard_stool,Constipation,Triphala with lukewarm water at night,Triphala;Haritaki;Bibhitaki,Avoid junk food and eat natural
+straining,heaviness,bloating,constipation,Constipation,Eranda oil with warm water,Eranda;Haritaki;Triphala,Regular meals at fixed times
+loss_of_appetite,hard_stool,abdominal_pain,gas,Constipation,Panchasakar churna with honey,Panchasakar;Senna;Haritaki,Soaked almonds and figs daily
+persistent_cough,sore_throat,chest_tightness,phlegm,Cough,Sitopaladi churna with honey three times daily,Sitopaladi;Vasaka;Kantakari,Avoid cold drinks and ice cream
+dry_cough,throat_irritation,chest_tightness,difficulty_breathing,Cough,Kantakari avaleha with warm milk,Kantakari;Vasaka;Yashtimadhu,Warm fluids and honey ginger tea
+phlegm,persistent_cough,congestion,fatigue,Cough,Talisadi churna with honey,Talisadi;Pippali;Vasaka,Avoid dairy and cold food
+sore_throat,dry_cough,hoarseness,chest_tightness,Cough,Yashtimadhu churna gargle and vati,Yashtimadhu;Kantakari;Tulsi,Warm water with turmeric
+difficulty_breathing,phlegm,persistent_cough,wheezing,Cough,Vasaka swaras with honey,Vasaka;Kantakari;Pippali,Avoid dust exposure and eat warm food
+throat_irritation,congestion,dry_cough,fatigue,Cough,Sitopaladi with warm water,Sitopaladi;Tulsi;Ginger,Ginger honey tea twice daily
+persistent_cough,hoarseness,sore_throat,phlegm,Cough,Khadiradi vati and throat gargle,Khadiradi;Yashtimadhu;Vasaka,Warm soup and avoid cold items
+chest_tightness,dry_cough,difficulty_breathing,throat_irritation,Cough,Kantakari ghrita with warm milk,Kantakari;Vasaka;Pippali,Steam inhalation and warm food
+phlegm,congestion,persistent_cough,wheezing,Cough,Talisadi with honey thrice daily,Talisadi;Vasaka;Kantakari,Avoid bananas and curd
+sore_throat,fatigue,dry_cough,hoarseness,Cough,Yashtimadhu avaleha with warm water,Yashtimadhu;Tulsi;Vasaka,Warm milk with turmeric
+persistent_cough,chest_tightness,phlegm,difficulty_breathing,Cough,Vasaka juice with honey twice daily,Vasaka;Pippali;Kantakari,Avoid exposure to cold air
+dry_cough,throat_irritation,congestion,sore_throat,Cough,Sitopaladi churna with ghee,Sitopaladi;Ginger;Tulsi,Warm ginger tea
+hoarseness,phlegm,persistent_cough,fatigue,Cough,Khadiradi vati tablets,Khadiradi;Yashtimadhu;Kantakari,Rest voice and drink warm fluids
+chest_tightness,wheezing,dry_cough,difficulty_breathing,Cough,Kantakari avaleha daily,Kantakari;Vasaka;Pippali,Avoid allergens and cold food
+congestion,sore_throat,phlegm,persistent_cough,Cough,Talisadi churna and steam therapy,Talisadi;Tulsi;Vasaka,Hot herbal tea with honey
+extreme_tiredness,weakness,lack_of_energy,drowsiness,Fatigue,Ashwagandha churna with warm milk,Ashwagandha;Shatavari;Amalaki,Iron-rich foods like spinach and dates
+drowsiness,lack_of_motivation,muscle_weakness,fatigue,Fatigue,Chyawanprash daily with warm milk,Chyawanprash;Ashwagandha;Amalaki,Balanced diet with proteins and vitamins
+weakness,extreme_tiredness,poor_concentration,body_ache,Fatigue,Ashwagandharishta after meals,Ashwagandharishta;Shatavari;Guduchi,Nuts dry fruits and fresh vegetables
+lack_of_energy,drowsiness,fatigue,irritability,Fatigue,Brahmi vati and ashwagandha milk,Brahmi;Ashwagandha;Shatavari,Regular meals with complex carbs
+muscle_weakness,poor_concentration,extreme_tiredness,weakness,Fatigue,Dhatupaushtik churna with milk,Dhatupaushtik;Ashwagandha;Bala,Protein-rich diet
+body_ache,lack_of_motivation,drowsiness,fatigue,Fatigue,Chyawanprash and ashwagandha combination,Chyawanprash;Ashwagandha;Amalaki,Fresh fruits and energizing foods
+fatigue,irritability,weakness,lack_of_energy,Fatigue,Ashwagandha ksheera paka daily,Ashwagandha;Shatavari;Guduchi,Avoid junk food and eat fresh
+extreme_tiredness,muscle_weakness,poor_concentration,drowsiness,Fatigue,Brahmi ashwagandha milk at night,Brahmi;Ashwagandha;Bala,Dates almonds and milk
+lack_of_motivation,body_ache,fatigue,weakness,Fatigue,Dhatupaushtik churna twice daily,Dhatupaushtik;Ashwagandha;Shatavari,Regular exercise and balanced meals
+drowsiness,lack_of_energy,irritability,extreme_tiredness,Fatigue,Chyawanprash with warm water,Chyawanprash;Amalaki;Guduchi,Iron and vitamin C rich foods
+muscle_weakness,fatigue,poor_concentration,body_ache,Fatigue,Ashwagandharishta with water,Ashwagandharishta;Bala;Shatavari,Whole grains and legumes
+weakness,drowsiness,lack_of_motivation,extreme_tiredness,Fatigue,Ashwagandha churna with ghee,Ashwagandha;Shatavari;Amalaki,Fresh home-cooked meals
+irritability,lack_of_energy,muscle_weakness,fatigue,Fatigue,Brahmi vati and rejuvenation therapy,Brahmi;Ashwagandha;Guduchi,Green vegetables and fruits
+body_ache,poor_concentration,drowsiness,weakness,Fatigue,Chyawanprash twice daily,Chyawanprash;Ashwagandha;Amalaki,Energy-boosting nuts and seeds
+extreme_tiredness,fatigue,lack_of_motivation,irritability,Fatigue,Dhatupaushtik with warm milk,Dhatupaushtik;Shatavari;Bala,Avoid refined sugar
+gas,bloating,abdominal_discomfort,belching,Gas / Bloating,Hingvastak churna with buttermilk after meals,Hingvastak;Ajwain;Hing,Avoid beans lentils and carbonated drinks
+bloating,flatulence,stomach_cramps,heaviness,Gas / Bloating,Ajwain water and hing application on belly,Ajwain;Hing;Jeera,Eat slowly and chew food properly
+abdominal_discomfort,gas,belching,nausea,Gas / Bloating,Lavanbhaskar churna with warm water,Lavanbhaskar;Ajwain;Saunf,Avoid raw vegetables at night
+flatulence,bloating,gas,stomach_cramps,Gas / Bloating,Hingvastak churna twice daily,Hingvastak;Hing;Pippali,Small frequent meals
+heaviness,abdominal_discomfort,belching,bloating,Gas / Bloating,Ajwain with black salt and warm water,Ajwain;Saindhava;Jeera,Avoid heavy meals
+gas,nausea,flatulence,stomach_cramps,Gas / Bloating,Lavanbhaskar with buttermilk,Lavanbhaskar;Saunf;Ajwain,Light food and ginger tea
+bloating,belching,heaviness,abdominal_discomfort,Gas / Bloating,Hingvastak with warm water before meals,Hingvastak;Hing;Ginger,Avoid carbonated beverages
+stomach_cramps,gas,bloating,flatulence,Gas / Bloating,Ajwain ark with water after meals,Ajwain;Hing;Jeera,Eat cooked food only
+nausea,abdominal_discomfort,belching,gas,Gas / Bloating,Chitrakadi vati before food,Chitrakadi;Pippali;Hing,Avoid overeating
+flatulence,heaviness,stomach_cramps,bloating,Gas / Bloating,Lavanbhaskar churna daily,Lavanbhaskar;Ajwain;Saunf,Cumin and fennel water
+gas,bloating,nausea,belching,Gas / Bloating,Hingvastak churna with ginger,Hingvastak;Ginger;Hing,Avoid dairy with meals
+abdominal_discomfort,flatulence,stomach_cramps,heaviness,Gas / Bloating,Ajwain with hing and warm water,Ajwain;Hing;Saindhava,Walk after meals
+bloating,gas,belching,nausea,Gas / Bloating,Shankha vati with warm water,Shankha;Ajwain;Saunf,Avoid late night snacking
+stomach_cramps,heaviness,flatulence,abdominal_discomfort,Gas / Bloating,Hingvastak and ajwain combination,Hingvastak;Ajwain;Jeera,Eat at fixed times
+gas,bloating,stomach_cramps,belching,Gas / Bloating,Lavanbhaskar with warm water,Lavanbhaskar;Hing;Saunf,Chew food thoroughly
+flatulence,nausea,gas,heaviness,Gas / Bloating,Chitrakadi vati with ginger juice,Chitrakadi;Pippali;Ajwain,Light warm meals only
+abdominal_discomfort,bloating,belching,stomach_cramps,Gas / Bloating,Ajwain water twice daily,Ajwain;Hing;Jeera,Avoid beans and cabbage
+heaviness,gas,flatulence,nausea,Gas / Bloating,Hingvastak with buttermilk daily,Hingvastak;Ajwain;Ginger,Simple cooked meals
+bloating,stomach_cramps,abdominal_discomfort,gas,Gas / Bloating,Shankha bhasma with honey,Shankha;Ajwain;Hing,Fennel tea after meals
+belching,flatulence,heaviness,bloating,Gas / Bloating,Lavanbhaskar churna after food,Lavanbhaskar;Saunf;Pippali,Avoid mixing fruits with meals
+gas,nausea,bloating,abdominal_discomfort,Gas / Bloating,Hingvastak with lukewarm water,Hingvastak;Hing;Ajwain,Light khichdi and cumin water
+stomach_cramps,bloating,gas,heaviness,Gas / Bloating,Ajwain and hing paste on belly,Ajwain;Hing;Jeera,Avoid cold drinks after meals
+flatulence,belching,abdominal_discomfort,gas,Gas / Bloating,Chitrakadi vati twice daily,Chitrakadi;Pippali;Ginger,Eat mindfully and slowly
+nausea,heaviness,bloating,stomach_cramps,Gas / Bloating,Lavanbhaskar with ginger juice,Lavanbhaskar;Ajwain;Saunf,Warm water between meals
+bloating,gas,flatulence,belching,Gas / Bloating,Hingvastak churna and cumin water,Hingvastak;Jeera;Hing,Avoid heavy dinner
+abdominal_discomfort,stomach_cramps,nausea,gas,Gas / Bloating,Shankha vati and ajwain water,Shankha;Ajwain;Saunf,Small portions and regular meals
+heaviness,bloating,flatulence,abdominal_discomfort,Gas / Bloating,Ajwain with warm water daily,Ajwain;Hing;Ginger,Avoid stale and reheated food
+gas,stomach_cramps,belching,nausea,Gas / Bloating,Hingvastak and chitrakadi combination,Hingvastak;Chitrakadi;Ajwain,Fresh warm cooked food only
+bloating,heaviness,abdominal_discomfort,flatulence,Gas / Bloating,Lavanbhaskar churna with buttermilk,Lavanbhaskar;Ajwain;Jeera,Ginger tea after meals
+flatulence,gas,stomach_cramps,bloating,Gas / Bloating,Ajwain ark and hing tablets,Ajwain;Hing;Saunf,Avoid eating in a hurry

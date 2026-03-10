@@ -7,7 +7,9 @@ import { ChatProvider } from './context/ChatContext';
 import LandingPage from './pages/LandingPage';
 import AuthPage from './pages/AuthPage';
 import AuthCallback from './pages/AuthCallback';
+import PredictionPage from './pages/PredictionPage';
 import ChatbotPage from './pages/ChatbotPage';
+import UserDashboardPage from './pages/UserDashboardPage';
 import HerbalRemediesPage from './pages/HerbalRemediesPage';
 import MedicalAnalyzerPage from './pages/MedicalAnalyzerPage';
 import AboutPage from './pages/AboutPage';
@@ -15,7 +17,7 @@ import ProfilePage from './pages/ProfilePage';
 import PrivacyPage from './pages/PrivacyPage';
 
 // Protected Route Component
-function ProtectedRoute({ children }) {
+function ProtectedRoute({ children, withChat = false }) {
   const { user, loading } = useAuth();
 
   if (loading) {
@@ -30,10 +32,14 @@ function ProtectedRoute({ children }) {
     return <Navigate to="/login" replace />;
   }
 
-  return <ChatProvider>{children}</ChatProvider>;
+  if (withChat) {
+    return <ChatProvider>{children}</ChatProvider>;
+  }
+
+  return children;
 }
 
-// Public Route (redirects to dashboard if logged in)
+// Public Route (redirects to predict if logged in)
 function PublicRoute({ children }) {
   const { user, loading } = useAuth();
 
@@ -46,7 +52,7 @@ function PublicRoute({ children }) {
   }
 
   if (user) {
-    return <Navigate to="/chatbot" replace />;
+    return <Navigate to="/predict" replace />;
   }
 
   return children;
@@ -68,9 +74,19 @@ function AppRoutes() {
       } />
       <Route path="/auth/callback" element={<AuthCallback />} />
 
-      {/* Protected Routes */}
-      <Route path="/chatbot" element={
+      {/* Protected Routes — Prediction is primary */}
+      <Route path="/predict" element={
         <ProtectedRoute>
+          <PredictionPage />
+        </ProtectedRoute>
+      } />
+      <Route path="/user-dashboard" element={
+        <ProtectedRoute>
+          <UserDashboardPage />
+        </ProtectedRoute>
+      } />
+      <Route path="/chatbot" element={
+        <ProtectedRoute withChat>
           <ChatbotPage />
         </ProtectedRoute>
       } />
@@ -91,7 +107,7 @@ function AppRoutes() {
       } />
 
       {/* Legacy redirects */}
-      <Route path="/dashboard" element={<Navigate to="/chatbot" replace />} />
+      <Route path="/dashboard" element={<Navigate to="/predict" replace />} />
       <Route path="/reports" element={<Navigate to="/herbal-remedies" replace />} />
 
       {/* Fallback */}
