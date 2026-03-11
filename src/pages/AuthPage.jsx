@@ -48,12 +48,19 @@ function AuthPage() {
         setGoogleLoading(true);
         setError('');
 
+        // Save where we are trying to go or just default to /predict
+        // since some redirects might bring us here
+        const locationState = window.history.state?.usr;
+        const fromPath = locationState?.from?.pathname || '/predict';
+        localStorage.setItem('intended_path', fromPath);
+
         const result = await signInWithGoogle();
-        setGoogleLoading(false);
 
         if (!result.success) {
+            setGoogleLoading(false);
             setError(result.message || 'Google sign-in failed');
         }
+        // Note: success doesn't need setGoogleLoading(false) because it navigates away
     };
 
     return (

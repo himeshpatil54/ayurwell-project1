@@ -17,7 +17,19 @@ function AuthCallback() {
 
         const handleCallback = async () => {
             try {
-                // First, try to get the session (Supabase auto-detects tokens from the URL hash)
+                // For magic links or OAuth, Supabase automatically handles the URL hash tokens.
+                // We'll first wait a brief moment for it to process
+                await new Promise(resolve => setTimeout(resolve, 500));
+
+                // If there's an error in the hash, handle it
+                const hashParams = new URLSearchParams(window.location.hash.substring(1));
+                if (hashParams.get('error')) {
+                    setError(hashParams.get('error_description') || 'Authentication failed');
+                    timeout = setTimeout(() => navigate('/login', { replace: true }), 2000);
+                    return;
+                }
+
+                // Then try to get the session 
                 const { data: { session }, error: sessionError } = await supabase.auth.getSession();
 
                 if (sessionError) {
@@ -28,9 +40,28 @@ function AuthCallback() {
                 }
 
                 if (session) {
-                    console.log('[AuthCallback] Session found immediately:', session.user.email);
-                    navigate('/chatbot', { replace: true });
+                    console.log('[AuthCallback] Session found immediately:', session.user?.email);
+                    // Important: check if there's a specific redirect path in localStorage or fallback to /predict
+                    const intendedPath = localStorage.getItem('intended_path') || '/predict';
+                    localStorage.removeItem('intended_path');
+                    navigate(intendedPath, { replace: true });
                     return;
+                }
+
+                // In some OAuth or MagicLink flows, access_token is in the URL but getSession hasn't caught it yet
+                if (hashParams.get('access_token')) {
+                    console.log('[AuthCallback] Found token in URL, setting session manually...');
+                    const { error: setSessionError } = await supabase.auth.setSession({
+                        access_token: hashParams.get('access_token'),
+                        refresh_token: hashParams.get('refresh_token')
+                    });
+
+                    if (setSessionError) {
+                        console.error('[AuthCallback] setSession error:', setSessionError.message);
+                        setError(setSessionError.message);
+                        timeout = setTimeout(() => navigate('/login', { replace: true }), 2000);
+                        return;
+                    }
                 }
 
                 // Session not ready yet — wait for onAuthStateChange
@@ -38,8 +69,10 @@ function AuthCallback() {
                 const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
                     console.log('[AuthCallback] Auth event:', event);
                     if (event === 'SIGNED_IN' && session) {
-                        console.log('[AuthCallback] SIGNED_IN detected:', session.user.email);
-                        navigate('/chatbot', { replace: true });
+                        console.log('[AuthCallback] SIGNED_IN detected:', session.user?.email);
+                        const intendedPath = localStorage.getItem('intended_path') || '/predict';
+                        localStorage.removeItem('intended_path');
+                        navigate(intendedPath, { replace: true });
                     }
                 });
                 unsubscribe = subscription;

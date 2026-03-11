@@ -79,17 +79,24 @@ export function AuthProvider({ children }) {
                 return { success: true };
             }
 
-            console.log('[Auth] Starting Google OAuth, redirectTo:', window.location.origin + '/auth/callback');
-            const { error } = await supabase.auth.signInWithOAuth({
+            const redirectUrl = `${window.location.origin}/auth/callback`;
+            console.log('[Auth] Starting Google OAuth, redirectTo:', redirectUrl);
+
+            const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
                 options: {
-                    redirectTo: window.location.origin + '/auth/callback'
+                    redirectTo: redirectUrl,
+                    queryParams: {
+                        access_type: 'offline',
+                        prompt: 'consent',
+                    }
                 }
             });
 
             if (error) throw error;
-            return { success: true };
+            return { success: true, data };
         } catch (error) {
+            console.error('[Auth] Google sign-in error:', error);
             return { success: false, message: error.message };
         }
     };

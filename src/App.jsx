@@ -19,6 +19,7 @@ import PrivacyPage from './pages/PrivacyPage';
 // Protected Route Component
 function ProtectedRoute({ children, withChat = false }) {
   const { user, loading } = useAuth();
+  const location = window.location.pathname;
 
   if (loading) {
     return (
@@ -29,7 +30,7 @@ function ProtectedRoute({ children, withChat = false }) {
   }
 
   if (!user) {
-    return <Navigate to="/login" replace />;
+    return <Navigate to="/login" state={{ from: { pathname: location } }} replace />;
   }
 
   if (withChat) {
