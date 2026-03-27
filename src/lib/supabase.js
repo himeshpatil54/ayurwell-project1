@@ -6,8 +6,15 @@ const supabaseUrl = import.meta.env.VITE_SUPABASE_URL || 'https://demo.supabase.
 const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY || 'demo-key';
 const demoMode = import.meta.env.VITE_DEMO_MODE === 'true' || !import.meta.env.VITE_SUPABASE_URL;
 
-// Create Supabase client
-export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+// Create Supabase client with explicit auth config for reliable OAuth
+export const supabase = createClient(supabaseUrl, supabaseAnonKey, {
+    auth: {
+        autoRefreshToken: true,
+        persistSession: true,
+        detectSessionInUrl: true,
+        flowType: 'pkce'
+    }
+});
 
 // Demo mode flag
 export const isDemoMode = demoMode;

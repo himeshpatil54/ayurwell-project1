@@ -73,9 +73,14 @@ function UserDashboardPage() {
                                 Welcome back, {user?.email?.split('@')[0] || user?.fullName || 'User'} 👋
                             </p>
                         </div>
-                        <Link to="/predict" className="btn btn-primary">
-                            🔮 New Prediction
-                        </Link>
+                        <div style={{ display: 'flex', gap: 'var(--space-sm)' }}>
+                            <Link to="/predict" className="btn btn-primary">
+                                🔮 New Prediction
+                            </Link>
+                            <Link to="/medical-analyzer" className="btn btn-secondary">
+                                📋 Analyze Report
+                            </Link>
+                        </div>
                     </div>
 
                     {/* Stats Cards */}

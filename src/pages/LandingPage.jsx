@@ -34,6 +34,13 @@ function LandingPage() {
             description: 'Track your prediction history, view health statistics, and review past chatbot conversations in one place.',
             path: user ? '/user-dashboard' : '/login',
             color: 'var(--color-primary-light)'
+        },
+        {
+            title: 'Report Analyzer',
+            icon: '📋',
+            description: 'Upload your medical reports for AI-powered Ayurvedic analysis — detect key indicators and get herbal recommendations.',
+            path: user ? '/medical-analyzer' : '/login',
+            color: 'var(--color-secondary)'
         }
     ];
 

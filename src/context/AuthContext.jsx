@@ -22,12 +22,16 @@ export function AuthProvider({ children }) {
             supabase.auth.getSession().then(({ data: { session } }) => {
                 setUser(session?.user ?? null);
                 setLoading(false);
+            }).catch(() => {
+                setLoading(false);
             });
 
             // Listen for auth changes (handles magic link & OAuth callbacks)
             const { data: { subscription } } = supabase.auth.onAuthStateChange((event, session) => {
                 console.log('[Auth] onAuthStateChange:', event, session?.user?.email || 'no user');
                 setUser(session?.user ?? null);
+                // Ensure loading is cleared when auth state resolves (covers new user PKCE edge case)
+                setLoading(false);
             });
 
             return () => subscription.unsubscribe();

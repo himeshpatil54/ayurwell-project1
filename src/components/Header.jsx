@@ -36,6 +36,7 @@ function Header({ showNav = true }) {
                             <Link to="/predict">Predict</Link>
                             <Link to="/chatbot">Chatbot</Link>
                             <Link to="/herbal-remedies">Herbal Remedies</Link>
+                            <Link to="/medical-analyzer">Report Analyzer</Link>
                             <Link to="/user-dashboard">Dashboard</Link>
                         </>
                     ) : (
